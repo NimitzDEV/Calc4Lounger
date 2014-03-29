@@ -11,7 +11,7 @@ Module MathEqHtmlCreater
             Kill(pubOperate)
         End If
         FileOpen(1, pubOperate, OpenMode.Output)
-        Print(1, "求平均值")
+        Print(1, "求平均值:")
         Print(1, "<br>")
         Print(1, "<br>")
         tmpStr = "\left ("
@@ -24,7 +24,7 @@ Module MathEqHtmlCreater
         Print(1, "<br>")
         Print(1, "<br>")
         Print(1, "<br>")
-        Print(1, "求平均偏差")
+        Print(1, "求平均偏差:")
         Print(1, "<br>")
         Print(1, "<br>")
         tmpStr = "\left ["
