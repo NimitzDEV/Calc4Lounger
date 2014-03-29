@@ -49,7 +49,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>20140329124859916_easyicon_net_128.ico</ApplicationIcon>
+    <ApplicationIcon>20140329041501994_easyicon_net_96.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevComponents.DotNetBar2, Version=11.4.0.6, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
@@ -124,6 +124,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="20140329041501994_easyicon_net_96.ico" />
     <Content Include="20140329124859916_easyicon_net_128.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
