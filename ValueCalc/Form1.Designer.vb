@@ -29,6 +29,7 @@ Partial Class Form1
         Me.ButtonX1 = New DevComponents.DotNetBar.ButtonX()
         Me.MetroStatusBar1 = New DevComponents.DotNetBar.Metro.MetroStatusBar()
         Me.LabelItem1 = New DevComponents.DotNetBar.LabelItem()
+        Me.CheckBoxItem1 = New DevComponents.DotNetBar.CheckBoxItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Slider1 = New DevComponents.DotNetBar.Controls.Slider()
@@ -48,7 +49,6 @@ Partial Class Form1
         Me.LinkLabel6 = New System.Windows.Forms.LinkLabel()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.LinkLabel7 = New System.Windows.Forms.LinkLabel()
-        Me.CheckBoxItem1 = New DevComponents.DotNetBar.CheckBoxItem()
         Me.SlidePanel1.SuspendLayout()
         Me.SlidePanel2.SuspendLayout()
         Me.SuspendLayout()
@@ -98,6 +98,11 @@ Partial Class Form1
         Me.LabelItem1.Name = "LabelItem1"
         Me.LabelItem1.Text = "Powered by NimitzDEV"
         '
+        'CheckBoxItem1
+        '
+        Me.CheckBoxItem1.Name = "CheckBoxItem1"
+        Me.CheckBoxItem1.Text = "点击计算后自动弹出演算过程"
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -123,7 +128,7 @@ Partial Class Form1
         '
         Me.Slider1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.Slider1.Location = New System.Drawing.Point(3, 28)
-        Me.Slider1.Maximum = 8
+        Me.Slider1.Maximum = 10
         Me.Slider1.Name = "Slider1"
         Me.Slider1.Size = New System.Drawing.Size(160, 29)
         Me.Slider1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Windows7
@@ -312,11 +317,6 @@ Partial Class Form1
         Me.LinkLabel7.TabStop = True
         Me.LinkLabel7.Text = "演算过程"
         Me.LinkLabel7.Visible = False
-        '
-        'CheckBoxItem1
-        '
-        Me.CheckBoxItem1.Name = "CheckBoxItem1"
-        Me.CheckBoxItem1.Text = "点击计算后自动弹出演算过程"
         '
         'Form1
         '
