@@ -35,6 +35,7 @@ Partial Class Form1
         Me.Slider1 = New DevComponents.DotNetBar.Controls.Slider()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.SlidePanel1 = New DevComponents.DotNetBar.Controls.SlidePanel()
+        Me.LinkLabel10 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel9 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel8 = New System.Windows.Forms.LinkLabel()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
@@ -49,7 +50,6 @@ Partial Class Form1
         Me.LinkLabel6 = New System.Windows.Forms.LinkLabel()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.LinkLabel7 = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel10 = New System.Windows.Forms.LinkLabel()
         Me.SlidePanel1.SuspendLayout()
         Me.SlidePanel2.SuspendLayout()
         Me.SuspendLayout()
@@ -165,6 +165,16 @@ Partial Class Form1
         Me.SlidePanel1.TabIndex = 9
         Me.SlidePanel1.Text = "SlidePanel1"
         Me.SlidePanel1.UsesBlockingAnimation = False
+        '
+        'LinkLabel10
+        '
+        Me.LinkLabel10.AutoSize = True
+        Me.LinkLabel10.Location = New System.Drawing.Point(55, 121)
+        Me.LinkLabel10.Name = "LinkLabel10"
+        Me.LinkLabel10.Size = New System.Drawing.Size(85, 13)
+        Me.LinkLabel10.TabIndex = 8
+        Me.LinkLabel10.TabStop = True
+        Me.LinkLabel10.Text = "支付宝捐助我"
         '
         'LinkLabel9
         '
@@ -319,16 +329,6 @@ Partial Class Form1
         Me.LinkLabel7.TabStop = True
         Me.LinkLabel7.Text = "演算过程"
         Me.LinkLabel7.Visible = False
-        '
-        'LinkLabel10
-        '
-        Me.LinkLabel10.AutoSize = True
-        Me.LinkLabel10.Location = New System.Drawing.Point(55, 121)
-        Me.LinkLabel10.Name = "LinkLabel10"
-        Me.LinkLabel10.Size = New System.Drawing.Size(85, 13)
-        Me.LinkLabel10.TabIndex = 8
-        Me.LinkLabel10.TabStop = True
-        Me.LinkLabel10.Text = "支付宝捐助我"
         '
         'Form1
         '
