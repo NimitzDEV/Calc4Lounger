@@ -24,6 +24,7 @@ Partial Class Form2
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form2))
         Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
+        Me.ButtonX1 = New DevComponents.DotNetBar.ButtonX()
         Me.SuspendLayout()
         '
         'WebBrowser1
@@ -35,11 +36,23 @@ Partial Class Form2
         Me.WebBrowser1.Size = New System.Drawing.Size(666, 455)
         Me.WebBrowser1.TabIndex = 0
         '
+        'ButtonX1
+        '
+        Me.ButtonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ButtonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ButtonX1.Location = New System.Drawing.Point(558, 12)
+        Me.ButtonX1.Name = "ButtonX1"
+        Me.ButtonX1.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.ButtonX1.TabIndex = 1
+        Me.ButtonX1.Text = "刷新"
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(666, 455)
+        Me.Controls.Add(Me.ButtonX1)
         Me.Controls.Add(Me.WebBrowser1)
         Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -52,4 +65,5 @@ Partial Class Form2
 
     End Sub
     Friend WithEvents WebBrowser1 As System.Windows.Forms.WebBrowser
+    Friend WithEvents ButtonX1 As DevComponents.DotNetBar.ButtonX
 End Class
