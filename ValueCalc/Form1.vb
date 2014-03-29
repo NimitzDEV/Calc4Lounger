@@ -27,6 +27,9 @@
         If Microsoft.VisualBasic.Right(TextBox1.Text, 1) = ";" Then
             TextBox1.Text = Microsoft.VisualBasic.Left(TextBox1.Text, Len(TextBox1.Text) - 1)
         End If
+        If Microsoft.VisualBasic.Left(TextBox1.Text, 1) = ";" Then
+            TextBox1.Text = Microsoft.VisualBasic.Right(TextBox1.Text, Len(TextBox1.Text) - 1)
+        End If
         '求计数
         returnCounter = countNum(TextBox1.Text)
         '求平均值
