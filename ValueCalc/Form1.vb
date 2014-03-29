@@ -7,7 +7,7 @@
     '检测网络是否连接，是否可以访问CGI服务器
     Public Shared Function IfOnline() As Boolean
         Const FLAG_ICC_FORCE_CONNECTION As Integer = &H1
-        Return InternetCheckConnection("http://www.forkosh.com/", FLAG_ICC_FORCE_CONNECTION, 0)
+        Return InternetCheckConnection("http://latex.codecogs.com/", FLAG_ICC_FORCE_CONNECTION, 0)
     End Function
     Private Sub ButtonX1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonX1.Click
         Form2.Close()
@@ -142,5 +142,9 @@
 
     Private Sub LinkLabel10_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel10.LinkClicked
         Process.Start("https://me.alipay.com/nimitzdev")
+    End Sub
+
+    Private Sub CheckBoxItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBoxItem1.Click
+
     End Sub
 End Class
