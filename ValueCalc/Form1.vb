@@ -136,4 +136,8 @@
             Exit Sub
         End If
     End Sub
+
+    Private Sub LinkLabel10_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel10.LinkClicked
+        Process.Start("https://me.alipay.com/nimitzdev")
+    End Sub
 End Class

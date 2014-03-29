@@ -49,6 +49,7 @@ Partial Class Form1
         Me.LinkLabel6 = New System.Windows.Forms.LinkLabel()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.LinkLabel7 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel10 = New System.Windows.Forms.LinkLabel()
         Me.SlidePanel1.SuspendLayout()
         Me.SlidePanel2.SuspendLayout()
         Me.SuspendLayout()
@@ -148,6 +149,7 @@ Partial Class Form1
         'SlidePanel1
         '
         Me.SlidePanel1.BackColor = System.Drawing.Color.White
+        Me.SlidePanel1.Controls.Add(Me.LinkLabel10)
         Me.SlidePanel1.Controls.Add(Me.LinkLabel9)
         Me.SlidePanel1.Controls.Add(Me.LinkLabel8)
         Me.SlidePanel1.Controls.Add(Me.TextBox2)
@@ -242,12 +244,12 @@ Partial Class Form1
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(376, 106)
+        Me.LinkLabel1.Location = New System.Drawing.Point(339, 103)
         Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(59, 13)
+        Me.LinkLabel1.Size = New System.Drawing.Size(95, 13)
         Me.LinkLabel1.TabIndex = 1
         Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "使用说明"
+        Me.LinkLabel1.Text = "使用说明 / 关于"
         '
         'LinkLabel5
         '
@@ -318,6 +320,16 @@ Partial Class Form1
         Me.LinkLabel7.Text = "演算过程"
         Me.LinkLabel7.Visible = False
         '
+        'LinkLabel10
+        '
+        Me.LinkLabel10.AutoSize = True
+        Me.LinkLabel10.Location = New System.Drawing.Point(55, 121)
+        Me.LinkLabel10.Name = "LinkLabel10"
+        Me.LinkLabel10.Size = New System.Drawing.Size(85, 13)
+        Me.LinkLabel10.TabIndex = 8
+        Me.LinkLabel10.TabStop = True
+        Me.LinkLabel10.Text = "支付宝捐助我"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -376,4 +388,5 @@ Partial Class Form1
     Friend WithEvents LinkLabel9 As System.Windows.Forms.LinkLabel
     Friend WithEvents LinkLabel8 As System.Windows.Forms.LinkLabel
     Friend WithEvents CheckBoxItem1 As DevComponents.DotNetBar.CheckBoxItem
+    Friend WithEvents LinkLabel10 As System.Windows.Forms.LinkLabel
 End Class
