@@ -61,7 +61,7 @@
             divStr = Microsoft.VisualBasic.Right(Microsoft.VisualBasic.Left(inputStr, i), 1)
             If divStr = ";" Then dividerCounter += 1
         Next
-        Return dividerCounter + 1
+        countNum = dividerCounter + 1
     End Function
     Private Sub Slider1_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Slider1.ValueChanged
         Label3.Text = "小数位：" & Slider1.Value & "位"
