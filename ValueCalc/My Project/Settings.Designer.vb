@@ -64,9 +64,9 @@ Namespace My
     Friend Module MySettingsProperty
         
         <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")>  _
-        Friend ReadOnly Property Settings() As Global.物理平均与偏差速算.My.MySettings
+        Friend ReadOnly Property Settings() As Global.懒人计算器.My.MySettings
             Get
-                Return Global.物理平均与偏差速算.My.MySettings.Default
+                Return Global.懒人计算器.My.MySettings.Default
             End Get
         End Property
     End Module

@@ -8,10 +8,10 @@ Imports System.Runtime.InteropServices
 
 ' 查看程序集特性的值
 
-<Assembly: AssemblyTitle("物理平均与偏差速算")> 
-<Assembly: AssemblyDescription("物理平均与偏差速算")> 
+<Assembly: AssemblyTitle("懒人计算器")> 
+<Assembly: AssemblyDescription("懒人计算器")> 
 <Assembly: AssemblyCompany("NimitzDEV")> 
-<Assembly: AssemblyProduct("物理平均与偏差速算")> 
+<Assembly: AssemblyProduct("懒人计算器")> 
 <Assembly: AssemblyCopyright("Copyright ©  2014")> 
 <Assembly: AssemblyTrademark("NimitzDEV")> 
 

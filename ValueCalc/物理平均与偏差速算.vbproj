@@ -8,9 +8,9 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{F2A2C5E5-448F-4581-9816-CB4BDBCF0084}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>物理平均与偏差速算.My.MyApplication</StartupObject>
-    <RootNamespace>物理平均与偏差速算</RootNamespace>
-    <AssemblyName>物理平均与偏差速算</AssemblyName>
+    <StartupObject>懒人计算器.My.MyApplication</StartupObject>
+    <RootNamespace>懒人计算器</RootNamespace>
+    <AssemblyName>懒人计算器</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
@@ -23,7 +23,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>物理平均与偏差速算.xml</DocumentationFile>
+    <DocumentationFile>懒人计算器.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
@@ -33,7 +33,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>物理平均与偏差速算.xml</DocumentationFile>
+    <DocumentationFile>懒人计算器.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
