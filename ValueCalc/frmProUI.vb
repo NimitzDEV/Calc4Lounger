@@ -8,12 +8,9 @@
         Me.Icon = frmMain.Icon
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        WebBrowser1.Refresh()
+    Private Sub WebBrowser1_DocumentCompleted(ByVal sender As System.Object, ByVal e As System.Windows.Forms.WebBrowserDocumentCompletedEventArgs) Handles WebBrowser1.DocumentCompleted
+        WebBrowser1.Visible = True
+        ProgressBar1.Visible = False
     End Sub
 
-    Private Sub frmProUI_Resize(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Resize
-        Button1.Left = Me.Width - Button1.Width - 80
-        Button1.Top = 12
-    End Sub
 End Class
