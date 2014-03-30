@@ -29,7 +29,6 @@ Partial Class frmMain
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TrackBar1 = New System.Windows.Forms.TrackBar()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
@@ -40,11 +39,12 @@ Partial Class frmMain
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
-        CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TrackBar1 = New System.Windows.Forms.TrackBar()
         Me.StatusStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -104,16 +104,6 @@ Partial Class frmMain
         Me.Label1.TabIndex = 14
         Me.Label1.Text = "平均值"
         '
-        'TrackBar1
-        '
-        Me.TrackBar1.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.TrackBar1.LargeChange = 1
-        Me.TrackBar1.Location = New System.Drawing.Point(55, 35)
-        Me.TrackBar1.Name = "TrackBar1"
-        Me.TrackBar1.Size = New System.Drawing.Size(184, 45)
-        Me.TrackBar1.TabIndex = 18
-        Me.TrackBar1.Value = 2
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -126,7 +116,7 @@ Partial Class frmMain
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(8, 60)
+        Me.Label4.Location = New System.Drawing.Point(8, 59)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(23, 12)
         Me.Label4.TabIndex = 20
@@ -214,6 +204,17 @@ Partial Class frmMain
         Me.TextBox2.Size = New System.Drawing.Size(434, 21)
         Me.TextBox2.TabIndex = 0
         '
+        'TrackBar1
+        '
+        Me.TrackBar1.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.TrackBar1.LargeChange = 1
+        Me.TrackBar1.Location = New System.Drawing.Point(55, 35)
+        Me.TrackBar1.Minimum = -1
+        Me.TrackBar1.Name = "TrackBar1"
+        Me.TrackBar1.Size = New System.Drawing.Size(183, 45)
+        Me.TrackBar1.TabIndex = 18
+        Me.TrackBar1.Value = 2
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
@@ -229,7 +230,6 @@ Partial Class frmMain
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Main"
-        CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
@@ -237,6 +237,7 @@ Partial Class frmMain
         Me.TabPage1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -247,7 +248,6 @@ Partial Class frmMain
     Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents TrackBar1 As System.Windows.Forms.TrackBar
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
@@ -258,4 +258,5 @@ Partial Class frmMain
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents TrackBar1 As System.Windows.Forms.TrackBar
 End Class

@@ -14,6 +14,10 @@
     End Sub
 
     Private Sub TrackBar1_Scroll(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TrackBar1.Scroll
+        If TrackBar1.Value = -1 Then
+            Label4.Text = "完整"
+            Exit Sub
+        End If
         Label4.Text = TrackBar1.Value & "位"
     End Sub
     Private Function countNum(ByVal inputStr As String) As Integer
@@ -49,7 +53,9 @@
             sumUp += Val(Split(TextBox1.Text, ";")(i))
         Next
         sumUp /= returnCounter
-        sumUp = Math.Round(sumUp, TrackBar1.Value)
+        If TrackBar1.Value <> -1 Then
+            sumUp = Math.Round(sumUp, TrackBar1.Value)
+        End If
         Label1.Text = "平均值：" & sumUp
         '求偏差值
         v2 = sumUp
@@ -58,7 +64,9 @@
             sumUp += Math.Abs(Val(Split(TextBox1.Text, ";")(i)) - v2)
         Next
         sumUp /= returnCounter
-        sumUp = Math.Round(sumUp, TrackBar1.Value)
+        If TrackBar1.Value <> -1 Then
+            sumUp = Math.Round(sumUp, TrackBar1.Value)
+        End If
         v3 = sumUp
         '数据显示排版
         Label2.Text = "偏差值：" & sumUp
