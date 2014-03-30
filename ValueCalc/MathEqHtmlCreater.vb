@@ -35,7 +35,7 @@ Module MathEqHtmlCreater
         Print(1, "求平均偏差:")
         Print(1, "<br>")
         Print(1, "<br>")
-        Print(1, serverStr & "\Delta\overline{a}" & "=\sum_{i=" & returnCounter & "}^{\overline{a}}" & "\frac{1}{" & returnCounter & "}\left [{a}_{i}-\overline{a}" & "\right ]"" />")
+        Print(1, serverStr & "\Delta\overline{a}" & "=\sum_{i=" & returnCounter & "}^{\overline{a}}" & "\frac{1}{" & returnCounter & "}\left [|{a}_{i}-\overline{a}" & "\right |]"" />")
         Print(1, "<br>")
         Print(1, "<br>")
         tmpStr = "\left ["
