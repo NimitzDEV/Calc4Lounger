@@ -37,18 +37,21 @@ Partial Class frmMain
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TrackBar1 = New System.Windows.Forms.TrackBar()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TrackBar2 = New System.Windows.Forms.TrackBar()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
         Me.StatusStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage2.SuspendLayout()
         CType(Me.TrackBar2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -158,7 +161,7 @@ Partial Class frmMain
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 23
-        Me.Button1.Text = "计算"
+        Me.Button1.Text = "计算结果"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'TabControl1
@@ -191,8 +194,22 @@ Partial Class frmMain
         Me.TabPage1.Text = "物理平均与偏差"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'TrackBar1
+        '
+        Me.TrackBar1.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.TrackBar1.LargeChange = 1
+        Me.TrackBar1.Location = New System.Drawing.Point(55, 35)
+        Me.TrackBar1.Minimum = -1
+        Me.TrackBar1.Name = "TrackBar1"
+        Me.TrackBar1.Size = New System.Drawing.Size(186, 45)
+        Me.TrackBar1.TabIndex = 18
+        Me.TrackBar1.Value = 2
+        '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.LinkLabel2)
+        Me.TabPage2.Controls.Add(Me.TextBox3)
+        Me.TabPage2.Controls.Add(Me.Label7)
         Me.TabPage2.Controls.Add(Me.Label5)
         Me.TabPage2.Controls.Add(Me.Label6)
         Me.TabPage2.Controls.Add(Me.TrackBar2)
@@ -205,33 +222,6 @@ Partial Class frmMain
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "算式运算"
         Me.TabPage2.UseVisualStyleBackColor = True
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(6, 6)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(434, 21)
-        Me.TextBox2.TabIndex = 0
-        '
-        'TrackBar1
-        '
-        Me.TrackBar1.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.TrackBar1.LargeChange = 1
-        Me.TrackBar1.Location = New System.Drawing.Point(55, 35)
-        Me.TrackBar1.Minimum = -1
-        Me.TrackBar1.Name = "TrackBar1"
-        Me.TrackBar1.Size = New System.Drawing.Size(183, 45)
-        Me.TrackBar1.TabIndex = 18
-        Me.TrackBar1.Value = 2
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(365, 33)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "运算式子"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'Label5
         '
@@ -262,6 +252,49 @@ Partial Class frmMain
         Me.TrackBar2.TabIndex = 21
         Me.TrackBar2.Value = 2
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(365, 33)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 1
+        Me.Button2.Text = "运算式子"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(6, 6)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(434, 21)
+        Me.TextBox2.TabIndex = 0
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(8, 78)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(53, 12)
+        Me.Label7.TabIndex = 24
+        Me.Label7.Text = "运算结果"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(8, 93)
+        Me.TextBox3.Multiline = True
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(432, 50)
+        Me.TextBox3.TabIndex = 25
+        '
+        'LinkLabel2
+        '
+        Me.LinkLabel2.AutoSize = True
+        Me.LinkLabel2.Location = New System.Drawing.Point(330, 38)
+        Me.LinkLabel2.Name = "LinkLabel2"
+        Me.LinkLabel2.Size = New System.Drawing.Size(29, 12)
+        Me.LinkLabel2.TabIndex = 26
+        Me.LinkLabel2.TabStop = True
+        Me.LinkLabel2.Text = "清除"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
@@ -282,9 +315,9 @@ Partial Class frmMain
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
+        CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TrackBar2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -311,4 +344,7 @@ Partial Class frmMain
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents TrackBar2 As System.Windows.Forms.TrackBar
     Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents LinkLabel2 As System.Windows.Forms.LinkLabel
+    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents Label7 As System.Windows.Forms.Label
 End Class

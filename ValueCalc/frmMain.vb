@@ -115,4 +115,17 @@
         TextBox1.SelectionStart = Len(TextBox1.Text)
         resetData()
     End Sub
+
+    Private Sub TrackBar2_Scroll(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TrackBar2.Scroll
+        If TrackBar2.Value = -1 Then
+            Label5.Text = "完整"
+            Exit Sub
+        End If
+        Label5.Text = TrackBar2.Value & "位"
+    End Sub
+
+    Private Sub LinkLabel2_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
+        TextBox2.Text = ""
+        TextBox3.Text = ""
+    End Sub
 End Class
