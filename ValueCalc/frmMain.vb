@@ -69,14 +69,19 @@
         If CheckBox1.Checked = True Then showProUI()
     End Sub
 
-    Private Sub LinkLabel5_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel5.LinkClicked
-        TextBox1.Text = ""
+    Private Sub resetData()
         Label1.Text = "平均值"
         Label2.Text = "偏差值"
         LinkLabel7.Visible = False
         Label2.Left = Label1.Left + Label2.Width + 5
     End Sub
+
+    Private Sub LinkLabel5_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel5.LinkClicked
+        TextBox1.Text = ""
+        resetData()
+    End Sub
     Private Sub showProUI()
+        If frmProUI.ToString <> "" Then frmProUI.Close()
         If IfOnline() = True Then
             outputHtmlFile()
             frmProUI.Show()
@@ -100,5 +105,6 @@
         TextBox1.Text = TextBox1.Text.Replace("；", ";")
         TextBox1.Text = TextBox1.Text.Replace("。", ".")
         TextBox1.SelectionStart = Len(TextBox1.Text)
+        resetData()
     End Sub
 End Class
