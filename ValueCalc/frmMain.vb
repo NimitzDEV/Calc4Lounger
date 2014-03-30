@@ -33,10 +33,6 @@
             MsgBox("没有任何数据输入哦，不能进行计算。。")
             Exit Sub
         End If
-        '数据纠正
-        TextBox1.Text = TextBox1.Text.Trim()
-        TextBox1.Text = TextBox1.Text.Replace("；", ";")
-        TextBox1.Text = TextBox1.Text.Replace("。", ".")
         '为了防止数据末尾出现；而不添加数据造成平均值计算错误
         '在这里添加判断，截取最后一位，如果为分号则去掉
         If Microsoft.VisualBasic.Right(TextBox1.Text, 1) = ";" Then
@@ -85,7 +81,7 @@
             outputHtmlFile()
             frmProUI.Show()
         Else
-            MsgBox("当前没有网络连接，无法显示演算过程。。" & vbCrLf & vbCrLf & "（演算过程显示需要依赖在线mimetex服务）")
+            MsgBox("当前没有网络连接，无法显示演算过程。。" & vbCrLf & vbCrLf & "（演算过程显示需要依赖在线LaTeX服务）")
             Exit Sub
         End If
     End Sub
@@ -96,5 +92,13 @@
 
     Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
         frmAbout.Show(Me)
+    End Sub
+
+    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox1.TextChanged
+        '数据纠正
+        TextBox1.Text = TextBox1.Text.Trim()
+        TextBox1.Text = TextBox1.Text.Replace("；", ";")
+        TextBox1.Text = TextBox1.Text.Replace("。", ".")
+        TextBox1.SelectionStart = Len(TextBox1.Text)
     End Sub
 End Class
