@@ -52,7 +52,6 @@
     <ApplicationIcon>20140329041501994_easyicon_net_96.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevComponents.DotNetBar2, Version=11.4.0.6, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
@@ -69,16 +68,22 @@
     <Import Include="System.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="frmAbout.Designer.vb">
+      <DependentUpon>frmAbout.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="frmAbout.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.vb">
-      <DependentUpon>Form2.vb</DependentUpon>
+    <Compile Include="frmProUI.Designer.vb">
+      <DependentUpon>frmProUI.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form2.vb">
+    <Compile Include="frmProUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MathEqHtmlCreater.vb" />
@@ -99,11 +104,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.vb</DependentUpon>
+    <EmbeddedResource Include="frmProUI.resx">
+      <DependentUpon>frmProUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

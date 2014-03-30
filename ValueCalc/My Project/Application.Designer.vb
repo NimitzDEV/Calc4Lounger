@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.物理平均与偏差速算.Form1
+            Me.MainForm = Global.物理平均与偏差速算.frmMain
         End Sub
     End Class
 End Namespace

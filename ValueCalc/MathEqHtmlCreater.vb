@@ -21,7 +21,7 @@ Module MathEqHtmlCreater
         Print(1, "<br>")
         tmpStr = "\left ("
         For i = 0 To returnCounter - 1
-            tmpStr &= Split(Form1.TextBox1.Text, ";")(i) & "+"
+            tmpStr &= Split(frmMain.TextBox1.Text, ";")(i) & "+"
         Next
         tmpStr = Microsoft.VisualBasic.Left(tmpStr, Len(tmpStr) - 1)
         tmpStr &= "\right )"
@@ -40,7 +40,7 @@ Module MathEqHtmlCreater
         Print(1, "<br>")
         tmpStr = "\left ["
         For i = 0 To returnCounter - 1
-            tmpStr &= "\left |" & Split(Form1.TextBox1.Text, ";")(i) & "-" & v2 & "\right |" & "+"
+            tmpStr &= "\left |" & Split(frmMain.TextBox1.Text, ";")(i) & "-" & v2 & "\right |" & "+"
         Next
         tmpStr = Microsoft.VisualBasic.Left(tmpStr, Len(tmpStr) - 1)
         tmpStr &= "\right ]"
