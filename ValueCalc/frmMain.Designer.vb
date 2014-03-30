@@ -40,18 +40,23 @@ Partial Class frmMain
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TrackBar1 = New System.Windows.Forms.TrackBar()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.TrackBar2 = New System.Windows.Forms.TrackBar()
         Me.StatusStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TrackBar2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(8, 11)
+        Me.TextBox1.Location = New System.Drawing.Point(6, 6)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(431, 21)
+        Me.TextBox1.Size = New System.Drawing.Size(439, 21)
         Me.TextBox1.TabIndex = 1
         Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -149,7 +154,7 @@ Partial Class frmMain
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(364, 38)
+        Me.Button1.Location = New System.Drawing.Point(370, 35)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 23
@@ -188,6 +193,10 @@ Partial Class frmMain
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.Label5)
+        Me.TabPage2.Controls.Add(Me.Label6)
+        Me.TabPage2.Controls.Add(Me.TrackBar2)
+        Me.TabPage2.Controls.Add(Me.Button2)
         Me.TabPage2.Controls.Add(Me.TextBox2)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
@@ -215,6 +224,44 @@ Partial Class frmMain
         Me.TrackBar1.TabIndex = 18
         Me.TrackBar1.Value = 2
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(365, 33)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 1
+        Me.Button2.Text = "运算式子"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(6, 54)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(23, 12)
+        Me.Label5.TabIndex = 23
+        Me.Label5.Text = "2位"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(6, 33)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(41, 12)
+        Me.Label6.TabIndex = 22
+        Me.Label6.Text = "小数位"
+        '
+        'TrackBar2
+        '
+        Me.TrackBar2.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.TrackBar2.LargeChange = 1
+        Me.TrackBar2.Location = New System.Drawing.Point(53, 30)
+        Me.TrackBar2.Minimum = -1
+        Me.TrackBar2.Name = "TrackBar2"
+        Me.TrackBar2.Size = New System.Drawing.Size(183, 45)
+        Me.TrackBar2.TabIndex = 21
+        Me.TrackBar2.Value = 2
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
@@ -238,6 +285,7 @@ Partial Class frmMain
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TrackBar2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -259,4 +307,8 @@ Partial Class frmMain
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents TrackBar1 As System.Windows.Forms.TrackBar
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents TrackBar2 As System.Windows.Forms.TrackBar
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class
