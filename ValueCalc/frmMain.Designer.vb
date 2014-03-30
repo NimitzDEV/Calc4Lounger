@@ -148,7 +148,7 @@ Partial Class frmMain
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(10, 115)
+        Me.CheckBox1.Location = New System.Drawing.Point(6, 127)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(180, 16)
         Me.CheckBox1.TabIndex = 22
