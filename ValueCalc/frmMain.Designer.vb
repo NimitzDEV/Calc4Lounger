@@ -77,7 +77,7 @@ Partial Class frmMain
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(360, 179)
+        Me.LinkLabel1.Location = New System.Drawing.Point(340, 179)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(95, 12)
         Me.LinkLabel1.TabIndex = 13
