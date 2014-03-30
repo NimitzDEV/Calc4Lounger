@@ -11,6 +11,7 @@
     End Function
     Private Sub Form3_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.Text = Application.ProductName & " - " & Application.ProductVersion
+        Randomize()
     End Sub
 
     Private Sub TrackBar1_Scroll(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TrackBar1.Scroll
@@ -127,5 +128,14 @@
     Private Sub LinkLabel2_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
         TextBox2.Text = ""
         TextBox3.Text = ""
+    End Sub
+
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        Dim finallyExpr As String
+        finallyExpr = Calc.Calc.Compute(TextBox2.Text)
+        If TrackBar2.Value <> -1 Then
+            finallyExpr = System.Math.Round(Val(finallyExpr), TrackBar2.Value)
+        End If
+        TextBox3.Text = finallyExpr
     End Sub
 End Class
