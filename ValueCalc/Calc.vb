@@ -47,7 +47,7 @@ Module Calc
                         If pCount = 0 Then Return Compute(Mid(expression, 1, i - 1)) ^ Compute(Mid(expression, i + 1, expression.Length - i))
                 End Select
             Next
-
+            Return 0
         End Function
 
         Private Shared Function InStrCount(ByVal sourceString As String, ByVal chr As Char()) As Integer
@@ -128,6 +128,7 @@ start:      For Each op In spop
                     Next
                 Case "e", "pi"
                     Dim cst As String
+                    cst = ""
                     Dim lo As Integer = InStr(sourceString, op)
                     Select Case op
                         Case "e"
@@ -137,6 +138,7 @@ start:      For Each op In spop
                     End Select
                     Return Mid(sourceString, 1, lo - 1) & cst & Mid(sourceString, lo + op.Length, sourceString.Length - lo - op.Length + 1)
             End Select
+            Return 0
         End Function
     End Class
 End Module
