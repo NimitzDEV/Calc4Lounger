@@ -25,16 +25,16 @@ Partial Class frmAbout
         Me.LinkLabel10 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel9 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel8 = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel4 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.SuspendLayout()
         '
         'LinkLabel10
         '
         Me.LinkLabel10.AutoSize = True
-        Me.LinkLabel10.Location = New System.Drawing.Point(273, 109)
+        Me.LinkLabel10.Location = New System.Drawing.Point(256, 112)
         Me.LinkLabel10.Name = "LinkLabel10"
         Me.LinkLabel10.Size = New System.Drawing.Size(77, 12)
         Me.LinkLabel10.TabIndex = 15
@@ -44,7 +44,7 @@ Partial Class frmAbout
         'LinkLabel9
         '
         Me.LinkLabel9.AutoSize = True
-        Me.LinkLabel9.Location = New System.Drawing.Point(220, 109)
+        Me.LinkLabel9.Location = New System.Drawing.Point(203, 112)
         Me.LinkLabel9.Name = "LinkLabel9"
         Me.LinkLabel9.Size = New System.Drawing.Size(47, 12)
         Me.LinkLabel9.TabIndex = 14
@@ -54,27 +54,17 @@ Partial Class frmAbout
         'LinkLabel8
         '
         Me.LinkLabel8.AutoSize = True
-        Me.LinkLabel8.Location = New System.Drawing.Point(185, 109)
+        Me.LinkLabel8.Location = New System.Drawing.Point(168, 112)
         Me.LinkLabel8.Name = "LinkLabel8"
         Me.LinkLabel8.Size = New System.Drawing.Size(29, 12)
         Me.LinkLabel8.TabIndex = 13
         Me.LinkLabel8.TabStop = True
         Me.LinkLabel8.Text = "知乎"
         '
-        'LinkLabel4
-        '
-        Me.LinkLabel4.AutoSize = True
-        Me.LinkLabel4.Location = New System.Drawing.Point(389, 138)
-        Me.LinkLabel4.Name = "LinkLabel4"
-        Me.LinkLabel4.Size = New System.Drawing.Size(29, 12)
-        Me.LinkLabel4.TabIndex = 11
-        Me.LinkLabel4.TabStop = True
-        Me.LinkLabel4.Text = "关闭"
-        '
         'LinkLabel3
         '
         Me.LinkLabel3.AutoSize = True
-        Me.LinkLabel3.Location = New System.Drawing.Point(126, 109)
+        Me.LinkLabel3.Location = New System.Drawing.Point(109, 112)
         Me.LinkLabel3.Name = "LinkLabel3"
         Me.LinkLabel3.Size = New System.Drawing.Size(53, 12)
         Me.LinkLabel3.TabIndex = 10
@@ -84,7 +74,7 @@ Partial Class frmAbout
         'LinkLabel2
         '
         Me.LinkLabel2.AutoSize = True
-        Me.LinkLabel2.Location = New System.Drawing.Point(67, 109)
+        Me.LinkLabel2.Location = New System.Drawing.Point(50, 112)
         Me.LinkLabel2.Name = "LinkLabel2"
         Me.LinkLabel2.Size = New System.Drawing.Size(53, 12)
         Me.LinkLabel2.TabIndex = 9
@@ -96,11 +86,21 @@ Partial Class frmAbout
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("微软雅黑", 42.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(44, 21)
+        Me.Label1.Location = New System.Drawing.Point(44, 26)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(336, 75)
         Me.Label1.TabIndex = 16
         Me.Label1.Text = "NimitzDEV"
+        '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.Location = New System.Drawing.Point(339, 112)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(41, 12)
+        Me.LinkLabel1.TabIndex = 17
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "源代码"
         '
         'frmAbout
         '
@@ -108,11 +108,11 @@ Partial Class frmAbout
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(430, 162)
         Me.ControlBox = False
+        Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.LinkLabel10)
         Me.Controls.Add(Me.LinkLabel9)
         Me.Controls.Add(Me.LinkLabel8)
-        Me.Controls.Add(Me.LinkLabel4)
         Me.Controls.Add(Me.LinkLabel3)
         Me.Controls.Add(Me.LinkLabel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -126,8 +126,8 @@ Partial Class frmAbout
     Friend WithEvents LinkLabel10 As System.Windows.Forms.LinkLabel
     Friend WithEvents LinkLabel9 As System.Windows.Forms.LinkLabel
     Friend WithEvents LinkLabel8 As System.Windows.Forms.LinkLabel
-    Friend WithEvents LinkLabel4 As System.Windows.Forms.LinkLabel
     Friend WithEvents LinkLabel3 As System.Windows.Forms.LinkLabel
     Friend WithEvents LinkLabel2 As System.Windows.Forms.LinkLabel
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
 End Class

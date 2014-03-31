@@ -30,7 +30,7 @@ Public Class frmAbout
         Process.Start("https://me.alipay.com/nimitzdev")
     End Sub
 
-    Private Sub LinkLabel4_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel4.LinkClicked
+    Private Sub frmAbout_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Click
         Me.Close()
     End Sub
 
@@ -48,5 +48,9 @@ Public Class frmAbout
         '如果设置指定区域则输入0以上的数字
         Dim hwnd As IntPtr = Me.Handle
         Dim result As Integer = DwmExtendFrameIntoClientArea(hwnd, margins)
+    End Sub
+
+    Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        Process.Start("https://github.com/nimitzdev/calc4lounger")
     End Sub
 End Class
