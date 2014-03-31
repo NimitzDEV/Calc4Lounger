@@ -236,17 +236,17 @@ Partial Class frmMain
         'TextBox3
         '
         Me.TextBox3.Font = New System.Drawing.Font("宋体", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(8, 93)
-        Me.TextBox3.Multiline = True
+        Me.TextBox3.Location = New System.Drawing.Point(8, 114)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(432, 50)
+        Me.TextBox3.Size = New System.Drawing.Size(432, 29)
         Me.TextBox3.TabIndex = 25
+        Me.TextBox3.Text = "0"
         Me.TextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(8, 78)
+        Me.Label7.Location = New System.Drawing.Point(8, 99)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(53, 12)
         Me.Label7.TabIndex = 24
