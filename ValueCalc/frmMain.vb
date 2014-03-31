@@ -142,4 +142,18 @@
     Private Sub LinkLabel3_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel3.LinkClicked
         frmHelp.Show(Me)
     End Sub
+
+    Private Sub TextBox2_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox2.TextChanged
+        TextBox2.Text = TextBox2.Text.Replace("[", "(")
+        TextBox2.Text = TextBox2.Text.Replace("]", ")")
+        TextBox2.Text = TextBox2.Text.Replace("（", "(")
+        TextBox2.Text = TextBox2.Text.Replace("）", ")")
+        TextBox2.Text = TextBox2.Text.Replace("【", "(")
+        TextBox2.Text = TextBox2.Text.Replace("】", ")")
+        TextBox2.Text = TextBox2.Text.Replace("{", "(")
+        TextBox2.Text = TextBox2.Text.Replace("}", ")")
+        TextBox2.Text = TextBox2.Text.Replace("。", ".")
+        TextBox2.Text = TextBox2.Text.Replace("、", "/")
+        TextBox2.SelectionStart = Len(TextBox2.Text)
+    End Sub
 End Class
