@@ -39,14 +39,14 @@ Partial Class frmMain
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TrackBar1 = New System.Windows.Forms.TrackBar()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TrackBar2 = New System.Windows.Forms.TrackBar()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
         Me.StatusStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -87,12 +87,12 @@ Partial Class frmMain
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(360, 179)
+        Me.LinkLabel1.Location = New System.Drawing.Point(426, 179)
         Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(95, 12)
+        Me.LinkLabel1.Size = New System.Drawing.Size(29, 12)
         Me.LinkLabel1.TabIndex = 13
         Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "使用说明 / 关于"
+        Me.LinkLabel1.Text = "关于"
         '
         'Label2
         '
@@ -223,6 +223,35 @@ Partial Class frmMain
         Me.TabPage2.Text = "算式运算"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'LinkLabel2
+        '
+        Me.LinkLabel2.AutoSize = True
+        Me.LinkLabel2.Location = New System.Drawing.Point(330, 38)
+        Me.LinkLabel2.Name = "LinkLabel2"
+        Me.LinkLabel2.Size = New System.Drawing.Size(29, 12)
+        Me.LinkLabel2.TabIndex = 26
+        Me.LinkLabel2.TabStop = True
+        Me.LinkLabel2.Text = "清除"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Font = New System.Drawing.Font("宋体", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.TextBox3.Location = New System.Drawing.Point(8, 93)
+        Me.TextBox3.Multiline = True
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(432, 50)
+        Me.TextBox3.TabIndex = 25
+        Me.TextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(8, 78)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(53, 12)
+        Me.Label7.TabIndex = 24
+        Me.Label7.Text = "运算结果"
+        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -268,35 +297,6 @@ Partial Class frmMain
         Me.TextBox2.Size = New System.Drawing.Size(434, 21)
         Me.TextBox2.TabIndex = 0
         Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(8, 78)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(53, 12)
-        Me.Label7.TabIndex = 24
-        Me.Label7.Text = "运算结果"
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Font = New System.Drawing.Font("宋体", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(8, 93)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(432, 50)
-        Me.TextBox3.TabIndex = 25
-        Me.TextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'LinkLabel2
-        '
-        Me.LinkLabel2.AutoSize = True
-        Me.LinkLabel2.Location = New System.Drawing.Point(330, 38)
-        Me.LinkLabel2.Name = "LinkLabel2"
-        Me.LinkLabel2.Size = New System.Drawing.Size(29, 12)
-        Me.LinkLabel2.TabIndex = 26
-        Me.LinkLabel2.TabStop = True
-        Me.LinkLabel2.Text = "清除"
         '
         'frmMain
         '
