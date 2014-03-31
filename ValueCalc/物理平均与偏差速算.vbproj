@@ -79,6 +79,12 @@
     <Compile Include="frmAbout.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmHelp.Designer.vb">
+      <DependentUpon>frmHelp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmHelp.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmProUI.Designer.vb">
       <DependentUpon>frmProUI.vb</DependentUpon>
     </Compile>
@@ -111,6 +117,9 @@
   <ItemGroup>
     <EmbeddedResource Include="frmAbout.resx">
       <DependentUpon>frmAbout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHelp.resx">
+      <DependentUpon>frmHelp.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProUI.resx">
       <DependentUpon>frmProUI.vb</DependentUpon>

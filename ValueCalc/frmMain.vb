@@ -138,4 +138,8 @@
         End If
         TextBox3.Text = finallyExpr
     End Sub
+
+    Private Sub LinkLabel3_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel3.LinkClicked
+        frmHelp.Show(Me)
+    End Sub
 End Class

@@ -47,6 +47,7 @@ Partial Class frmMain
         Me.TrackBar2 = New System.Windows.Forms.TrackBar()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
         Me.StatusStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -226,7 +227,7 @@ Partial Class frmMain
         'LinkLabel2
         '
         Me.LinkLabel2.AutoSize = True
-        Me.LinkLabel2.Location = New System.Drawing.Point(330, 38)
+        Me.LinkLabel2.Location = New System.Drawing.Point(335, 38)
         Me.LinkLabel2.Name = "LinkLabel2"
         Me.LinkLabel2.Size = New System.Drawing.Size(29, 12)
         Me.LinkLabel2.TabIndex = 26
@@ -283,7 +284,7 @@ Partial Class frmMain
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(365, 33)
+        Me.Button2.Location = New System.Drawing.Point(370, 33)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 1
@@ -294,9 +295,19 @@ Partial Class frmMain
         '
         Me.TextBox2.Location = New System.Drawing.Point(6, 6)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(434, 21)
+        Me.TextBox2.Size = New System.Drawing.Size(439, 21)
         Me.TextBox2.TabIndex = 0
         Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'LinkLabel3
+        '
+        Me.LinkLabel3.AutoSize = True
+        Me.LinkLabel3.Location = New System.Drawing.Point(367, 179)
+        Me.LinkLabel3.Name = "LinkLabel3"
+        Me.LinkLabel3.Size = New System.Drawing.Size(53, 12)
+        Me.LinkLabel3.TabIndex = 25
+        Me.LinkLabel3.TabStop = True
+        Me.LinkLabel3.Text = "使用帮助"
         '
         'frmMain
         '
@@ -304,6 +315,7 @@ Partial Class frmMain
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(456, 193)
+        Me.Controls.Add(Me.LinkLabel3)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.StatusStrip1)
@@ -350,4 +362,5 @@ Partial Class frmMain
     Friend WithEvents LinkLabel2 As System.Windows.Forms.LinkLabel
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents LinkLabel3 As System.Windows.Forms.LinkLabel
 End Class
