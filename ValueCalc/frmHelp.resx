@@ -125,8 +125,7 @@
 /   除法符号
 \   整除符号
 ^  开方符号
-sqrt  开根号
-abs 绝对值
+
 
 数据：
 e 自然对数的底
@@ -134,6 +133,8 @@ pi 圆周率 （本程序取 3.1415926535897931）
 rnd 由电脑生成一个伪随机数
 
 函数：
+sqrt  开根号
+abs 绝对值
 asin arcsin
 acos arccos
 atan arctan
