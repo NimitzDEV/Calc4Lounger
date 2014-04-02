@@ -124,12 +124,17 @@
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
-        Dim finallyExpr As String
-        finallyExpr = Calc.Calc.Compute(TextBox2.Text)
-        If TrackBar2.Value <> -1 Then
-            finallyExpr = System.Math.Round(Val(finallyExpr), TrackBar2.Value)
-        End If
-        TextBox3.Text = finallyExpr
+        Try
+            Dim finallyExpr As String
+            finallyExpr = Calc.Calc.Compute(TextBox2.Text)
+            If TrackBar2.Value <> -1 Then
+                finallyExpr = System.Math.Round(Val(finallyExpr), TrackBar2.Value)
+            End If
+            TextBox3.Text = finallyExpr
+        Catch ex As Exception
+            Debug.Print(ex.Message)
+            TextBox3.Text = "算式异常"
+        End Try
     End Sub
 
     Private Sub LinkLabel3_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel3.LinkClicked
