@@ -2,6 +2,7 @@
     Dim sumUp As Double
     Dim dividerCounter As Integer
     Dim divStr As String
+    Dim storeOrigPosition As Integer
     '引入函数 用于网络连接的检查
     Private Declare Function InternetCheckConnection Lib "wininet.dll" Alias "InternetCheckConnectionA" (ByVal lpszUrl As String, ByVal dwFlags As Integer, ByVal dwReserved As Integer) As Integer
     '检测网络是否连接，是否可以访问CGI服务器
@@ -108,14 +109,6 @@
         frmAbout.Show(Me)
     End Sub
 
-    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox1.TextChanged
-        '数据纠正
-        TextBox1.Text = TextBox1.Text.Trim()
-        TextBox1.Text = TextBox1.Text.Replace("；", ";")
-        TextBox1.Text = TextBox1.Text.Replace("。", ".")
-        TextBox1.SelectionStart = Len(TextBox1.Text)
-        resetData()
-    End Sub
 
     Private Sub TrackBar2_Scroll(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TrackBar2.Scroll
         If TrackBar2.Value = -1 Then
@@ -143,17 +136,21 @@
         frmHelp.Show(Me)
     End Sub
 
-    Private Sub TextBox2_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox2.TextChanged
-        TextBox2.Text = TextBox2.Text.Replace("[", "(")
-        TextBox2.Text = TextBox2.Text.Replace("]", ")")
-        TextBox2.Text = TextBox2.Text.Replace("（", "(")
-        TextBox2.Text = TextBox2.Text.Replace("）", ")")
-        TextBox2.Text = TextBox2.Text.Replace("【", "(")
-        TextBox2.Text = TextBox2.Text.Replace("】", ")")
-        TextBox2.Text = TextBox2.Text.Replace("{", "(")
-        TextBox2.Text = TextBox2.Text.Replace("}", ")")
-        TextBox2.Text = TextBox2.Text.Replace("。", ".")
-        TextBox2.Text = TextBox2.Text.Replace("、", "/")
-        TextBox2.SelectionStart = Len(TextBox2.Text)
+    Private Sub TextBox2_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox2.KeyPress
+        If e.KeyChar = "[" Then e.KeyChar = "("
+        If e.KeyChar = "]" Then e.KeyChar = ")"
+        If e.KeyChar = "（" Then e.KeyChar = "("
+        If e.KeyChar = "）" Then e.KeyChar = ")"
+        If e.KeyChar = "】" Then e.KeyChar = ")"
+        If e.KeyChar = "【" Then e.KeyChar = "（"
+        If e.KeyChar = "{" Then e.KeyChar = "("
+        If e.KeyChar = "}" Then e.KeyChar = ")"
+        If e.KeyChar = "。" Then e.KeyChar = "."
+        If e.KeyChar = "、" Then e.KeyChar = "/"
+    End Sub
+
+    Private Sub TextBox1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox1.KeyPress
+        If e.KeyChar = "；" Then e.KeyChar = ";"
+        If e.KeyChar = "。" Then e.KeyChar = "."
     End Sub
 End Class
