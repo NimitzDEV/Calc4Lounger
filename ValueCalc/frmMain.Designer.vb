@@ -48,6 +48,8 @@ Partial Class frmMain
         Me.Button2 = New System.Windows.Forms.Button()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
+        Me.ToolStripDropDownButton1 = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.触摸板ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -133,7 +135,7 @@ Partial Class frmMain
         '
         'StatusStrip1
         '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1})
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.ToolStripDropDownButton1})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 171)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(456, 22)
@@ -192,7 +194,7 @@ Partial Class frmMain
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(451, 149)
         Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "物理平均与偏差"
+        Me.TabPage1.Text = "平均与偏差"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
         'TrackBar1
@@ -309,6 +311,22 @@ Partial Class frmMain
         Me.LinkLabel3.TabStop = True
         Me.LinkLabel3.Text = "使用帮助"
         '
+        'ToolStripDropDownButton1
+        '
+        Me.ToolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.触摸板ToolStripMenuItem})
+        Me.ToolStripDropDownButton1.Image = CType(resources.GetObject("ToolStripDropDownButton1.Image"), System.Drawing.Image)
+        Me.ToolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripDropDownButton1.Name = "ToolStripDropDownButton1"
+        Me.ToolStripDropDownButton1.Size = New System.Drawing.Size(29, 20)
+        Me.ToolStripDropDownButton1.Text = "ToolStripDropDownButton1"
+        '
+        '触摸板ToolStripMenuItem
+        '
+        Me.触摸板ToolStripMenuItem.Name = "触摸板ToolStripMenuItem"
+        Me.触摸板ToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.触摸板ToolStripMenuItem.Text = "触摸板"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
@@ -363,4 +381,6 @@ Partial Class frmMain
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents LinkLabel3 As System.Windows.Forms.LinkLabel
+    Friend WithEvents ToolStripDropDownButton1 As System.Windows.Forms.ToolStripDropDownButton
+    Friend WithEvents 触摸板ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

@@ -173,4 +173,13 @@
         If e.KeyChar = "。" Then e.KeyChar = "."
         If e.KeyChar = "+" Then e.KeyChar = ";"
     End Sub
+
+    Private Sub 触摸板ToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles 触摸板ToolStripMenuItem.Click
+        frmTouch.Show(Me)
+        Me.Top = (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Height - (Me.Height + frmTouch.Height)) / 2
+    End Sub
+
+    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox1.TextChanged
+        Debug.Print(TextBox1.SelectionStart)
+    End Sub
 End Class
