@@ -141,6 +141,12 @@
         frmHelp.Show(Me)
     End Sub
 
+    Private Sub TextBox2_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextBox2.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Button2.PerformClick()
+        End If
+    End Sub
+
     Private Sub TextBox2_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox2.KeyPress
         If e.KeyChar = "[" Then e.KeyChar = "("
         If e.KeyChar = "]" Then e.KeyChar = ")"
@@ -154,9 +160,19 @@
         If e.KeyChar = "、" Then e.KeyChar = "/"
     End Sub
 
+    Private Sub TextBox1_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextBox1.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Button1.PerformClick()
+        End If
+    End Sub
+
+
+
     Private Sub TextBox1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox1.KeyPress
         If e.KeyChar = "；" Then e.KeyChar = ";"
         If e.KeyChar = "。" Then e.KeyChar = "."
         If e.KeyChar = "+" Then e.KeyChar = ";"
     End Sub
+
+
 End Class
