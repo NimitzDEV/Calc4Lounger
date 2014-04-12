@@ -173,6 +173,4 @@
         If e.KeyChar = "。" Then e.KeyChar = "."
         If e.KeyChar = "+" Then e.KeyChar = ";"
     End Sub
-
-
 End Class

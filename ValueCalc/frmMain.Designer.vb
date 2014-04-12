@@ -61,7 +61,7 @@ Partial Class frmMain
         Me.TextBox1.Location = New System.Drawing.Point(6, 6)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(439, 21)
-        Me.TextBox1.TabIndex = 1
+        Me.TextBox1.TabIndex = 0
         Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'LinkLabel7
