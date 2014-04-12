@@ -157,5 +157,6 @@
     Private Sub TextBox1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox1.KeyPress
         If e.KeyChar = "；" Then e.KeyChar = ";"
         If e.KeyChar = "。" Then e.KeyChar = "."
+        If e.KeyChar = "+" Then e.KeyChar = ";"
     End Sub
 End Class
