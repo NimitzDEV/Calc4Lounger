@@ -104,9 +104,7 @@ Partial Class frmHelp
         Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.TextBox1.Size = New System.Drawing.Size(462, 255)
         Me.TextBox1.TabIndex = 0
-        Me.TextBox1.Text = "分别输入要计算的数据：" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "比如：要计算 35.123 35.133 35.332 " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "则在数据输入框中输入" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "35.123;35.133;35.332" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "-要" & _
-            "点：每一个数据之间使用；（分号）隔开" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "-不区分中/英文状态，输入时程序会自动更改" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "点击""计算""按钮即可得出结果" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "演算过程功能需要网络连接才能够使用" & _
-            "哦！"
+        Me.TextBox1.Text = resources.GetString("TextBox1.Text")
         '
         'TabPage4
         '
