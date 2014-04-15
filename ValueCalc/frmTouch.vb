@@ -6,11 +6,11 @@
     End Sub
     Private Function getSelectedTab() As System.Windows.Forms.TextBox
         If frmMain.TabControl1.SelectedIndex = 0 Then
-            Return frmMain.TextBox1
+            Return frmMain.txtInputData
         ElseIf frmMain.TabControl1.SelectedIndex = 1 Then
-            Return frmMain.TextBox2
+            Return frmMain.txtInputMath
         End If
-        Return frmMain.TextBox1
+        Return frmMain.txtInputData
     End Function
     Private Sub sendData(ByVal sendChar As String)
         targetControl = getSelectedTab()
@@ -108,9 +108,9 @@
 
     Private Sub Button12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button12.Click
         If frmMain.TabControl1.SelectedIndex = 0 Then
-            frmMain.Button1.PerformClick()
+            frmMain.btnCalcPhy.PerformClick()
         ElseIf frmMain.TabControl1.SelectedIndex = 1 Then
-            frmMain.Button2.PerformClick()
+            frmMain.btnCalcMath.PerformClick()
         End If
     End Sub
 End Class

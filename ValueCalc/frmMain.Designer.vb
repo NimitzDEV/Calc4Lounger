@@ -23,10 +23,10 @@ Partial Class frmMain
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.LinkLabel7 = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel5 = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.txtInputData = New System.Windows.Forms.TextBox()
+        Me.llbProUI = New System.Windows.Forms.LinkLabel()
+        Me.llbClear1 = New System.Windows.Forms.LinkLabel()
+        Me.llbAbout = New System.Windows.Forms.LinkLabel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -34,22 +34,22 @@ Partial Class frmMain
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripDropDownButton1 = New System.Windows.Forms.ToolStripDropDownButton()
-        Me.触摸板ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.tsmiTouchPanel = New System.Windows.Forms.ToolStripMenuItem()
+        Me.cbAutoShowProUI = New System.Windows.Forms.CheckBox()
+        Me.btnCalcPhy = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.TrackBar1 = New System.Windows.Forms.TrackBar()
+        Me.tbDigi1 = New System.Windows.Forms.TrackBar()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.llbClear2 = New System.Windows.Forms.LinkLabel()
+        Me.tbResult = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TrackBar2 = New System.Windows.Forms.TrackBar()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
+        Me.tbDigi2 = New System.Windows.Forms.TrackBar()
+        Me.btnCalcMath = New System.Windows.Forms.Button()
+        Me.txtInputMath = New System.Windows.Forms.TextBox()
+        Me.llbHelp = New System.Windows.Forms.LinkLabel()
         Me.btnSqrt = New System.Windows.Forms.Button()
         Me.btnAbs = New System.Windows.Forms.Button()
         Me.btnE = New System.Windows.Forms.Button()
@@ -58,49 +58,49 @@ Partial Class frmMain
         Me.StatusStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
-        CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.tbDigi1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
-        CType(Me.TrackBar2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.tbDigi2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'txtInputData
         '
-        Me.TextBox1.Location = New System.Drawing.Point(6, 6)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(439, 21)
-        Me.TextBox1.TabIndex = 0
-        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.txtInputData.Location = New System.Drawing.Point(6, 6)
+        Me.txtInputData.Name = "txtInputData"
+        Me.txtInputData.Size = New System.Drawing.Size(439, 21)
+        Me.txtInputData.TabIndex = 0
+        Me.txtInputData.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
-        'LinkLabel7
+        'llbProUI
         '
-        Me.LinkLabel7.AutoSize = True
-        Me.LinkLabel7.Location = New System.Drawing.Point(100, 92)
-        Me.LinkLabel7.Name = "LinkLabel7"
-        Me.LinkLabel7.Size = New System.Drawing.Size(53, 12)
-        Me.LinkLabel7.TabIndex = 17
-        Me.LinkLabel7.TabStop = True
-        Me.LinkLabel7.Text = "演算过程"
-        Me.LinkLabel7.Visible = False
+        Me.llbProUI.AutoSize = True
+        Me.llbProUI.Location = New System.Drawing.Point(100, 92)
+        Me.llbProUI.Name = "llbProUI"
+        Me.llbProUI.Size = New System.Drawing.Size(53, 12)
+        Me.llbProUI.TabIndex = 17
+        Me.llbProUI.TabStop = True
+        Me.llbProUI.Text = "演算过程"
+        Me.llbProUI.Visible = False
         '
-        'LinkLabel5
+        'llbClear1
         '
-        Me.LinkLabel5.AutoSize = True
-        Me.LinkLabel5.Location = New System.Drawing.Point(329, 43)
-        Me.LinkLabel5.Name = "LinkLabel5"
-        Me.LinkLabel5.Size = New System.Drawing.Size(29, 12)
-        Me.LinkLabel5.TabIndex = 16
-        Me.LinkLabel5.TabStop = True
-        Me.LinkLabel5.Text = "清除"
+        Me.llbClear1.AutoSize = True
+        Me.llbClear1.Location = New System.Drawing.Point(329, 43)
+        Me.llbClear1.Name = "llbClear1"
+        Me.llbClear1.Size = New System.Drawing.Size(29, 12)
+        Me.llbClear1.TabIndex = 16
+        Me.llbClear1.TabStop = True
+        Me.llbClear1.Text = "清除"
         '
-        'LinkLabel1
+        'llbAbout
         '
-        Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(426, 196)
-        Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(29, 12)
-        Me.LinkLabel1.TabIndex = 13
-        Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "关于"
+        Me.llbAbout.AutoSize = True
+        Me.llbAbout.Location = New System.Drawing.Point(426, 196)
+        Me.llbAbout.Name = "llbAbout"
+        Me.llbAbout.Size = New System.Drawing.Size(29, 12)
+        Me.llbAbout.TabIndex = 13
+        Me.llbAbout.TabStop = True
+        Me.llbAbout.Text = "关于"
         '
         'Label2
         '
@@ -156,37 +156,37 @@ Partial Class frmMain
         'ToolStripDropDownButton1
         '
         Me.ToolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.触摸板ToolStripMenuItem})
+        Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiTouchPanel})
         Me.ToolStripDropDownButton1.Image = CType(resources.GetObject("ToolStripDropDownButton1.Image"), System.Drawing.Image)
         Me.ToolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripDropDownButton1.Name = "ToolStripDropDownButton1"
         Me.ToolStripDropDownButton1.Size = New System.Drawing.Size(29, 20)
         Me.ToolStripDropDownButton1.Text = "ToolStripDropDownButton1"
         '
-        '触摸板ToolStripMenuItem
+        'tsmiTouchPanel
         '
-        Me.触摸板ToolStripMenuItem.Name = "触摸板ToolStripMenuItem"
-        Me.触摸板ToolStripMenuItem.Size = New System.Drawing.Size(110, 22)
-        Me.触摸板ToolStripMenuItem.Text = "触摸板"
+        Me.tsmiTouchPanel.Name = "tsmiTouchPanel"
+        Me.tsmiTouchPanel.Size = New System.Drawing.Size(152, 22)
+        Me.tsmiTouchPanel.Text = "触摸板"
         '
-        'CheckBox1
+        'cbAutoShowProUI
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(6, 127)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(180, 16)
-        Me.CheckBox1.TabIndex = 22
-        Me.CheckBox1.Text = "点击计算后自动打开演算过程"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.cbAutoShowProUI.AutoSize = True
+        Me.cbAutoShowProUI.Location = New System.Drawing.Point(6, 127)
+        Me.cbAutoShowProUI.Name = "cbAutoShowProUI"
+        Me.cbAutoShowProUI.Size = New System.Drawing.Size(180, 16)
+        Me.cbAutoShowProUI.TabIndex = 22
+        Me.cbAutoShowProUI.Text = "点击计算后自动打开演算过程"
+        Me.cbAutoShowProUI.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnCalcPhy
         '
-        Me.Button1.Location = New System.Drawing.Point(370, 35)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 23
-        Me.Button1.Text = "计算结果"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnCalcPhy.Location = New System.Drawing.Point(370, 35)
+        Me.btnCalcPhy.Name = "btnCalcPhy"
+        Me.btnCalcPhy.Size = New System.Drawing.Size(75, 23)
+        Me.btnCalcPhy.TabIndex = 23
+        Me.btnCalcPhy.Text = "计算结果"
+        Me.btnCalcPhy.UseVisualStyleBackColor = True
         '
         'TabControl1
         '
@@ -201,15 +201,15 @@ Partial Class frmMain
         'TabPage1
         '
         Me.TabPage1.Controls.Add(Me.Label1)
-        Me.TabPage1.Controls.Add(Me.Button1)
-        Me.TabPage1.Controls.Add(Me.TextBox1)
-        Me.TabPage1.Controls.Add(Me.CheckBox1)
+        Me.TabPage1.Controls.Add(Me.btnCalcPhy)
+        Me.TabPage1.Controls.Add(Me.txtInputData)
+        Me.TabPage1.Controls.Add(Me.cbAutoShowProUI)
         Me.TabPage1.Controls.Add(Me.Label2)
         Me.TabPage1.Controls.Add(Me.Label4)
-        Me.TabPage1.Controls.Add(Me.LinkLabel5)
+        Me.TabPage1.Controls.Add(Me.llbClear1)
         Me.TabPage1.Controls.Add(Me.Label3)
-        Me.TabPage1.Controls.Add(Me.LinkLabel7)
-        Me.TabPage1.Controls.Add(Me.TrackBar1)
+        Me.TabPage1.Controls.Add(Me.llbProUI)
+        Me.TabPage1.Controls.Add(Me.tbDigi1)
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
@@ -218,16 +218,16 @@ Partial Class frmMain
         Me.TabPage1.Text = "平均与偏差"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
-        'TrackBar1
+        'tbDigi1
         '
-        Me.TrackBar1.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.TrackBar1.LargeChange = 1
-        Me.TrackBar1.Location = New System.Drawing.Point(55, 35)
-        Me.TrackBar1.Minimum = -1
-        Me.TrackBar1.Name = "TrackBar1"
-        Me.TrackBar1.Size = New System.Drawing.Size(186, 45)
-        Me.TrackBar1.TabIndex = 18
-        Me.TrackBar1.Value = 2
+        Me.tbDigi1.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.tbDigi1.LargeChange = 1
+        Me.tbDigi1.Location = New System.Drawing.Point(55, 35)
+        Me.tbDigi1.Minimum = -1
+        Me.tbDigi1.Name = "tbDigi1"
+        Me.tbDigi1.Size = New System.Drawing.Size(186, 45)
+        Me.tbDigi1.TabIndex = 18
+        Me.tbDigi1.Value = 2
         '
         'TabPage2
         '
@@ -236,14 +236,14 @@ Partial Class frmMain
         Me.TabPage2.Controls.Add(Me.btnE)
         Me.TabPage2.Controls.Add(Me.btnAbs)
         Me.TabPage2.Controls.Add(Me.btnSqrt)
-        Me.TabPage2.Controls.Add(Me.LinkLabel2)
-        Me.TabPage2.Controls.Add(Me.TextBox3)
+        Me.TabPage2.Controls.Add(Me.llbClear2)
+        Me.TabPage2.Controls.Add(Me.tbResult)
         Me.TabPage2.Controls.Add(Me.Label7)
         Me.TabPage2.Controls.Add(Me.Label5)
         Me.TabPage2.Controls.Add(Me.Label6)
-        Me.TabPage2.Controls.Add(Me.TrackBar2)
-        Me.TabPage2.Controls.Add(Me.Button2)
-        Me.TabPage2.Controls.Add(Me.TextBox2)
+        Me.TabPage2.Controls.Add(Me.tbDigi2)
+        Me.TabPage2.Controls.Add(Me.btnCalcMath)
+        Me.TabPage2.Controls.Add(Me.txtInputMath)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
@@ -252,25 +252,25 @@ Partial Class frmMain
         Me.TabPage2.Text = "算式运算"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'LinkLabel2
+        'llbClear2
         '
-        Me.LinkLabel2.AutoSize = True
-        Me.LinkLabel2.Location = New System.Drawing.Point(335, 38)
-        Me.LinkLabel2.Name = "LinkLabel2"
-        Me.LinkLabel2.Size = New System.Drawing.Size(29, 12)
-        Me.LinkLabel2.TabIndex = 26
-        Me.LinkLabel2.TabStop = True
-        Me.LinkLabel2.Text = "清除"
+        Me.llbClear2.AutoSize = True
+        Me.llbClear2.Location = New System.Drawing.Point(335, 38)
+        Me.llbClear2.Name = "llbClear2"
+        Me.llbClear2.Size = New System.Drawing.Size(29, 12)
+        Me.llbClear2.TabIndex = 26
+        Me.llbClear2.TabStop = True
+        Me.llbClear2.Text = "清除"
         '
-        'TextBox3
+        'tbResult
         '
-        Me.TextBox3.Font = New System.Drawing.Font("宋体", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(8, 123)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(432, 29)
-        Me.TextBox3.TabIndex = 25
-        Me.TextBox3.Text = "0"
-        Me.TextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.tbResult.Font = New System.Drawing.Font("宋体", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.tbResult.Location = New System.Drawing.Point(8, 123)
+        Me.tbResult.Name = "tbResult"
+        Me.tbResult.Size = New System.Drawing.Size(432, 29)
+        Me.tbResult.TabIndex = 25
+        Me.tbResult.Text = "0"
+        Me.tbResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label7
         '
@@ -299,43 +299,43 @@ Partial Class frmMain
         Me.Label6.TabIndex = 22
         Me.Label6.Text = "小数位"
         '
-        'TrackBar2
+        'tbDigi2
         '
-        Me.TrackBar2.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.TrackBar2.LargeChange = 1
-        Me.TrackBar2.Location = New System.Drawing.Point(53, 64)
-        Me.TrackBar2.Minimum = -1
-        Me.TrackBar2.Name = "TrackBar2"
-        Me.TrackBar2.Size = New System.Drawing.Size(183, 45)
-        Me.TrackBar2.TabIndex = 21
-        Me.TrackBar2.Value = 2
+        Me.tbDigi2.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.tbDigi2.LargeChange = 1
+        Me.tbDigi2.Location = New System.Drawing.Point(53, 64)
+        Me.tbDigi2.Minimum = -1
+        Me.tbDigi2.Name = "tbDigi2"
+        Me.tbDigi2.Size = New System.Drawing.Size(183, 45)
+        Me.tbDigi2.TabIndex = 21
+        Me.tbDigi2.Value = 2
         '
-        'Button2
+        'btnCalcMath
         '
-        Me.Button2.Location = New System.Drawing.Point(370, 33)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "运算式子"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnCalcMath.Location = New System.Drawing.Point(370, 33)
+        Me.btnCalcMath.Name = "btnCalcMath"
+        Me.btnCalcMath.Size = New System.Drawing.Size(75, 23)
+        Me.btnCalcMath.TabIndex = 1
+        Me.btnCalcMath.Text = "运算式子"
+        Me.btnCalcMath.UseVisualStyleBackColor = True
         '
-        'TextBox2
+        'txtInputMath
         '
-        Me.TextBox2.Location = New System.Drawing.Point(6, 6)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(439, 21)
-        Me.TextBox2.TabIndex = 0
-        Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.txtInputMath.Location = New System.Drawing.Point(6, 6)
+        Me.txtInputMath.Name = "txtInputMath"
+        Me.txtInputMath.Size = New System.Drawing.Size(439, 21)
+        Me.txtInputMath.TabIndex = 0
+        Me.txtInputMath.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
-        'LinkLabel3
+        'llbHelp
         '
-        Me.LinkLabel3.AutoSize = True
-        Me.LinkLabel3.Location = New System.Drawing.Point(367, 196)
-        Me.LinkLabel3.Name = "LinkLabel3"
-        Me.LinkLabel3.Size = New System.Drawing.Size(53, 12)
-        Me.LinkLabel3.TabIndex = 25
-        Me.LinkLabel3.TabStop = True
-        Me.LinkLabel3.Text = "使用帮助"
+        Me.llbHelp.AutoSize = True
+        Me.llbHelp.Location = New System.Drawing.Point(367, 196)
+        Me.llbHelp.Name = "llbHelp"
+        Me.llbHelp.Size = New System.Drawing.Size(53, 12)
+        Me.llbHelp.TabIndex = 25
+        Me.llbHelp.TabStop = True
+        Me.llbHelp.Text = "使用帮助"
         '
         'btnSqrt
         '
@@ -389,8 +389,8 @@ Partial Class frmMain
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(456, 208)
-        Me.Controls.Add(Me.LinkLabel3)
-        Me.Controls.Add(Me.LinkLabel1)
+        Me.Controls.Add(Me.llbHelp)
+        Me.Controls.Add(Me.llbAbout)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.StatusStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -404,41 +404,41 @@ Partial Class frmMain
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
-        CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.tbDigi1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        CType(Me.TrackBar2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.tbDigi2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents LinkLabel7 As System.Windows.Forms.LinkLabel
-    Friend WithEvents LinkLabel5 As System.Windows.Forms.LinkLabel
-    Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
+    Friend WithEvents txtInputData As System.Windows.Forms.TextBox
+    Friend WithEvents llbProUI As System.Windows.Forms.LinkLabel
+    Friend WithEvents llbClear1 As System.Windows.Forms.LinkLabel
+    Friend WithEvents llbAbout As System.Windows.Forms.LinkLabel
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
     Friend WithEvents ToolStripStatusLabel1 As System.Windows.Forms.ToolStripStatusLabel
-    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents cbAutoShowProUI As System.Windows.Forms.CheckBox
+    Friend WithEvents btnCalcPhy As System.Windows.Forms.Button
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents TrackBar1 As System.Windows.Forms.TrackBar
+    Friend WithEvents txtInputMath As System.Windows.Forms.TextBox
+    Friend WithEvents tbDigi1 As System.Windows.Forms.TrackBar
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents TrackBar2 As System.Windows.Forms.TrackBar
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents LinkLabel2 As System.Windows.Forms.LinkLabel
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents tbDigi2 As System.Windows.Forms.TrackBar
+    Friend WithEvents btnCalcMath As System.Windows.Forms.Button
+    Friend WithEvents llbClear2 As System.Windows.Forms.LinkLabel
+    Friend WithEvents tbResult As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents LinkLabel3 As System.Windows.Forms.LinkLabel
+    Friend WithEvents llbHelp As System.Windows.Forms.LinkLabel
     Friend WithEvents ToolStripDropDownButton1 As System.Windows.Forms.ToolStripDropDownButton
-    Friend WithEvents 触摸板ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents tsmiTouchPanel As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents btnAbs As System.Windows.Forms.Button
     Friend WithEvents btnSqrt As System.Windows.Forms.Button
     Friend WithEvents btnPi As System.Windows.Forms.Button

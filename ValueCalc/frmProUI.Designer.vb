@@ -23,7 +23,7 @@ Partial Class frmProUI
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
-        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
+        Me.pbWait = New System.Windows.Forms.ProgressBar()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
@@ -39,20 +39,20 @@ Partial Class frmProUI
         Me.WebBrowser1.TabIndex = 0
         Me.WebBrowser1.Visible = False
         '
-        'ProgressBar1
+        'pbWait
         '
-        Me.ProgressBar1.Location = New System.Drawing.Point(4, 39)
-        Me.ProgressBar1.MarqueeAnimationSpeed = 50
-        Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(284, 23)
-        Me.ProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee
-        Me.ProgressBar1.TabIndex = 2
+        Me.pbWait.Location = New System.Drawing.Point(4, 39)
+        Me.pbWait.MarqueeAnimationSpeed = 50
+        Me.pbWait.Name = "pbWait"
+        Me.pbWait.Size = New System.Drawing.Size(284, 23)
+        Me.pbWait.Style = System.Windows.Forms.ProgressBarStyle.Marquee
+        Me.pbWait.TabIndex = 2
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.ProgressBar1)
+        Me.Panel1.Controls.Add(Me.pbWait)
         Me.Panel1.Location = New System.Drawing.Point(137, 169)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(291, 73)
@@ -84,7 +84,7 @@ Partial Class frmProUI
 
     End Sub
     Friend WithEvents WebBrowser1 As System.Windows.Forms.WebBrowser
-    Friend WithEvents ProgressBar1 As System.Windows.Forms.ProgressBar
+    Friend WithEvents pbWait As System.Windows.Forms.ProgressBar
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class
