@@ -182,4 +182,42 @@
     Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox1.TextChanged
         Debug.Print(TextBox1.SelectionStart)
     End Sub
+
+    Private Sub quickFunctionInput(ByVal funcSign As String)
+        Dim selInput As String
+        selInput = ""
+        Select Case funcSign
+            Case "Sqrt"
+                selInput = "Sqrt()"
+            Case "Abs"
+                selInput = "Abs()"
+            Case "e"
+                selInput = "e"
+            Case "pi"
+                selInput = "pi"
+            Case "Rnd"
+                selInput = "Rnd"
+        End Select
+        TextBox2.Text &= selInput
+    End Sub
+
+    Private Sub btnSqrt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSqrt.Click
+        quickFunctionInput("Sqrt")
+    End Sub
+
+    Private Sub btnAbs_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAbs.Click
+        quickFunctionInput("Abs")
+    End Sub
+
+    Private Sub btnE_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnE.Click
+        quickFunctionInput("e")
+    End Sub
+
+    Private Sub btnPi_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPi.Click
+        quickFunctionInput("pi")
+    End Sub
+
+    Private Sub btnRnd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRnd.Click
+        quickFunctionInput("Rnd")
+    End Sub
 End Class

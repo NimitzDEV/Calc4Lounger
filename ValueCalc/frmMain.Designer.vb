@@ -33,6 +33,8 @@ Partial Class frmMain
         Me.Label4 = New System.Windows.Forms.Label()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripDropDownButton1 = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.触摸板ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
@@ -48,8 +50,11 @@ Partial Class frmMain
         Me.Button2 = New System.Windows.Forms.Button()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
-        Me.ToolStripDropDownButton1 = New System.Windows.Forms.ToolStripDropDownButton()
-        Me.触摸板ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btnSqrt = New System.Windows.Forms.Button()
+        Me.btnAbs = New System.Windows.Forms.Button()
+        Me.btnE = New System.Windows.Forms.Button()
+        Me.btnPi = New System.Windows.Forms.Button()
+        Me.btnRnd = New System.Windows.Forms.Button()
         Me.StatusStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -90,7 +95,7 @@ Partial Class frmMain
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(426, 179)
+        Me.LinkLabel1.Location = New System.Drawing.Point(426, 196)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(29, 12)
         Me.LinkLabel1.TabIndex = 13
@@ -127,7 +132,7 @@ Partial Class frmMain
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(8, 59)
+        Me.Label4.Location = New System.Drawing.Point(247, 38)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(23, 12)
         Me.Label4.TabIndex = 20
@@ -136,7 +141,7 @@ Partial Class frmMain
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.ToolStripDropDownButton1})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 171)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 186)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(456, 22)
         Me.StatusStrip1.TabIndex = 21
@@ -147,6 +152,22 @@ Partial Class frmMain
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
         Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(141, 17)
         Me.ToolStripStatusLabel1.Text = "Powered by NimitzDEV"
+        '
+        'ToolStripDropDownButton1
+        '
+        Me.ToolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.触摸板ToolStripMenuItem})
+        Me.ToolStripDropDownButton1.Image = CType(resources.GetObject("ToolStripDropDownButton1.Image"), System.Drawing.Image)
+        Me.ToolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripDropDownButton1.Name = "ToolStripDropDownButton1"
+        Me.ToolStripDropDownButton1.Size = New System.Drawing.Size(29, 20)
+        Me.ToolStripDropDownButton1.Text = "ToolStripDropDownButton1"
+        '
+        '触摸板ToolStripMenuItem
+        '
+        Me.触摸板ToolStripMenuItem.Name = "触摸板ToolStripMenuItem"
+        Me.触摸板ToolStripMenuItem.Size = New System.Drawing.Size(110, 22)
+        Me.触摸板ToolStripMenuItem.Text = "触摸板"
         '
         'CheckBox1
         '
@@ -174,7 +195,7 @@ Partial Class frmMain
         Me.TabControl1.Location = New System.Drawing.Point(0, 1)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(459, 175)
+        Me.TabControl1.Size = New System.Drawing.Size(459, 182)
         Me.TabControl1.TabIndex = 24
         '
         'TabPage1
@@ -192,7 +213,7 @@ Partial Class frmMain
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(451, 149)
+        Me.TabPage1.Size = New System.Drawing.Size(451, 156)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "平均与偏差"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -210,6 +231,11 @@ Partial Class frmMain
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.btnRnd)
+        Me.TabPage2.Controls.Add(Me.btnPi)
+        Me.TabPage2.Controls.Add(Me.btnE)
+        Me.TabPage2.Controls.Add(Me.btnAbs)
+        Me.TabPage2.Controls.Add(Me.btnSqrt)
         Me.TabPage2.Controls.Add(Me.LinkLabel2)
         Me.TabPage2.Controls.Add(Me.TextBox3)
         Me.TabPage2.Controls.Add(Me.Label7)
@@ -221,7 +247,7 @@ Partial Class frmMain
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(451, 149)
+        Me.TabPage2.Size = New System.Drawing.Size(451, 156)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "算式运算"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -239,7 +265,7 @@ Partial Class frmMain
         'TextBox3
         '
         Me.TextBox3.Font = New System.Drawing.Font("宋体", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(8, 114)
+        Me.TextBox3.Location = New System.Drawing.Point(8, 123)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(432, 29)
         Me.TextBox3.TabIndex = 25
@@ -249,7 +275,7 @@ Partial Class frmMain
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(8, 99)
+        Me.Label7.Location = New System.Drawing.Point(8, 108)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(53, 12)
         Me.Label7.TabIndex = 24
@@ -258,7 +284,7 @@ Partial Class frmMain
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(6, 54)
+        Me.Label5.Location = New System.Drawing.Point(242, 70)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(23, 12)
         Me.Label5.TabIndex = 23
@@ -267,7 +293,7 @@ Partial Class frmMain
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(6, 33)
+        Me.Label6.Location = New System.Drawing.Point(6, 70)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(41, 12)
         Me.Label6.TabIndex = 22
@@ -277,7 +303,7 @@ Partial Class frmMain
         '
         Me.TrackBar2.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.TrackBar2.LargeChange = 1
-        Me.TrackBar2.Location = New System.Drawing.Point(53, 30)
+        Me.TrackBar2.Location = New System.Drawing.Point(53, 64)
         Me.TrackBar2.Minimum = -1
         Me.TrackBar2.Name = "TrackBar2"
         Me.TrackBar2.Size = New System.Drawing.Size(183, 45)
@@ -304,35 +330,65 @@ Partial Class frmMain
         'LinkLabel3
         '
         Me.LinkLabel3.AutoSize = True
-        Me.LinkLabel3.Location = New System.Drawing.Point(367, 179)
+        Me.LinkLabel3.Location = New System.Drawing.Point(367, 196)
         Me.LinkLabel3.Name = "LinkLabel3"
         Me.LinkLabel3.Size = New System.Drawing.Size(53, 12)
         Me.LinkLabel3.TabIndex = 25
         Me.LinkLabel3.TabStop = True
         Me.LinkLabel3.Text = "使用帮助"
         '
-        'ToolStripDropDownButton1
+        'btnSqrt
         '
-        Me.ToolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.触摸板ToolStripMenuItem})
-        Me.ToolStripDropDownButton1.Image = CType(resources.GetObject("ToolStripDropDownButton1.Image"), System.Drawing.Image)
-        Me.ToolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripDropDownButton1.Name = "ToolStripDropDownButton1"
-        Me.ToolStripDropDownButton1.Size = New System.Drawing.Size(29, 20)
-        Me.ToolStripDropDownButton1.Text = "ToolStripDropDownButton1"
+        Me.btnSqrt.Location = New System.Drawing.Point(6, 33)
+        Me.btnSqrt.Name = "btnSqrt"
+        Me.btnSqrt.Size = New System.Drawing.Size(26, 23)
+        Me.btnSqrt.TabIndex = 27
+        Me.btnSqrt.Text = "√"
+        Me.btnSqrt.UseVisualStyleBackColor = True
         '
-        '触摸板ToolStripMenuItem
+        'btnAbs
         '
-        Me.触摸板ToolStripMenuItem.Name = "触摸板ToolStripMenuItem"
-        Me.触摸板ToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.触摸板ToolStripMenuItem.Text = "触摸板"
+        Me.btnAbs.Location = New System.Drawing.Point(35, 33)
+        Me.btnAbs.Name = "btnAbs"
+        Me.btnAbs.Size = New System.Drawing.Size(26, 23)
+        Me.btnAbs.TabIndex = 28
+        Me.btnAbs.Text = "||"
+        Me.btnAbs.UseVisualStyleBackColor = True
+        '
+        'btnE
+        '
+        Me.btnE.Location = New System.Drawing.Point(64, 33)
+        Me.btnE.Name = "btnE"
+        Me.btnE.Size = New System.Drawing.Size(26, 23)
+        Me.btnE.TabIndex = 29
+        Me.btnE.Text = "e"
+        Me.btnE.UseVisualStyleBackColor = True
+        '
+        'btnPi
+        '
+        Me.btnPi.Location = New System.Drawing.Point(93, 33)
+        Me.btnPi.Name = "btnPi"
+        Me.btnPi.Size = New System.Drawing.Size(26, 23)
+        Me.btnPi.TabIndex = 30
+        Me.btnPi.Text = "π"
+        Me.btnPi.UseVisualStyleBackColor = True
+        '
+        'btnRnd
+        '
+        Me.btnRnd.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.btnRnd.Location = New System.Drawing.Point(122, 33)
+        Me.btnRnd.Name = "btnRnd"
+        Me.btnRnd.Size = New System.Drawing.Size(26, 23)
+        Me.btnRnd.TabIndex = 31
+        Me.btnRnd.Text = "R"
+        Me.btnRnd.UseVisualStyleBackColor = True
         '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.ClientSize = New System.Drawing.Size(456, 193)
+        Me.ClientSize = New System.Drawing.Size(456, 208)
         Me.Controls.Add(Me.LinkLabel3)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.TabControl1)
@@ -383,4 +439,9 @@ Partial Class frmMain
     Friend WithEvents LinkLabel3 As System.Windows.Forms.LinkLabel
     Friend WithEvents ToolStripDropDownButton1 As System.Windows.Forms.ToolStripDropDownButton
     Friend WithEvents 触摸板ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents btnAbs As System.Windows.Forms.Button
+    Friend WithEvents btnSqrt As System.Windows.Forms.Button
+    Friend WithEvents btnPi As System.Windows.Forms.Button
+    Friend WithEvents btnE As System.Windows.Forms.Button
+    Friend WithEvents btnRnd As System.Windows.Forms.Button
 End Class
