@@ -117,21 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TextBox1.Text" xml:space="preserve">
-    <value>分别输入要计算的数据：
-比如：要计算 35.123 35.133 35.332 
-
-则在数据输入框中输入
-35.123;35.133;35.332
--要点：每一个数据之间使用；（分号）隔开
--对于拥有小数字键盘的用户，可以直接点击+代替；按键
--不区分中/英文状态，输入时程序会自动更改
-
-点击"计算"按钮即可得出结果
-也可以直接回车执行计算
-
-演算过程功能需要网络连接才能够使用哦！</value>
-  </data>
   <data name="TextBox5.Text" xml:space="preserve">
     <value>运算符号：
 +  加法符号
@@ -148,6 +133,7 @@ pi 圆周率 （本程序取 3.1415926535897931）
 rnd 由电脑生成一个伪随机数
 
 函数：
+int 取整数（请注意，这不是四舍五入功能，例如3.1和3.9取整数的结果都将是3）
 sqrt  开根号
 abs 绝对值
 fact 计算阶乘
@@ -163,5 +149,20 @@ tan
 lg log
 ln
 </value>
+  </data>
+  <data name="TextBox1.Text" xml:space="preserve">
+    <value>分别输入要计算的数据：
+比如：要计算 35.123 35.133 35.332 
+
+则在数据输入框中输入
+35.123;35.133;35.332
+-要点：每一个数据之间使用；（分号）隔开
+-对于拥有小数字键盘的用户，可以直接点击+代替；按键
+-不区分中/英文状态，输入时程序会自动更改
+
+点击"计算"按钮即可得出结果
+也可以直接回车执行计算
+
+演算过程功能需要网络连接才能够使用哦！</value>
   </data>
 </root>
