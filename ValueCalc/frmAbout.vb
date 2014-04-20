@@ -28,4 +28,7 @@ Public Class frmAbout
         Me.Close()
     End Sub
 
+    Private Sub frmAbout_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        btnClose.Left = (Me.Width - btnClose.Width) / 2
+    End Sub
 End Class

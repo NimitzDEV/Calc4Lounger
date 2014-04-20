@@ -117,7 +117,7 @@ Partial Class frmAbout
         '
         'btnClose
         '
-        Me.btnClose.Location = New System.Drawing.Point(353, 136)
+        Me.btnClose.Location = New System.Drawing.Point(170, 139)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(75, 23)
         Me.btnClose.TabIndex = 19
@@ -128,7 +128,7 @@ Partial Class frmAbout
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(430, 162)
+        Me.ClientSize = New System.Drawing.Size(430, 171)
         Me.ControlBox = False
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.Label2)
