@@ -1,7 +1,7 @@
 ﻿Imports System.Math
 Module Calc
     Public Class Calc
-        Private Shared spop As String() = {"asin", "acos", "atan", "csc", "sec", "cot", "sin", "cos", "tan", "lg", "ln", "abs", "rnd", "sqrt", "e", "pi"}
+        Private Shared spop As String() = {"asin", "acos", "atan", "csc", "sec", "cot", "sin", "cos", "tan", "lg", "ln", "abs", "rnd", "sqrt", "fact", "e", "pi"}
 
         Public Shared Function Compute(ByVal expression As String) As Double
             expression = ChkSpc(expression)
@@ -79,7 +79,7 @@ start:      For Each op In spop
 
         Private Shared Function SearchSpecialOp(ByVal sourceString As String, ByVal op As String) As String
             Select Case op
-                Case "sin", "cos", "tan", "csc", "sec", "cot", "asin", "acos", "atan", "lg", "ln", "abs", "rnd", "sqrt"
+                Case "sin", "cos", "tan", "csc", "sec", "cot", "asin", "acos", "atan", "lg", "ln", "abs", "rnd", "sqrt", "fact"
                     Dim l As Integer = InStr(sourceString, op)
                     Dim c As Char, pCount As Integer = 0
                     Dim result, nm As Double
@@ -121,6 +121,14 @@ start:      For Each op In spop
                                             result = Rnd() * nm
                                         Case "sqrt"
                                             result = Sqrt(nm)
+                                        Case "fact"
+                                            Dim factCalc As Integer
+                                            Dim factCalcResult As Long
+                                            factCalcResult = 1
+                                            For factCalc = 1 To nm
+                                                factCalcResult *= factCalc
+                                            Next
+                                            result = factCalcResult
                                     End Select
                                     Return Mid(sourceString, 1, l - 1) & result & Mid(sourceString, i + 1, sourceString.Length - i)
                                 End If

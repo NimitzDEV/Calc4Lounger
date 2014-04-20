@@ -41,6 +41,11 @@ Partial Class frmMain
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.tbDigi1 = New System.Windows.Forms.TrackBar()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.btnRnd = New System.Windows.Forms.Button()
+        Me.btnPi = New System.Windows.Forms.Button()
+        Me.btnE = New System.Windows.Forms.Button()
+        Me.btnAbs = New System.Windows.Forms.Button()
+        Me.btnSqrt = New System.Windows.Forms.Button()
         Me.llbClear2 = New System.Windows.Forms.LinkLabel()
         Me.tbResult = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -50,11 +55,7 @@ Partial Class frmMain
         Me.btnCalcMath = New System.Windows.Forms.Button()
         Me.txtInputMath = New System.Windows.Forms.TextBox()
         Me.llbHelp = New System.Windows.Forms.LinkLabel()
-        Me.btnSqrt = New System.Windows.Forms.Button()
-        Me.btnAbs = New System.Windows.Forms.Button()
-        Me.btnE = New System.Windows.Forms.Button()
-        Me.btnPi = New System.Windows.Forms.Button()
-        Me.btnRnd = New System.Windows.Forms.Button()
+        Me.btnFact = New System.Windows.Forms.Button()
         Me.StatusStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -231,6 +232,7 @@ Partial Class frmMain
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.btnFact)
         Me.TabPage2.Controls.Add(Me.btnRnd)
         Me.TabPage2.Controls.Add(Me.btnPi)
         Me.TabPage2.Controls.Add(Me.btnE)
@@ -251,6 +253,52 @@ Partial Class frmMain
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "算式运算"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'btnRnd
+        '
+        Me.btnRnd.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.btnRnd.Location = New System.Drawing.Point(122, 33)
+        Me.btnRnd.Name = "btnRnd"
+        Me.btnRnd.Size = New System.Drawing.Size(26, 23)
+        Me.btnRnd.TabIndex = 31
+        Me.btnRnd.Text = "R"
+        Me.btnRnd.UseVisualStyleBackColor = True
+        '
+        'btnPi
+        '
+        Me.btnPi.Location = New System.Drawing.Point(93, 33)
+        Me.btnPi.Name = "btnPi"
+        Me.btnPi.Size = New System.Drawing.Size(26, 23)
+        Me.btnPi.TabIndex = 30
+        Me.btnPi.Text = "π"
+        Me.btnPi.UseVisualStyleBackColor = True
+        '
+        'btnE
+        '
+        Me.btnE.Location = New System.Drawing.Point(64, 33)
+        Me.btnE.Name = "btnE"
+        Me.btnE.Size = New System.Drawing.Size(26, 23)
+        Me.btnE.TabIndex = 29
+        Me.btnE.Text = "e"
+        Me.btnE.UseVisualStyleBackColor = True
+        '
+        'btnAbs
+        '
+        Me.btnAbs.Location = New System.Drawing.Point(35, 33)
+        Me.btnAbs.Name = "btnAbs"
+        Me.btnAbs.Size = New System.Drawing.Size(26, 23)
+        Me.btnAbs.TabIndex = 28
+        Me.btnAbs.Text = "||"
+        Me.btnAbs.UseVisualStyleBackColor = True
+        '
+        'btnSqrt
+        '
+        Me.btnSqrt.Location = New System.Drawing.Point(6, 33)
+        Me.btnSqrt.Name = "btnSqrt"
+        Me.btnSqrt.Size = New System.Drawing.Size(26, 23)
+        Me.btnSqrt.TabIndex = 27
+        Me.btnSqrt.Text = "√"
+        Me.btnSqrt.UseVisualStyleBackColor = True
         '
         'llbClear2
         '
@@ -337,51 +385,15 @@ Partial Class frmMain
         Me.llbHelp.TabStop = True
         Me.llbHelp.Text = "使用帮助"
         '
-        'btnSqrt
+        'btnFact
         '
-        Me.btnSqrt.Location = New System.Drawing.Point(6, 33)
-        Me.btnSqrt.Name = "btnSqrt"
-        Me.btnSqrt.Size = New System.Drawing.Size(26, 23)
-        Me.btnSqrt.TabIndex = 27
-        Me.btnSqrt.Text = "√"
-        Me.btnSqrt.UseVisualStyleBackColor = True
-        '
-        'btnAbs
-        '
-        Me.btnAbs.Location = New System.Drawing.Point(35, 33)
-        Me.btnAbs.Name = "btnAbs"
-        Me.btnAbs.Size = New System.Drawing.Size(26, 23)
-        Me.btnAbs.TabIndex = 28
-        Me.btnAbs.Text = "||"
-        Me.btnAbs.UseVisualStyleBackColor = True
-        '
-        'btnE
-        '
-        Me.btnE.Location = New System.Drawing.Point(64, 33)
-        Me.btnE.Name = "btnE"
-        Me.btnE.Size = New System.Drawing.Size(26, 23)
-        Me.btnE.TabIndex = 29
-        Me.btnE.Text = "e"
-        Me.btnE.UseVisualStyleBackColor = True
-        '
-        'btnPi
-        '
-        Me.btnPi.Location = New System.Drawing.Point(93, 33)
-        Me.btnPi.Name = "btnPi"
-        Me.btnPi.Size = New System.Drawing.Size(26, 23)
-        Me.btnPi.TabIndex = 30
-        Me.btnPi.Text = "π"
-        Me.btnPi.UseVisualStyleBackColor = True
-        '
-        'btnRnd
-        '
-        Me.btnRnd.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.btnRnd.Location = New System.Drawing.Point(122, 33)
-        Me.btnRnd.Name = "btnRnd"
-        Me.btnRnd.Size = New System.Drawing.Size(26, 23)
-        Me.btnRnd.TabIndex = 31
-        Me.btnRnd.Text = "R"
-        Me.btnRnd.UseVisualStyleBackColor = True
+        Me.btnFact.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.btnFact.Location = New System.Drawing.Point(152, 33)
+        Me.btnFact.Name = "btnFact"
+        Me.btnFact.Size = New System.Drawing.Size(26, 23)
+        Me.btnFact.TabIndex = 32
+        Me.btnFact.Text = "！"
+        Me.btnFact.UseVisualStyleBackColor = True
         '
         'frmMain
         '
@@ -444,4 +456,5 @@ Partial Class frmMain
     Friend WithEvents btnPi As System.Windows.Forms.Button
     Friend WithEvents btnE As System.Windows.Forms.Button
     Friend WithEvents btnRnd As System.Windows.Forms.Button
+    Friend WithEvents btnFact As System.Windows.Forms.Button
 End Class

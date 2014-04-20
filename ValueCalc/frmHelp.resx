@@ -150,6 +150,7 @@ rnd 由电脑生成一个伪随机数
 函数：
 sqrt  开根号
 abs 绝对值
+fact 计算阶乘
 asin arcsin
 acos arccos
 atan arctan

@@ -188,15 +188,17 @@
         selInput = ""
         Select Case funcSign
             Case "Sqrt"
-                selInput = "Sqrt()"
+                selInput = "sqrt()"
             Case "Abs"
-                selInput = "Abs()"
+                selInput = "abs()"
             Case "e"
                 selInput = "e"
             Case "pi"
                 selInput = "pi"
             Case "Rnd"
-                selInput = "Rnd"
+                selInput = "rnd"
+            Case "Fact"
+                selInput = "fact()"
         End Select
         txtInputMath.Text &= selInput
     End Sub
@@ -219,5 +221,9 @@
 
     Private Sub btnRnd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRnd.Click
         quickFunctionInput("Rnd")
+    End Sub
+
+    Private Sub btnFact_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnFact.Click
+        quickFunctionInput("Fact")
     End Sub
 End Class
