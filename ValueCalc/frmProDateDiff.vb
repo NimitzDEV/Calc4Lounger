@@ -14,8 +14,8 @@
             date1 = date2
             date2 = switchBridge
         End If
-        lbTip1.Text = "日期 " & date1 & " 到 " & date2
-        rbDay.PerformClick()
+        lbTip1.Text = date1 & " 到 " & date2
+        lbResult.Text = DateDiff("d", date1, date2) & "天"
     End Sub
 
     Private Sub rbDay_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rbDay.CheckedChanged

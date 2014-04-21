@@ -41,7 +41,7 @@ Partial Class frmProDateDiff
         Me.lbTip1.AutoSize = True
         Me.lbTip1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbTip1.Font = New System.Drawing.Font("幼圆", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.lbTip1.ForeColor = System.Drawing.Color.Orange
+        Me.lbTip1.ForeColor = System.Drawing.Color.OliveDrab
         Me.lbTip1.Location = New System.Drawing.Point(3, 0)
         Me.lbTip1.Name = "lbTip1"
         Me.lbTip1.Size = New System.Drawing.Size(508, 49)
