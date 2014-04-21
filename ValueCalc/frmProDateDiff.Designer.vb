@@ -29,9 +29,9 @@ Partial Class frmProDateDiff
         Me.lbResult = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.rbHour = New System.Windows.Forms.RadioButton()
-        Me.rbDay = New System.Windows.Forms.RadioButton()
         Me.rbWeek = New System.Windows.Forms.RadioButton()
+        Me.rbDay = New System.Windows.Forms.RadioButton()
+        Me.rbHour = New System.Windows.Forms.RadioButton()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -44,7 +44,7 @@ Partial Class frmProDateDiff
         Me.lbTip1.ForeColor = System.Drawing.Color.OliveDrab
         Me.lbTip1.Location = New System.Drawing.Point(3, 0)
         Me.lbTip1.Name = "lbTip1"
-        Me.lbTip1.Size = New System.Drawing.Size(508, 49)
+        Me.lbTip1.Size = New System.Drawing.Size(508, 53)
         Me.lbTip1.TabIndex = 0
         Me.lbTip1.Text = "日期 2000/01/01 到 2000/01/01 之间"
         Me.lbTip1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -55,9 +55,9 @@ Partial Class frmProDateDiff
         Me.lbDiff.BackColor = System.Drawing.Color.Transparent
         Me.lbDiff.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbDiff.Font = New System.Drawing.Font("幼圆", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.lbDiff.Location = New System.Drawing.Point(3, 49)
+        Me.lbDiff.Location = New System.Drawing.Point(3, 53)
         Me.lbDiff.Name = "lbDiff"
-        Me.lbDiff.Size = New System.Drawing.Size(508, 28)
+        Me.lbDiff.Size = New System.Drawing.Size(508, 30)
         Me.lbDiff.TabIndex = 1
         Me.lbDiff.Text = "之间相差"
         Me.lbDiff.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -65,7 +65,7 @@ Partial Class frmProDateDiff
         'btnClose
         '
         Me.btnClose.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnClose.Location = New System.Drawing.Point(517, 339)
+        Me.btnClose.Location = New System.Drawing.Point(517, 345)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(74, 56)
         Me.btnClose.TabIndex = 3
@@ -91,7 +91,7 @@ Partial Class frmProDateDiff
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.08247!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 259.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 61.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(594, 398)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(594, 404)
         Me.TableLayoutPanel1.TabIndex = 4
         '
         'lbResult
@@ -100,7 +100,7 @@ Partial Class frmProDateDiff
         Me.lbResult.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbResult.Font = New System.Drawing.Font("微软雅黑", 42.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.lbResult.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.lbResult.Location = New System.Drawing.Point(3, 77)
+        Me.lbResult.Location = New System.Drawing.Point(3, 83)
         Me.lbResult.Name = "lbResult"
         Me.lbResult.Size = New System.Drawing.Size(508, 259)
         Me.lbResult.TabIndex = 4
@@ -113,9 +113,9 @@ Partial Class frmProDateDiff
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label1.Font = New System.Drawing.Font("幼圆", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Label1.Location = New System.Drawing.Point(517, 49)
+        Me.Label1.Location = New System.Drawing.Point(517, 53)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(74, 28)
+        Me.Label1.Size = New System.Drawing.Size(74, 30)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "单位"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -125,20 +125,20 @@ Partial Class frmProDateDiff
         Me.Panel1.Controls.Add(Me.rbWeek)
         Me.Panel1.Controls.Add(Me.rbDay)
         Me.Panel1.Controls.Add(Me.rbHour)
-        Me.Panel1.Location = New System.Drawing.Point(517, 80)
+        Me.Panel1.Location = New System.Drawing.Point(517, 86)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(74, 253)
         Me.Panel1.TabIndex = 6
         '
-        'rbHour
+        'rbWeek
         '
-        Me.rbHour.AutoSize = True
-        Me.rbHour.Location = New System.Drawing.Point(18, 100)
-        Me.rbHour.Name = "rbHour"
-        Me.rbHour.Size = New System.Drawing.Size(47, 16)
-        Me.rbHour.TabIndex = 0
-        Me.rbHour.Text = "小时"
-        Me.rbHour.UseVisualStyleBackColor = True
+        Me.rbWeek.AutoSize = True
+        Me.rbWeek.Location = New System.Drawing.Point(18, 144)
+        Me.rbWeek.Name = "rbWeek"
+        Me.rbWeek.Size = New System.Drawing.Size(35, 16)
+        Me.rbWeek.TabIndex = 2
+        Me.rbWeek.Text = "周"
+        Me.rbWeek.UseVisualStyleBackColor = True
         '
         'rbDay
         '
@@ -152,21 +152,21 @@ Partial Class frmProDateDiff
         Me.rbDay.Text = "天"
         Me.rbDay.UseVisualStyleBackColor = True
         '
-        'rbWeek
+        'rbHour
         '
-        Me.rbWeek.AutoSize = True
-        Me.rbWeek.Location = New System.Drawing.Point(18, 144)
-        Me.rbWeek.Name = "rbWeek"
-        Me.rbWeek.Size = New System.Drawing.Size(35, 16)
-        Me.rbWeek.TabIndex = 2
-        Me.rbWeek.Text = "周"
-        Me.rbWeek.UseVisualStyleBackColor = True
+        Me.rbHour.AutoSize = True
+        Me.rbHour.Location = New System.Drawing.Point(18, 100)
+        Me.rbHour.Name = "rbHour"
+        Me.rbHour.Size = New System.Drawing.Size(47, 16)
+        Me.rbHour.TabIndex = 0
+        Me.rbHour.Text = "小时"
+        Me.rbHour.UseVisualStyleBackColor = True
         '
         'frmProDateDiff
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(594, 398)
+        Me.ClientSize = New System.Drawing.Size(594, 404)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "frmProDateDiff"
