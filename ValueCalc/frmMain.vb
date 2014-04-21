@@ -96,7 +96,6 @@
         Label1.Text = "平均值"
         Label2.Text = "偏差值"
         llbProUI.Visible = False
-        Label2.Left = Label1.Left + Label2.Width + 5
     End Sub
 
     Private Sub LinkLabel5_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles llbClear1.LinkClicked
