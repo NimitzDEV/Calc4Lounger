@@ -18,8 +18,17 @@
         Me.Text = Application.ProductName & " - " & Application.ProductVersion
         Randomize()
         ReadSettings()
-        Label4.Text = tbDigi1.Value & "位"
-        Label5.Text = tbDigi2.Value & "位"
+        If tbDigi1.Value < 0 Then
+            Label4.Text = "完整"
+        Else
+            Label4.Text = tbDigi1.Value & "位"
+        End If
+        If tbDigi2.Value < 0 Then
+            Label5.Text = "完整"
+        Else
+            Label5.Text = tbDigi2.Value & "位"
+        End If
+
     End Sub
 
     Private Sub TrackBar1_Scroll(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tbDigi1.Scroll
