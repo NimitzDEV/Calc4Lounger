@@ -16,7 +16,7 @@ Module MathEqHtmlCreater
         Print(1, "求平均值：")
         Print(1, "<br>")
         Print(1, "<br>")
-        Print(1, serverStr & "\overline{a}" & "=\sum_{i=" & returnCounter & "}^{a}" & "\frac{1}{" & returnCounter & "}a_{i}" & """ />")
+        Print(1, serverStr & "\overline{a}" & "=\frac{1}{" & returnCounter & "}\sum_{i=" & returnCounter & "}^{a}" & "}a_{i}" & """ />")
         Print(1, "<br>")
         Print(1, "<br>")
         tmpStr = "\left ("
@@ -25,7 +25,7 @@ Module MathEqHtmlCreater
         Next
         tmpStr = Microsoft.VisualBasic.Left(tmpStr, Len(tmpStr) - 1)
         tmpStr &= "\right )"
-        Print(1, "&nbsp;&nbsp;" & serverStr & "=\frac{1}{" & returnCounter & "}" & tmpStr & """ />")
+        Print(1, "&nbsp;&nbsp;" & serverStr & "=\frac{1}{" & returnCounter & "}\times" & tmpStr & """ />")
         Print(1, "<br>")
         Print(1, "<br>")
         Print(1, "&nbsp;&nbsp;" & serverStr & "=\color{Red}" & v2 & """ />")
@@ -35,7 +35,7 @@ Module MathEqHtmlCreater
         Print(1, "求平均偏差:")
         Print(1, "<br>")
         Print(1, "<br>")
-        Print(1, serverStr & "\Delta\overline{a}" & "=\sum_{i=" & returnCounter & "}^{\overline{a}}" & "\frac{1}{" & returnCounter & "}\left [|{a}_{i}-\overline{a}" & "\right |]"" />")
+        Print(1, serverStr & "\Delta\overline{a}" & "=\frac{1}{" & returnCounter & "}\sum_{i=" & returnCounter & "}^{\overline{a}}\left [|{a}_{i}-\overline{a}\right |]"" />")
         Print(1, "<br>")
         Print(1, "<br>")
         tmpStr = "\left ["
@@ -44,7 +44,7 @@ Module MathEqHtmlCreater
         Next
         tmpStr = Microsoft.VisualBasic.Left(tmpStr, Len(tmpStr) - 1)
         tmpStr &= "\right ]"
-        Print(1, "&nbsp;&nbsp;&nbsp;&nbsp;" & serverStr & "=\frac{1}{" & returnCounter & "}" & tmpStr & """ />")
+        Print(1, "&nbsp;&nbsp;&nbsp;&nbsp;" & serverStr & "=\frac{1}{" & returnCounter & "}\times" & tmpStr & """ />")
         Print(1, "<br>")
         Print(1, "<br>")
         Print(1, "&nbsp;&nbsp;&nbsp;&nbsp;" & serverStr & "=\color{Red}" & v3 & """ />")
