@@ -10,6 +10,9 @@ Calc4Lounger
 
 thanks
 
+如果希望pull更新，请联系我  nimitzdevteam@gmail.com
+如果希望直接提交更改（commit）aka add collaborator 请联系我
+同时告诉我你的Github账号
 
 
 GNU 较宽松公共许可证
