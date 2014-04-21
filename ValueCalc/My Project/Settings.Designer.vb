@@ -53,6 +53,42 @@ Namespace My
                 Return defaultInstance
             End Get
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("2")>  _
+        Public Property dots1() As Integer
+            Get
+                Return CType(Me("dots1"),Integer)
+            End Get
+            Set
+                Me("dots1") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("2")>  _
+        Public Property dots2() As Integer
+            Get
+                Return CType(Me("dots2"),Integer)
+            End Get
+            Set
+                Me("dots2") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property autoShowProUI() As Boolean
+            Get
+                Return CType(Me("autoShowProUI"),Boolean)
+            End Get
+            Set
+                Me("autoShowProUI") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

@@ -10,9 +10,16 @@
         Const FLAG_ICC_FORCE_CONNECTION As Integer = &H1
         Return InternetCheckConnection("http://latex.codecogs.com/", FLAG_ICC_FORCE_CONNECTION, 0)
     End Function
+
+    Private Sub frmMain_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
+        SaveSettings()
+    End Sub
     Private Sub Form3_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.Text = Application.ProductName & " - " & Application.ProductVersion
         Randomize()
+        ReadSettings()
+        Label4.Text = tbDigi1.Value & "位"
+        Label5.Text = tbDigi2.Value & "位"
     End Sub
 
     Private Sub TrackBar1_Scroll(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tbDigi1.Scroll
