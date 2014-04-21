@@ -56,26 +56,32 @@ Partial Class frmMain
         Me.txtInputMath = New System.Windows.Forms.TextBox()
         Me.llbHelp = New System.Windows.Forms.LinkLabel()
         Me.btnFact = New System.Windows.Forms.Button()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.mcldA = New System.Windows.Forms.MonthCalendar()
+        Me.mcldB = New System.Windows.Forms.MonthCalendar()
+        Me.btnCalcDateDiff = New System.Windows.Forms.Button()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.StatusStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.tbDigi1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
         CType(Me.tbDigi2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage3.SuspendLayout()
         Me.SuspendLayout()
         '
         'txtInputData
         '
         Me.txtInputData.Location = New System.Drawing.Point(6, 6)
         Me.txtInputData.Name = "txtInputData"
-        Me.txtInputData.Size = New System.Drawing.Size(439, 21)
+        Me.txtInputData.Size = New System.Drawing.Size(480, 21)
         Me.txtInputData.TabIndex = 0
         Me.txtInputData.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'llbProUI
         '
         Me.llbProUI.AutoSize = True
-        Me.llbProUI.Location = New System.Drawing.Point(100, 92)
+        Me.llbProUI.Location = New System.Drawing.Point(8, 133)
         Me.llbProUI.Name = "llbProUI"
         Me.llbProUI.Size = New System.Drawing.Size(53, 12)
         Me.llbProUI.TabIndex = 17
@@ -86,7 +92,7 @@ Partial Class frmMain
         'llbClear1
         '
         Me.llbClear1.AutoSize = True
-        Me.llbClear1.Location = New System.Drawing.Point(329, 43)
+        Me.llbClear1.Location = New System.Drawing.Point(376, 38)
         Me.llbClear1.Name = "llbClear1"
         Me.llbClear1.Size = New System.Drawing.Size(29, 12)
         Me.llbClear1.TabIndex = 16
@@ -96,7 +102,7 @@ Partial Class frmMain
         'llbAbout
         '
         Me.llbAbout.AutoSize = True
-        Me.llbAbout.Location = New System.Drawing.Point(426, 196)
+        Me.llbAbout.Location = New System.Drawing.Point(470, 222)
         Me.llbAbout.Name = "llbAbout"
         Me.llbAbout.Size = New System.Drawing.Size(29, 12)
         Me.llbAbout.TabIndex = 13
@@ -106,7 +112,7 @@ Partial Class frmMain
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(53, 92)
+        Me.Label2.Location = New System.Drawing.Point(8, 108)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(41, 12)
         Me.Label2.TabIndex = 15
@@ -115,7 +121,7 @@ Partial Class frmMain
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 92)
+        Me.Label1.Location = New System.Drawing.Point(8, 83)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(41, 12)
         Me.Label1.TabIndex = 14
@@ -142,9 +148,9 @@ Partial Class frmMain
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.ToolStripDropDownButton1})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 186)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 215)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(456, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(502, 22)
         Me.StatusStrip1.TabIndex = 21
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -173,7 +179,7 @@ Partial Class frmMain
         'cbAutoShowProUI
         '
         Me.cbAutoShowProUI.AutoSize = True
-        Me.cbAutoShowProUI.Location = New System.Drawing.Point(6, 127)
+        Me.cbAutoShowProUI.Location = New System.Drawing.Point(306, 167)
         Me.cbAutoShowProUI.Name = "cbAutoShowProUI"
         Me.cbAutoShowProUI.Size = New System.Drawing.Size(180, 16)
         Me.cbAutoShowProUI.TabIndex = 22
@@ -182,7 +188,7 @@ Partial Class frmMain
         '
         'btnCalcPhy
         '
-        Me.btnCalcPhy.Location = New System.Drawing.Point(370, 35)
+        Me.btnCalcPhy.Location = New System.Drawing.Point(411, 33)
         Me.btnCalcPhy.Name = "btnCalcPhy"
         Me.btnCalcPhy.Size = New System.Drawing.Size(75, 23)
         Me.btnCalcPhy.TabIndex = 23
@@ -193,10 +199,12 @@ Partial Class frmMain
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Location = New System.Drawing.Point(0, 1)
+        Me.TabControl1.Controls.Add(Me.TabPage3)
+        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(459, 182)
+        Me.TabControl1.Size = New System.Drawing.Size(502, 215)
         Me.TabControl1.TabIndex = 24
         '
         'TabPage1
@@ -214,7 +222,7 @@ Partial Class frmMain
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(451, 156)
+        Me.TabPage1.Size = New System.Drawing.Size(494, 189)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "平均与偏差"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -249,7 +257,7 @@ Partial Class frmMain
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(451, 156)
+        Me.TabPage2.Size = New System.Drawing.Size(494, 189)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "算式运算"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -303,7 +311,7 @@ Partial Class frmMain
         'llbClear2
         '
         Me.llbClear2.AutoSize = True
-        Me.llbClear2.Location = New System.Drawing.Point(335, 38)
+        Me.llbClear2.Location = New System.Drawing.Point(378, 38)
         Me.llbClear2.Name = "llbClear2"
         Me.llbClear2.Size = New System.Drawing.Size(29, 12)
         Me.llbClear2.TabIndex = 26
@@ -313,9 +321,9 @@ Partial Class frmMain
         'tbResult
         '
         Me.tbResult.Font = New System.Drawing.Font("宋体", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.tbResult.Location = New System.Drawing.Point(8, 123)
+        Me.tbResult.Location = New System.Drawing.Point(10, 154)
         Me.tbResult.Name = "tbResult"
-        Me.tbResult.Size = New System.Drawing.Size(432, 29)
+        Me.tbResult.Size = New System.Drawing.Size(481, 29)
         Me.tbResult.TabIndex = 25
         Me.tbResult.Text = "0"
         Me.tbResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -323,7 +331,7 @@ Partial Class frmMain
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(8, 108)
+        Me.Label7.Location = New System.Drawing.Point(8, 139)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(53, 12)
         Me.Label7.TabIndex = 24
@@ -332,7 +340,7 @@ Partial Class frmMain
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(242, 70)
+        Me.Label5.Location = New System.Drawing.Point(244, 97)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(23, 12)
         Me.Label5.TabIndex = 23
@@ -341,7 +349,7 @@ Partial Class frmMain
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(6, 70)
+        Me.Label6.Location = New System.Drawing.Point(8, 97)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(41, 12)
         Me.Label6.TabIndex = 22
@@ -351,7 +359,7 @@ Partial Class frmMain
         '
         Me.tbDigi2.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.tbDigi2.LargeChange = 1
-        Me.tbDigi2.Location = New System.Drawing.Point(53, 64)
+        Me.tbDigi2.Location = New System.Drawing.Point(55, 85)
         Me.tbDigi2.Minimum = -1
         Me.tbDigi2.Name = "tbDigi2"
         Me.tbDigi2.Size = New System.Drawing.Size(183, 45)
@@ -360,7 +368,7 @@ Partial Class frmMain
         '
         'btnCalcMath
         '
-        Me.btnCalcMath.Location = New System.Drawing.Point(370, 33)
+        Me.btnCalcMath.Location = New System.Drawing.Point(413, 33)
         Me.btnCalcMath.Name = "btnCalcMath"
         Me.btnCalcMath.Size = New System.Drawing.Size(75, 23)
         Me.btnCalcMath.TabIndex = 1
@@ -371,14 +379,14 @@ Partial Class frmMain
         '
         Me.txtInputMath.Location = New System.Drawing.Point(6, 6)
         Me.txtInputMath.Name = "txtInputMath"
-        Me.txtInputMath.Size = New System.Drawing.Size(439, 21)
+        Me.txtInputMath.Size = New System.Drawing.Size(482, 21)
         Me.txtInputMath.TabIndex = 0
         Me.txtInputMath.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'llbHelp
         '
         Me.llbHelp.AutoSize = True
-        Me.llbHelp.Location = New System.Drawing.Point(367, 196)
+        Me.llbHelp.Location = New System.Drawing.Point(411, 222)
         Me.llbHelp.Name = "llbHelp"
         Me.llbHelp.Size = New System.Drawing.Size(53, 12)
         Me.llbHelp.TabIndex = 25
@@ -395,12 +403,58 @@ Partial Class frmMain
         Me.btnFact.Text = "！"
         Me.btnFact.UseVisualStyleBackColor = True
         '
+        'TabPage3
+        '
+        Me.TabPage3.Controls.Add(Me.Label8)
+        Me.TabPage3.Controls.Add(Me.btnCalcDateDiff)
+        Me.TabPage3.Controls.Add(Me.mcldB)
+        Me.TabPage3.Controls.Add(Me.mcldA)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage3.Size = New System.Drawing.Size(494, 189)
+        Me.TabPage3.TabIndex = 2
+        Me.TabPage3.Text = "天数差"
+        Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'mcldA
+        '
+        Me.mcldA.Location = New System.Drawing.Point(0, 24)
+        Me.mcldA.Name = "mcldA"
+        Me.mcldA.ShowWeekNumbers = True
+        Me.mcldA.TabIndex = 0
+        '
+        'mcldB
+        '
+        Me.mcldB.Location = New System.Drawing.Point(248, 24)
+        Me.mcldB.Name = "mcldB"
+        Me.mcldB.ShowWeekNumbers = True
+        Me.mcldB.TabIndex = 1
+        '
+        'btnCalcDateDiff
+        '
+        Me.btnCalcDateDiff.Location = New System.Drawing.Point(416, 0)
+        Me.btnCalcDateDiff.Name = "btnCalcDateDiff"
+        Me.btnCalcDateDiff.Size = New System.Drawing.Size(75, 23)
+        Me.btnCalcDateDiff.TabIndex = 2
+        Me.btnCalcDateDiff.Text = "计算"
+        Me.btnCalcDateDiff.UseVisualStyleBackColor = True
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(4, 6)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(293, 12)
+        Me.Label8.TabIndex = 3
+        Me.Label8.Text = "在下面两个日历中选择两个日期来计算他们的天数差别"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.ClientSize = New System.Drawing.Size(456, 208)
+        Me.ClientSize = New System.Drawing.Size(502, 237)
         Me.Controls.Add(Me.llbHelp)
         Me.Controls.Add(Me.llbAbout)
         Me.Controls.Add(Me.TabControl1)
@@ -420,6 +474,8 @@ Partial Class frmMain
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         CType(Me.tbDigi2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage3.ResumeLayout(False)
+        Me.TabPage3.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -457,4 +513,9 @@ Partial Class frmMain
     Friend WithEvents btnE As System.Windows.Forms.Button
     Friend WithEvents btnRnd As System.Windows.Forms.Button
     Friend WithEvents btnFact As System.Windows.Forms.Button
+    Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
+    Friend WithEvents mcldB As System.Windows.Forms.MonthCalendar
+    Friend WithEvents mcldA As System.Windows.Forms.MonthCalendar
+    Friend WithEvents btnCalcDateDiff As System.Windows.Forms.Button
+    Friend WithEvents Label8 As System.Windows.Forms.Label
 End Class

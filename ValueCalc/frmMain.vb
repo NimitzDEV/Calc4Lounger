@@ -72,9 +72,6 @@
         v3 = sumUp
         '数据显示排版
         Label2.Text = "偏差值：" & sumUp
-        Label2.Left = Label1.Left + Label1.Width + 5
-        llbProUI.Top = Label1.Top
-        llbProUI.Left = Label1.Left + Label1.Width + 5 + Label2.Width + 5
         llbProUI.Visible = True
         If cbAutoShowProUI.Checked = True Then showProUI()
     End Sub
@@ -175,6 +172,10 @@
     End Sub
 
     Private Sub 触摸板ToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tsmiTouchPanel.Click
+        If TabControl1.SelectedIndex = 2 Then
+            MsgBox("当前的功能不支持触摸板的输入")
+            Exit Sub
+        End If
         frmTouch.Show(Me)
         Me.Top = (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Height - (Me.Height + frmTouch.Height)) / 2
     End Sub
@@ -225,5 +226,13 @@
 
     Private Sub btnFact_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnFact.Click
         quickFunctionInput("Fact")
+    End Sub
+
+    Private Sub btnCalcDateDiff_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCalcDateDiff.Click
+        If DateDiff("d", mcldA.SelectionStart, mcldB.SelectionStart) = 0 Then
+            MsgBox("这两个日期没有差别")
+            Exit Sub
+        End If
+        frmProDateDiff.Show()
     End Sub
 End Class

@@ -91,6 +91,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Calc.vb" />
+    <Compile Include="frmProDateDiff.Designer.vb">
+      <DependentUpon>frmProDateDiff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProDateDiff.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmTouch.Designer.vb">
       <DependentUpon>frmTouch.vb</DependentUpon>
     </Compile>
@@ -139,6 +145,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmProDateDiff.resx">
+      <DependentUpon>frmProDateDiff.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTouch.resx">
       <DependentUpon>frmTouch.vb</DependentUpon>
     </EmbeddedResource>

@@ -10,7 +10,7 @@
         ElseIf frmMain.TabControl1.SelectedIndex = 1 Then
             Return frmMain.txtInputMath
         End If
-        Return frmMain.txtInputData
+        Return Nothing
     End Function
     Private Sub sendData(ByVal sendChar As String)
         targetControl = getSelectedTab()
@@ -23,7 +23,6 @@
             Exit Sub
         End If
         targetControl.Text &= sendChar
-
     End Sub
 
     Private Sub Button11_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button11.Click
