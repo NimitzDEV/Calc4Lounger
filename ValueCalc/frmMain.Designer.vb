@@ -41,6 +41,7 @@ Partial Class frmMain
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.tbDigi1 = New System.Windows.Forms.TrackBar()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.btnFact = New System.Windows.Forms.Button()
         Me.btnRnd = New System.Windows.Forms.Button()
         Me.btnPi = New System.Windows.Forms.Button()
         Me.btnE = New System.Windows.Forms.Button()
@@ -54,13 +55,12 @@ Partial Class frmMain
         Me.tbDigi2 = New System.Windows.Forms.TrackBar()
         Me.btnCalcMath = New System.Windows.Forms.Button()
         Me.txtInputMath = New System.Windows.Forms.TextBox()
-        Me.llbHelp = New System.Windows.Forms.LinkLabel()
-        Me.btnFact = New System.Windows.Forms.Button()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.mcldA = New System.Windows.Forms.MonthCalendar()
-        Me.mcldB = New System.Windows.Forms.MonthCalendar()
-        Me.btnCalcDateDiff = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.btnCalcDateDiff = New System.Windows.Forms.Button()
+        Me.mcldB = New System.Windows.Forms.MonthCalendar()
+        Me.mcldA = New System.Windows.Forms.MonthCalendar()
+        Me.llbHelp = New System.Windows.Forms.LinkLabel()
         Me.StatusStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -173,7 +173,7 @@ Partial Class frmMain
         'tsmiTouchPanel
         '
         Me.tsmiTouchPanel.Name = "tsmiTouchPanel"
-        Me.tsmiTouchPanel.Size = New System.Drawing.Size(152, 22)
+        Me.tsmiTouchPanel.Size = New System.Drawing.Size(110, 22)
         Me.tsmiTouchPanel.Text = "触摸板"
         '
         'cbAutoShowProUI
@@ -262,6 +262,16 @@ Partial Class frmMain
         Me.TabPage2.Text = "算式运算"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'btnFact
+        '
+        Me.btnFact.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.btnFact.Location = New System.Drawing.Point(152, 33)
+        Me.btnFact.Name = "btnFact"
+        Me.btnFact.Size = New System.Drawing.Size(26, 23)
+        Me.btnFact.TabIndex = 32
+        Me.btnFact.Text = "！"
+        Me.btnFact.UseVisualStyleBackColor = True
+        '
         'btnRnd
         '
         Me.btnRnd.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
@@ -323,6 +333,7 @@ Partial Class frmMain
         Me.tbResult.Font = New System.Drawing.Font("宋体", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.tbResult.Location = New System.Drawing.Point(10, 154)
         Me.tbResult.Name = "tbResult"
+        Me.tbResult.ReadOnly = True
         Me.tbResult.Size = New System.Drawing.Size(481, 29)
         Me.tbResult.TabIndex = 25
         Me.tbResult.Text = "0"
@@ -383,26 +394,6 @@ Partial Class frmMain
         Me.txtInputMath.TabIndex = 0
         Me.txtInputMath.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
-        'llbHelp
-        '
-        Me.llbHelp.AutoSize = True
-        Me.llbHelp.Location = New System.Drawing.Point(411, 222)
-        Me.llbHelp.Name = "llbHelp"
-        Me.llbHelp.Size = New System.Drawing.Size(53, 12)
-        Me.llbHelp.TabIndex = 25
-        Me.llbHelp.TabStop = True
-        Me.llbHelp.Text = "使用帮助"
-        '
-        'btnFact
-        '
-        Me.btnFact.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.btnFact.Location = New System.Drawing.Point(152, 33)
-        Me.btnFact.Name = "btnFact"
-        Me.btnFact.Size = New System.Drawing.Size(26, 23)
-        Me.btnFact.TabIndex = 32
-        Me.btnFact.Text = "！"
-        Me.btnFact.UseVisualStyleBackColor = True
-        '
         'TabPage3
         '
         Me.TabPage3.Controls.Add(Me.Label8)
@@ -417,19 +408,14 @@ Partial Class frmMain
         Me.TabPage3.Text = "天数差"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
-        'mcldA
+        'Label8
         '
-        Me.mcldA.Location = New System.Drawing.Point(0, 24)
-        Me.mcldA.Name = "mcldA"
-        Me.mcldA.ShowWeekNumbers = True
-        Me.mcldA.TabIndex = 0
-        '
-        'mcldB
-        '
-        Me.mcldB.Location = New System.Drawing.Point(248, 24)
-        Me.mcldB.Name = "mcldB"
-        Me.mcldB.ShowWeekNumbers = True
-        Me.mcldB.TabIndex = 1
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(4, 6)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(293, 12)
+        Me.Label8.TabIndex = 3
+        Me.Label8.Text = "在下面两个日历中选择两个日期来计算他们的天数差别"
         '
         'btnCalcDateDiff
         '
@@ -440,14 +426,29 @@ Partial Class frmMain
         Me.btnCalcDateDiff.Text = "计算"
         Me.btnCalcDateDiff.UseVisualStyleBackColor = True
         '
-        'Label8
+        'mcldB
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(4, 6)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(293, 12)
-        Me.Label8.TabIndex = 3
-        Me.Label8.Text = "在下面两个日历中选择两个日期来计算他们的天数差别"
+        Me.mcldB.Location = New System.Drawing.Point(248, 24)
+        Me.mcldB.Name = "mcldB"
+        Me.mcldB.ShowWeekNumbers = True
+        Me.mcldB.TabIndex = 1
+        '
+        'mcldA
+        '
+        Me.mcldA.Location = New System.Drawing.Point(0, 24)
+        Me.mcldA.Name = "mcldA"
+        Me.mcldA.ShowWeekNumbers = True
+        Me.mcldA.TabIndex = 0
+        '
+        'llbHelp
+        '
+        Me.llbHelp.AutoSize = True
+        Me.llbHelp.Location = New System.Drawing.Point(411, 222)
+        Me.llbHelp.Name = "llbHelp"
+        Me.llbHelp.Size = New System.Drawing.Size(53, 12)
+        Me.llbHelp.TabIndex = 25
+        Me.llbHelp.TabStop = True
+        Me.llbHelp.Text = "使用帮助"
         '
         'frmMain
         '

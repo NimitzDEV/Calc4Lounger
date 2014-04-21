@@ -117,7 +117,7 @@
 
     Private Sub LinkLabel2_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles llbClear2.LinkClicked
         txtInputMath.Text = ""
-        tbResult.Text = ""
+        tbResult.Text = "0"
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCalcMath.Click
