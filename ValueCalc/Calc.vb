@@ -1,7 +1,8 @@
 ﻿Imports System.Math
 Module Calc
+    Public ansValue As Double
     Public Class Calc
-        Private Shared spop As String() = {"asin", "acos", "atan", "csc", "sec", "cot", "sin", "cos", "tan", "lg", "ln", "abs", "rnd", "sqrt", "int", "fact", "e", "pi"}
+        Private Shared spop As String() = {"asin", "acos", "atan", "csc", "sec", "cot", "sin", "cos", "tan", "lg", "ln", "abs", "rnd", "sqrt", "int", "fact", "ans", "e", "pi"}
 
         Public Shared Function Compute(ByVal expression As String) As Double
             expression = ChkSpc(expression)
@@ -136,7 +137,7 @@ start:      For Each op In spop
                                 End If
                         End Select
                     Next
-                Case "e", "pi"
+                Case "e", "pi", "ans"
                     Dim cst As String
                     cst = ""
                     Dim lo As Integer = InStr(sourceString, op)
@@ -145,6 +146,8 @@ start:      For Each op In spop
                             cst = IIf(Not (lo > 1 AndAlso Mid(sourceString, lo - 1, 1) Like "#"), E.ToString, "*10^")
                         Case "pi"
                             cst = PI
+                        Case "ans"
+                            cst = ansValue
                     End Select
                     Return Mid(sourceString, 1, lo - 1) & cst & Mid(sourceString, lo + op.Length, sourceString.Length - lo - op.Length + 1)
             End Select

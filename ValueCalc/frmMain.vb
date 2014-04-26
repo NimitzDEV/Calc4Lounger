@@ -137,12 +137,11 @@
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCalcMath.Click
         Try
-            Dim finallyExpr As String
-            finallyExpr = Calc.Calc.Compute(txtInputMath.Text)
+            ansValue = Calc.Calc.Compute(txtInputMath.Text)
             If tbDigi2.Value <> -1 Then
-                finallyExpr = System.Math.Round(Val(finallyExpr), tbDigi2.Value)
+                ansValue = System.Math.Round(Val(ansValue), tbDigi2.Value)
             End If
-            tbResult.Text = finallyExpr
+            tbResult.Text = ansValue
         Catch ex As Exception
             Debug.Print(ex.Message)
             tbResult.Text = "算式异常"
