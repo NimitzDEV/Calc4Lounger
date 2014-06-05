@@ -3,13 +3,6 @@
     Dim dividerCounter As Integer
     Dim divStr As String
     Dim storeOrigPosition As Integer
-    '引入函数 用于网络连接的检查
-    Private Declare Function InternetCheckConnection Lib "wininet.dll" Alias "InternetCheckConnectionA" (ByVal lpszUrl As String, ByVal dwFlags As Integer, ByVal dwReserved As Integer) As Integer
-    '检测网络是否连接，是否可以访问CGI服务器
-    Public Shared Function IfOnline() As Boolean
-        Const FLAG_ICC_FORCE_CONNECTION As Integer = &H1
-        Return InternetCheckConnection("http://latex.codecogs.com/", FLAG_ICC_FORCE_CONNECTION, 0)
-    End Function
 
     Private Sub frmMain_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
         SaveSettings()
@@ -104,11 +97,11 @@
     End Sub
     Private Sub showProUI()
         If frmProUI.ToString <> "" Then frmProUI.Close()
-        If IfOnline() = True Then
+        If My.Computer.FileSystem.FileExists(Application.StartupPath & "\mimetex.exe") = True Then
             outputHtmlFile()
             frmProUI.Show()
         Else
-            MsgBox("当前没有网络连接，无法显示演算过程。。" & vbCrLf & vbCrLf & "（演算过程显示需要依赖在线LaTeX服务）")
+            MsgBox("缺少mimetex文件")
             Exit Sub
         End If
     End Sub

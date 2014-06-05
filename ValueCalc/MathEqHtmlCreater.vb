@@ -8,7 +8,7 @@ Module MathEqHtmlCreater
     Dim serverStr As String
     Public Sub outputHtmlFile()
         pubOperate = Application.StartupPath & "\eq.html"
-        serverStr = "<img src=""http://latex.codecogs.com/gif.latex?"
+        serverStr = "<img src=""" & Application.StartupPath
         If Dir(pubOperate) <> "" Then
             Kill(pubOperate)
         End If
@@ -16,7 +16,9 @@ Module MathEqHtmlCreater
         Print(1, "求平均值：")
         Print(1, "<br>")
         Print(1, "<br>")
-        Print(1, serverStr & "\overline{a}" & "=\frac{1}{" & returnCounter & "}\sum_{i=" & returnCounter & "}^{a}" & "}a_{i}" & """ />")
+        'First
+        Shell(Application.StartupPath & "\mimetex.exe ""\overline{a}" & "=\frac{1}{" & returnCounter & "}\sum_{i=" & returnCounter & "}^{a}" & "}a_{i}"" -e eqp1.gif -s 5", AppWinStyle.Hide, True, -1)
+        Print(1, serverStr & "\eqp1.gif"" />")
         Print(1, "<br>")
         Print(1, "<br>")
         tmpStr = "\left ("
@@ -25,17 +27,23 @@ Module MathEqHtmlCreater
         Next
         tmpStr = Microsoft.VisualBasic.Left(tmpStr, Len(tmpStr) - 1)
         tmpStr &= "\right )"
-        Print(1, "&nbsp;&nbsp;" & serverStr & "=\frac{1}{" & returnCounter & "}\times" & tmpStr & """ />")
+        'Second
+        Shell(Application.StartupPath & "\mimetex.exe ""=\frac{1}{" & returnCounter & "}\times" & tmpStr & """ -e eqp2.gif -s 5", AppWinStyle.Hide, True, -1)
+        Print(1, "&nbsp;&nbsp;" & serverStr & "\eqp2.gif"" />")
         Print(1, "<br>")
         Print(1, "<br>")
-        Print(1, "&nbsp;&nbsp;" & serverStr & "=\color{Red}" & v2 & """ />")
+        'Third
+        Shell(Application.StartupPath & "\mimetex.exe ""=\color{Red}" & v2 & """ -e eqp3.gif -s 5", AppWinStyle.Hide, True, -1)
+        Print(1, "&nbsp;&nbsp;" & serverStr & "\eqp3.gif"" />")
         Print(1, "<br>")
         Print(1, "<br>")
         Print(1, "<br>")
         Print(1, "求平均偏差:")
         Print(1, "<br>")
         Print(1, "<br>")
-        Print(1, serverStr & "\Delta\overline{a}" & "=\frac{1}{" & returnCounter & "}\sum_{i=" & returnCounter & "}^{\overline{a}}\left [|{a}_{i}-\overline{a}\right |]"" />")
+        'forth
+        Shell(Application.StartupPath & "\mimetex.exe ""\Delta\overline{a}" & "=\frac{1}{" & returnCounter & "}\sum_{i=" & returnCounter & "}^{\overline{a}}\left [\left |{a}_{i}-\overline{a}\right |\right ]"" -e eqp4.gif -s 5", AppWinStyle.Hide, True, -1)
+        Print(1, serverStr & "\eqp4.gif"" />")
         Print(1, "<br>")
         Print(1, "<br>")
         tmpStr = "\left ["
@@ -44,10 +52,14 @@ Module MathEqHtmlCreater
         Next
         tmpStr = Microsoft.VisualBasic.Left(tmpStr, Len(tmpStr) - 1)
         tmpStr &= "\right ]"
-        Print(1, "&nbsp;&nbsp;&nbsp;&nbsp;" & serverStr & "=\frac{1}{" & returnCounter & "}\times" & tmpStr & """ />")
+        'fifth
+        Shell(Application.StartupPath & "\mimetex.exe ""=\frac{1}{" & returnCounter & "}\times" & tmpStr & """ -e eqp5.gif -s 5", AppWinStyle.Hide, True, -1)
+        Print(1, "&nbsp;&nbsp;&nbsp;&nbsp;" & serverStr & "\eqp5.gif"" />")
         Print(1, "<br>")
         Print(1, "<br>")
-        Print(1, "&nbsp;&nbsp;&nbsp;&nbsp;" & serverStr & "=\color{Red}" & v3 & """ />")
+        'last
+        Shell(Application.StartupPath & "\mimetex.exe ""=\color{Red}" & v3 & """ -e eqp6.gif -s 5", AppWinStyle.Hide, True, -1)
+        Print(1, "&nbsp;&nbsp;&nbsp;&nbsp;" & serverStr & "\eqp6.gif"" />")
         FileClose(1)
     End Sub
 End Module

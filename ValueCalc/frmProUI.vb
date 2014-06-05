@@ -1,6 +1,9 @@
 ﻿Public Class frmProUI
     Private Sub frmProUI_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
         Kill(Application.StartupPath & "\eq.html")
+        For i = 1 To 6
+            Kill(Application.StartupPath & "\eqp" & i & ".gif")
+        Next
     End Sub
 
     Private Sub frmProUI_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -11,13 +14,10 @@
         Me.Width = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Width / 2
         Me.Height = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Height
         frmMain.Left = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Width * 3 / 4 - frmMain.Width / 2
-        Panel1.Left = (Me.Width - Panel1.Width) / 2
-        Panel1.Top = (Me.Height - Panel1.Height) / 2
     End Sub
 
     Private Sub WebBrowser1_DocumentCompleted(ByVal sender As System.Object, ByVal e As System.Windows.Forms.WebBrowserDocumentCompletedEventArgs) Handles WebBrowser1.DocumentCompleted
         WebBrowser1.Visible = True
-        Panel1.Visible = False
     End Sub
 
 End Class
