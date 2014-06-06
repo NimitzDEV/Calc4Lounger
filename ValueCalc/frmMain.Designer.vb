@@ -173,7 +173,7 @@ Partial Class frmMain
         'tsmiTouchPanel
         '
         Me.tsmiTouchPanel.Name = "tsmiTouchPanel"
-        Me.tsmiTouchPanel.Size = New System.Drawing.Size(110, 22)
+        Me.tsmiTouchPanel.Size = New System.Drawing.Size(152, 22)
         Me.tsmiTouchPanel.Text = "触摸板"
         '
         'cbAutoShowProUI

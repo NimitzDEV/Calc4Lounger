@@ -152,16 +152,7 @@
     End Sub
 
     Private Sub TextBox2_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtInputMath.KeyPress
-        If e.KeyChar = "[" Then e.KeyChar = "("
-        If e.KeyChar = "]" Then e.KeyChar = ")"
-        If e.KeyChar = "（" Then e.KeyChar = "("
-        If e.KeyChar = "）" Then e.KeyChar = ")"
-        If e.KeyChar = "】" Then e.KeyChar = ")"
-        If e.KeyChar = "【" Then e.KeyChar = "（"
-        If e.KeyChar = "{" Then e.KeyChar = "("
-        If e.KeyChar = "}" Then e.KeyChar = ")"
-        If e.KeyChar = "。" Then e.KeyChar = "."
-        If e.KeyChar = "、" Then e.KeyChar = "/"
+        e.KeyChar = keyFilter(e.KeyChar)
     End Sub
 
     Private Sub TextBox1_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles txtInputData.KeyDown
@@ -171,10 +162,8 @@
     End Sub
 
 
-
     Private Sub TextBox1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtInputData.KeyPress
-        If e.KeyChar = "；" Then e.KeyChar = ";"
-        If e.KeyChar = "。" Then e.KeyChar = "."
+        e.KeyChar = keyFilter(e.KeyChar)
         If e.KeyChar = "+" Then e.KeyChar = ";"
     End Sub
 
