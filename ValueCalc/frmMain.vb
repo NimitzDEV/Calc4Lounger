@@ -35,7 +35,7 @@
         '计算有多少个数值需要计算
         dividerCounter = 0
         For i = 0 To Len(inputStr)
-            divStr = Microsoft.VisualBasic.Right(Microsoft.VisualBasic.Left(inputStr, i), 1)
+            divStr = Strings.Right(Strings.Left(inputStr, i), 1)
             If divStr = ";" Then dividerCounter += 1
         Next
         countNum = dividerCounter + 1
@@ -50,11 +50,11 @@
         End If
         '为了防止数据末尾出现；而不添加数据造成平均值计算错误
         '在这里添加判断，截取最后一位，如果为分号则去掉
-        If Microsoft.VisualBasic.Right(txtInputData.Text, 1) = ";" Then
-            txtInputData.Text = Microsoft.VisualBasic.Left(txtInputData.Text, Len(txtInputData.Text) - 1)
+        If Strings.Right(txtInputData.Text, 1) = ";" Then
+            txtInputData.Text = Strings.Left(txtInputData.Text, Len(txtInputData.Text) - 1)
         End If
-        If Microsoft.VisualBasic.Left(txtInputData.Text, 1) = ";" Then
-            txtInputData.Text = Microsoft.VisualBasic.Right(txtInputData.Text, Len(txtInputData.Text) - 1)
+        If Strings.Left(txtInputData.Text, 1) = ";" Then
+            txtInputData.Text = Strings.Right(txtInputData.Text, Len(txtInputData.Text) - 1)
         End If
         '求计数
         returnCounter = countNum(txtInputData.Text)

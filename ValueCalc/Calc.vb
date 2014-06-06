@@ -65,7 +65,7 @@ Module Calc
             Dim count As Integer = 0
             Do While InStr(sourceString, str) <> -1
                 count += 1
-                sourceString = Microsoft.VisualBasic.Right(sourceString, sourceString.Length - InStr(sourceString, str))
+                sourceString = Strings.Right(sourceString, sourceString.Length - InStr(sourceString, str))
             Loop
             Return count
         End Function

@@ -19,7 +19,7 @@
         End If
         If sendChar = "Del" Then
             If targetControl.Text = "" Then Exit Sub
-            targetControl.Text = Microsoft.VisualBasic.Left(targetControl.Text, Len(targetControl.Text) - 1)
+            targetControl.Text = Strings.Left(targetControl.Text, Len(targetControl.Text) - 1)
             Exit Sub
         End If
         targetControl.Text &= sendChar

@@ -25,7 +25,7 @@ Module MathEqHtmlCreater
         For i = 0 To returnCounter - 1
             tmpStr &= Split(frmMain.txtInputData.Text, ";")(i) & "+"
         Next
-        tmpStr = Microsoft.VisualBasic.Left(tmpStr, Len(tmpStr) - 1)
+        tmpStr = Strings.Left(tmpStr, Len(tmpStr) - 1)
         tmpStr &= "\right )"
         'Second
         Shell(Application.StartupPath & "\mimetex.exe ""=\frac{1}{" & returnCounter & "}\times" & tmpStr & """ -e eqp2.gif -s 5", AppWinStyle.Hide, True, -1)
@@ -50,7 +50,7 @@ Module MathEqHtmlCreater
         For i = 0 To returnCounter - 1
             tmpStr &= "\left |" & Split(frmMain.txtInputData.Text, ";")(i) & "-" & v2 & "\right |" & "+"
         Next
-        tmpStr = Microsoft.VisualBasic.Left(tmpStr, Len(tmpStr) - 1)
+        tmpStr = Strings.Left(tmpStr, Len(tmpStr) - 1)
         tmpStr &= "\right ]"
         'fifth
         Shell(Application.StartupPath & "\mimetex.exe ""=\frac{1}{" & returnCounter & "}\times" & tmpStr & """ -e eqp5.gif -s 5", AppWinStyle.Hide, True, -1)
