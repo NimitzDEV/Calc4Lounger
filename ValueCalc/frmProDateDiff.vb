@@ -29,4 +29,6 @@
     Private Sub rbWeek_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rbWeek.CheckedChanged
         lbResult.Text = DateDiff("w", date1, date2) & "周"
     End Sub
+
+
 End Class
