@@ -1,7 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "物理平均与偏差速算", "ValueCalc\物理平均与偏差速算.vbproj", "{F2A2C5E5-448F-4581-9816-CB4BDBCF0084}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "懒人计算器", "ValueCalc\懒人计算器.vbproj", "{F2A2C5E5-448F-4581-9816-CB4BDBCF0084}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
