@@ -145,5 +145,6 @@
             Case 12
                 Return 1
         End Select
+        Return 0
     End Function
 End Module
