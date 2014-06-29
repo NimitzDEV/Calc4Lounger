@@ -61,6 +61,8 @@ Partial Class frmMain
         Me.mcldB = New System.Windows.Forms.MonthCalendar()
         Me.mcldA = New System.Windows.Forms.MonthCalendar()
         Me.llbHelp = New System.Windows.Forms.LinkLabel()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.StatusStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -68,6 +70,7 @@ Partial Class frmMain
         Me.TabPage2.SuspendLayout()
         CType(Me.tbDigi2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
+        Me.TabPage4.SuspendLayout()
         Me.SuspendLayout()
         '
         'txtInputData
@@ -173,7 +176,7 @@ Partial Class frmMain
         'tsmiTouchPanel
         '
         Me.tsmiTouchPanel.Name = "tsmiTouchPanel"
-        Me.tsmiTouchPanel.Size = New System.Drawing.Size(152, 22)
+        Me.tsmiTouchPanel.Size = New System.Drawing.Size(110, 22)
         Me.tsmiTouchPanel.Text = "触摸板"
         '
         'cbAutoShowProUI
@@ -200,6 +203,7 @@ Partial Class frmMain
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
+        Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
@@ -450,6 +454,26 @@ Partial Class frmMain
         Me.llbHelp.TabStop = True
         Me.llbHelp.Text = "使用帮助"
         '
+        'TabPage4
+        '
+        Me.TabPage4.Controls.Add(Me.Button1)
+        Me.TabPage4.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage4.Name = "TabPage4"
+        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage4.Size = New System.Drawing.Size(494, 189)
+        Me.TabPage4.TabIndex = 3
+        Me.TabPage4.Text = "电路工具箱"
+        Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(3, 6)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(131, 43)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "色环电阻计算器"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
@@ -477,6 +501,7 @@ Partial Class frmMain
         CType(Me.tbDigi2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
+        Me.TabPage4.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -519,4 +544,6 @@ Partial Class frmMain
     Friend WithEvents mcldA As System.Windows.Forms.MonthCalendar
     Friend WithEvents btnCalcDateDiff As System.Windows.Forms.Button
     Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents TabPage4 As System.Windows.Forms.TabPage
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class
