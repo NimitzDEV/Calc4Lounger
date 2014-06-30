@@ -87,62 +87,62 @@
     End Sub
 
     Private Sub btnSilver_Click(sender As Object, e As EventArgs) Handles btnSilver.Click
-        setColor(Color.FromArgb(192, 192, 192))
+        setColor(Color.Silver)
         shDataRecord(1)
     End Sub
 
     Private Sub btnGold_Click(sender As Object, e As EventArgs) Handles btnGold.Click
-        setColor(Color.FromArgb(255, 227, 0))
+        setColor(Color.Gold)
         shDataRecord(2)
     End Sub
 
     Private Sub btnBlack_Click(sender As Object, e As EventArgs) Handles btnBlack.Click
-        setColor(Color.FromArgb(0, 0, 0))
+        setColor(Color.Black)
         shDataRecord(3)
     End Sub
 
     Private Sub btnBrown_Click(sender As Object, e As EventArgs) Handles btnBrown.Click
-        setColor(Color.FromArgb(128, 42, 42))
+        setColor(Color.Brown)
         shDataRecord(4)
     End Sub
 
     Private Sub btnRed_Click(sender As Object, e As EventArgs) Handles btnRed.Click
-        setColor(Color.FromArgb(255, 0, 0))
+        setColor(Color.Red)
         shDataRecord(5)
     End Sub
 
     Private Sub btnOrange_Click(sender As Object, e As EventArgs) Handles btnOrange.Click
-        setColor(Color.FromArgb(255, 97, 0))
+        setColor(Color.Orange)
         shDataRecord(6)
     End Sub
 
     Private Sub btnYellow_Click(sender As Object, e As EventArgs) Handles btnYellow.Click
-        setColor(Color.FromArgb(255, 255, 0))
+        setColor(Color.Yellow)
         shDataRecord(7)
     End Sub
 
     Private Sub btnGreen_Click(sender As Object, e As EventArgs) Handles btnGreen.Click
-        setColor(Color.FromArgb(0, 201, 87))
+        setColor(Color.Green)
         shDataRecord(8)
     End Sub
 
     Private Sub btnBlue_Click(sender As Object, e As EventArgs) Handles btnBlue.Click
-        setColor(Color.FromArgb(65, 105, 255))
+        setColor(Color.Blue)
         shDataRecord(9)
     End Sub
 
     Private Sub btnPueple_Click(sender As Object, e As EventArgs) Handles btnPueple.Click
-        setColor(Color.FromArgb(160, 32, 140))
+        setColor(Color.Purple)
         shDataRecord(10)
     End Sub
 
     Private Sub btnGrey_Click(sender As Object, e As EventArgs) Handles btnGrey.Click
-        setColor(Color.FromArgb(128, 138, 135))
+        setColor(Color.Gray)
         shDataRecord(11)
     End Sub
 
     Private Sub btnWhite_Click(sender As Object, e As EventArgs) Handles btnWhite.Click
-        setColor(Color.FromArgb(255, 255, 255))
+        setColor(Color.White)
         shDataRecord(12)
     End Sub
 
