@@ -89,6 +89,18 @@ Namespace My
                 Me("autoShowProUI") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property tabIndex() As Integer
+            Get
+                Return CType(Me("tabIndex"),Integer)
+            End Get
+            Set
+                Me("tabIndex") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

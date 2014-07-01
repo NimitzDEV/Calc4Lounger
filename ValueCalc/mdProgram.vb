@@ -12,6 +12,7 @@
             .tbDigi1.Value = My.Settings.dots1
             .tbDigi2.Value = My.Settings.dots2
             .cbAutoShowProUI.Checked = My.Settings.autoShowProUI
+            .TabControl1.SelectedIndex = My.Settings.tabIndex
         End With
     End Sub
     Public Sub SaveSettings()
@@ -19,6 +20,7 @@
             My.Settings.dots1 = .tbDigi1.Value
             My.Settings.dots2 = .tbDigi2.Value
             My.Settings.autoShowProUI = .cbAutoShowProUI.Checked
+            My.Settings.tabIndex = .TabControl1.SelectedIndex
             My.Settings.Save()
         End With
     End Sub
