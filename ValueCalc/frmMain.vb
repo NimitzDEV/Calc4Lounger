@@ -226,4 +226,12 @@
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
         frmCRR.Show()
     End Sub
+
+    Private Sub getNewVerStable_Click(sender As Object, e As EventArgs) Handles getNewVerStable.Click
+        Process.Start("http://pan.baidu.com/s/1hqxdjbY")
+    End Sub
+
+    Private Sub GetNewVerNightly_Click(sender As Object, e As EventArgs) Handles GetNewVerNightly.Click
+        Process.Start("http://pan.baidu.com/s/1mgiHQUs")
+    End Sub
 End Class

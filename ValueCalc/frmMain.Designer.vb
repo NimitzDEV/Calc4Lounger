@@ -62,6 +62,9 @@ Partial Class frmMain
         Me.mcldB = New System.Windows.Forms.MonthCalendar()
         Me.mcldA = New System.Windows.Forms.MonthCalendar()
         Me.llbHelp = New System.Windows.Forms.LinkLabel()
+        Me.获取新版本ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.getNewVerStable = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GetNewVerNightly = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -165,6 +168,7 @@ Partial Class frmMain
         'ToolStripDropDownButton1
         '
         Me.ToolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.获取新版本ToolStripMenuItem})
         Me.ToolStripDropDownButton1.Image = CType(resources.GetObject("ToolStripDropDownButton1.Image"), System.Drawing.Image)
         Me.ToolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripDropDownButton1.Name = "ToolStripDropDownButton1"
@@ -466,6 +470,25 @@ Partial Class frmMain
         Me.llbHelp.TabStop = True
         Me.llbHelp.Text = "使用帮助"
         '
+        '获取新版本ToolStripMenuItem
+        '
+        Me.获取新版本ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.getNewVerStable, Me.GetNewVerNightly})
+        Me.获取新版本ToolStripMenuItem.Name = "获取新版本ToolStripMenuItem"
+        Me.获取新版本ToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.获取新版本ToolStripMenuItem.Text = "获取新版本"
+        '
+        'getNewVerStable
+        '
+        Me.getNewVerStable.Name = "getNewVerStable"
+        Me.getNewVerStable.Size = New System.Drawing.Size(152, 22)
+        Me.getNewVerStable.Text = "稳定版"
+        '
+        'GetNewVerNightly
+        '
+        Me.GetNewVerNightly.Name = "GetNewVerNightly"
+        Me.GetNewVerNightly.Size = New System.Drawing.Size(152, 22)
+        Me.GetNewVerNightly.Text = "测试版"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
@@ -537,4 +560,7 @@ Partial Class frmMain
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents TabPage4 As System.Windows.Forms.TabPage
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents 获取新版本ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents getNewVerStable As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents GetNewVerNightly As System.Windows.Forms.ToolStripMenuItem
 End Class
