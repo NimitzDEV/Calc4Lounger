@@ -313,7 +313,7 @@ Partial Class frmCRR
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "frmCRR"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "色环电阻计算"
+        Me.Text = "色环电阻计算（BETA!）"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
