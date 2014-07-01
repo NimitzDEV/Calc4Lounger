@@ -60,9 +60,9 @@ Partial Class frmMain
         Me.btnCalcDateDiff = New System.Windows.Forms.Button()
         Me.mcldB = New System.Windows.Forms.MonthCalendar()
         Me.mcldA = New System.Windows.Forms.MonthCalendar()
-        Me.llbHelp = New System.Windows.Forms.LinkLabel()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.llbHelp = New System.Windows.Forms.LinkLabel()
         Me.StatusStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -200,10 +200,10 @@ Partial Class frmMain
         '
         'TabControl1
         '
-        Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Controls.Add(Me.TabPage3)
+        Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage4)
+        Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
@@ -444,16 +444,6 @@ Partial Class frmMain
         Me.mcldA.ShowWeekNumbers = True
         Me.mcldA.TabIndex = 0
         '
-        'llbHelp
-        '
-        Me.llbHelp.AutoSize = True
-        Me.llbHelp.Location = New System.Drawing.Point(411, 222)
-        Me.llbHelp.Name = "llbHelp"
-        Me.llbHelp.Size = New System.Drawing.Size(53, 12)
-        Me.llbHelp.TabIndex = 25
-        Me.llbHelp.TabStop = True
-        Me.llbHelp.Text = "使用帮助"
-        '
         'TabPage4
         '
         Me.TabPage4.Controls.Add(Me.Button1)
@@ -473,6 +463,16 @@ Partial Class frmMain
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "色环电阻计算器"
         Me.Button1.UseVisualStyleBackColor = True
+        '
+        'llbHelp
+        '
+        Me.llbHelp.AutoSize = True
+        Me.llbHelp.Location = New System.Drawing.Point(411, 222)
+        Me.llbHelp.Name = "llbHelp"
+        Me.llbHelp.Size = New System.Drawing.Size(53, 12)
+        Me.llbHelp.TabIndex = 25
+        Me.llbHelp.TabStop = True
+        Me.llbHelp.Text = "使用帮助"
         '
         'frmMain
         '
