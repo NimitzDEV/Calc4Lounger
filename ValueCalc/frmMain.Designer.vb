@@ -34,12 +34,9 @@ Partial Class frmMain
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripDropDownButton1 = New System.Windows.Forms.ToolStripDropDownButton()
-        Me.tsmiTouchPanel = New System.Windows.Forms.ToolStripMenuItem()
         Me.cbAutoShowProUI = New System.Windows.Forms.CheckBox()
         Me.btnCalcPhy = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.tbDigi1 = New System.Windows.Forms.TrackBar()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.btnFact = New System.Windows.Forms.Button()
         Me.btnRnd = New System.Windows.Forms.Button()
@@ -55,22 +52,24 @@ Partial Class frmMain
         Me.tbDigi2 = New System.Windows.Forms.TrackBar()
         Me.btnCalcMath = New System.Windows.Forms.Button()
         Me.txtInputMath = New System.Windows.Forms.TextBox()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.tbDigi1 = New System.Windows.Forms.TrackBar()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.btnCalcDateDiff = New System.Windows.Forms.Button()
         Me.mcldB = New System.Windows.Forms.MonthCalendar()
         Me.mcldA = New System.Windows.Forms.MonthCalendar()
-        Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.llbHelp = New System.Windows.Forms.LinkLabel()
         Me.StatusStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
-        CType(Me.tbDigi1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
         CType(Me.tbDigi2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage3.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
+        CType(Me.tbDigi1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage4.SuspendLayout()
+        Me.TabPage3.SuspendLayout()
         Me.SuspendLayout()
         '
         'txtInputData
@@ -166,18 +165,11 @@ Partial Class frmMain
         'ToolStripDropDownButton1
         '
         Me.ToolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiTouchPanel})
         Me.ToolStripDropDownButton1.Image = CType(resources.GetObject("ToolStripDropDownButton1.Image"), System.Drawing.Image)
         Me.ToolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripDropDownButton1.Name = "ToolStripDropDownButton1"
         Me.ToolStripDropDownButton1.Size = New System.Drawing.Size(29, 20)
         Me.ToolStripDropDownButton1.Text = "ToolStripDropDownButton1"
-        '
-        'tsmiTouchPanel
-        '
-        Me.tsmiTouchPanel.Name = "tsmiTouchPanel"
-        Me.tsmiTouchPanel.Size = New System.Drawing.Size(110, 22)
-        Me.tsmiTouchPanel.Text = "触摸板"
         '
         'cbAutoShowProUI
         '
@@ -210,37 +202,6 @@ Partial Class frmMain
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(502, 215)
         Me.TabControl1.TabIndex = 24
-        '
-        'TabPage1
-        '
-        Me.TabPage1.Controls.Add(Me.Label1)
-        Me.TabPage1.Controls.Add(Me.btnCalcPhy)
-        Me.TabPage1.Controls.Add(Me.txtInputData)
-        Me.TabPage1.Controls.Add(Me.cbAutoShowProUI)
-        Me.TabPage1.Controls.Add(Me.Label2)
-        Me.TabPage1.Controls.Add(Me.Label4)
-        Me.TabPage1.Controls.Add(Me.llbClear1)
-        Me.TabPage1.Controls.Add(Me.Label3)
-        Me.TabPage1.Controls.Add(Me.llbProUI)
-        Me.TabPage1.Controls.Add(Me.tbDigi1)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(494, 189)
-        Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "平均与偏差"
-        Me.TabPage1.UseVisualStyleBackColor = True
-        '
-        'tbDigi1
-        '
-        Me.tbDigi1.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.tbDigi1.LargeChange = 1
-        Me.tbDigi1.Location = New System.Drawing.Point(55, 35)
-        Me.tbDigi1.Minimum = -1
-        Me.tbDigi1.Name = "tbDigi1"
-        Me.tbDigi1.Size = New System.Drawing.Size(186, 45)
-        Me.tbDigi1.TabIndex = 18
-        Me.tbDigi1.Value = 2
         '
         'TabPage2
         '
@@ -398,6 +359,57 @@ Partial Class frmMain
         Me.txtInputMath.TabIndex = 0
         Me.txtInputMath.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
+        'TabPage1
+        '
+        Me.TabPage1.Controls.Add(Me.Label1)
+        Me.TabPage1.Controls.Add(Me.btnCalcPhy)
+        Me.TabPage1.Controls.Add(Me.txtInputData)
+        Me.TabPage1.Controls.Add(Me.cbAutoShowProUI)
+        Me.TabPage1.Controls.Add(Me.Label2)
+        Me.TabPage1.Controls.Add(Me.Label4)
+        Me.TabPage1.Controls.Add(Me.llbClear1)
+        Me.TabPage1.Controls.Add(Me.Label3)
+        Me.TabPage1.Controls.Add(Me.llbProUI)
+        Me.TabPage1.Controls.Add(Me.tbDigi1)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(494, 189)
+        Me.TabPage1.TabIndex = 0
+        Me.TabPage1.Text = "平均与偏差"
+        Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'tbDigi1
+        '
+        Me.tbDigi1.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.tbDigi1.LargeChange = 1
+        Me.tbDigi1.Location = New System.Drawing.Point(55, 35)
+        Me.tbDigi1.Minimum = -1
+        Me.tbDigi1.Name = "tbDigi1"
+        Me.tbDigi1.Size = New System.Drawing.Size(186, 45)
+        Me.tbDigi1.TabIndex = 18
+        Me.tbDigi1.Value = 2
+        '
+        'TabPage4
+        '
+        Me.TabPage4.Controls.Add(Me.Button1)
+        Me.TabPage4.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage4.Name = "TabPage4"
+        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage4.Size = New System.Drawing.Size(494, 189)
+        Me.TabPage4.TabIndex = 3
+        Me.TabPage4.Text = "电路工具箱"
+        Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(3, 6)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(131, 43)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "色环电阻计算器"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'TabPage3
         '
         Me.TabPage3.Controls.Add(Me.Label8)
@@ -444,26 +456,6 @@ Partial Class frmMain
         Me.mcldA.ShowWeekNumbers = True
         Me.mcldA.TabIndex = 0
         '
-        'TabPage4
-        '
-        Me.TabPage4.Controls.Add(Me.Button1)
-        Me.TabPage4.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(494, 189)
-        Me.TabPage4.TabIndex = 3
-        Me.TabPage4.Text = "电路工具箱"
-        Me.TabPage4.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(3, 6)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(131, 43)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "色环电阻计算器"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'llbHelp
         '
         Me.llbHelp.AutoSize = True
@@ -493,15 +485,15 @@ Partial Class frmMain
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
-        Me.TabPage1.ResumeLayout(False)
-        Me.TabPage1.PerformLayout()
-        CType(Me.tbDigi1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         CType(Me.tbDigi2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage1.ResumeLayout(False)
+        Me.TabPage1.PerformLayout()
+        CType(Me.tbDigi1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage4.ResumeLayout(False)
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
-        Me.TabPage4.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -532,7 +524,6 @@ Partial Class frmMain
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents llbHelp As System.Windows.Forms.LinkLabel
     Friend WithEvents ToolStripDropDownButton1 As System.Windows.Forms.ToolStripDropDownButton
-    Friend WithEvents tsmiTouchPanel As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents btnAbs As System.Windows.Forms.Button
     Friend WithEvents btnSqrt As System.Windows.Forms.Button
     Friend WithEvents btnPi As System.Windows.Forms.Button

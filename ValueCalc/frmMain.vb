@@ -162,19 +162,9 @@
         End If
     End Sub
 
-
     Private Sub TextBox1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtInputData.KeyPress
         e.KeyChar = keyFilter(e.KeyChar)
         If e.KeyChar = "+" Then e.KeyChar = ";"
-    End Sub
-
-    Private Sub 触摸板ToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tsmiTouchPanel.Click
-        If TabControl1.SelectedIndex = 2 Then
-            MsgBox("当前的功能不支持触摸板的输入")
-            Exit Sub
-        End If
-        frmTouch.Show(Me)
-        Me.Top = (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Height - (Me.Height + frmTouch.Height)) / 2
     End Sub
 
     Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtInputData.TextChanged

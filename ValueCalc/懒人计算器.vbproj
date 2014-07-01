@@ -105,12 +105,6 @@
     <Compile Include="frmProDateDiff.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTouch.Designer.vb">
-      <DependentUpon>frmTouch.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmTouch.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frmAbout.Designer.vb">
       <DependentUpon>frmAbout.vb</DependentUpon>
     </Compile>
@@ -159,9 +153,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmProDateDiff.resx">
       <DependentUpon>frmProDateDiff.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTouch.resx">
-      <DependentUpon>frmTouch.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAbout.resx">
       <DependentUpon>frmAbout.vb</DependentUpon>
