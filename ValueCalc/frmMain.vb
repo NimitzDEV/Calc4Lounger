@@ -234,4 +234,8 @@
     Private Sub GetNewVerNightly_Click(sender As Object, e As EventArgs) Handles GetNewVerNightly.Click
         Process.Start("http://pan.baidu.com/s/1mgiHQUs")
     End Sub
+
+    Private Sub getReleaseCode_Click(sender As Object, e As EventArgs) Handles getReleaseCode.Click
+        Process.Start("https://github.com/NimitzDEV/Calc4Lounger/releases")
+    End Sub
 End Class

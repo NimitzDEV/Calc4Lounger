@@ -34,6 +34,9 @@ Partial Class frmMain
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripDropDownButton1 = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.获取新版本ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.getNewVerStable = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GetNewVerNightly = New System.Windows.Forms.ToolStripMenuItem()
         Me.cbAutoShowProUI = New System.Windows.Forms.CheckBox()
         Me.btnCalcPhy = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
@@ -62,9 +65,7 @@ Partial Class frmMain
         Me.mcldB = New System.Windows.Forms.MonthCalendar()
         Me.mcldA = New System.Windows.Forms.MonthCalendar()
         Me.llbHelp = New System.Windows.Forms.LinkLabel()
-        Me.获取新版本ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.getNewVerStable = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GetNewVerNightly = New System.Windows.Forms.ToolStripMenuItem()
+        Me.getReleaseCode = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -168,12 +169,31 @@ Partial Class frmMain
         'ToolStripDropDownButton1
         '
         Me.ToolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.获取新版本ToolStripMenuItem})
+        Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.获取新版本ToolStripMenuItem, Me.getReleaseCode})
         Me.ToolStripDropDownButton1.Image = CType(resources.GetObject("ToolStripDropDownButton1.Image"), System.Drawing.Image)
         Me.ToolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripDropDownButton1.Name = "ToolStripDropDownButton1"
         Me.ToolStripDropDownButton1.Size = New System.Drawing.Size(29, 20)
         Me.ToolStripDropDownButton1.Text = "ToolStripDropDownButton1"
+        '
+        '获取新版本ToolStripMenuItem
+        '
+        Me.获取新版本ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.getNewVerStable, Me.GetNewVerNightly})
+        Me.获取新版本ToolStripMenuItem.Name = "获取新版本ToolStripMenuItem"
+        Me.获取新版本ToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.获取新版本ToolStripMenuItem.Text = "获取新版本"
+        '
+        'getNewVerStable
+        '
+        Me.getNewVerStable.Name = "getNewVerStable"
+        Me.getNewVerStable.Size = New System.Drawing.Size(152, 22)
+        Me.getNewVerStable.Text = "稳定版"
+        '
+        'GetNewVerNightly
+        '
+        Me.GetNewVerNightly.Name = "GetNewVerNightly"
+        Me.GetNewVerNightly.Size = New System.Drawing.Size(152, 22)
+        Me.GetNewVerNightly.Text = "测试版"
         '
         'cbAutoShowProUI
         '
@@ -470,24 +490,11 @@ Partial Class frmMain
         Me.llbHelp.TabStop = True
         Me.llbHelp.Text = "使用帮助"
         '
-        '获取新版本ToolStripMenuItem
+        'getReleaseCode
         '
-        Me.获取新版本ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.getNewVerStable, Me.GetNewVerNightly})
-        Me.获取新版本ToolStripMenuItem.Name = "获取新版本ToolStripMenuItem"
-        Me.获取新版本ToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.获取新版本ToolStripMenuItem.Text = "获取新版本"
-        '
-        'getNewVerStable
-        '
-        Me.getNewVerStable.Name = "getNewVerStable"
-        Me.getNewVerStable.Size = New System.Drawing.Size(152, 22)
-        Me.getNewVerStable.Text = "稳定版"
-        '
-        'GetNewVerNightly
-        '
-        Me.GetNewVerNightly.Name = "GetNewVerNightly"
-        Me.GetNewVerNightly.Size = New System.Drawing.Size(152, 22)
-        Me.GetNewVerNightly.Text = "测试版"
+        Me.getReleaseCode.Name = "getReleaseCode"
+        Me.getReleaseCode.Size = New System.Drawing.Size(191, 22)
+        Me.getReleaseCode.Text = "获取Release版本代码"
         '
         'frmMain
         '
@@ -563,4 +570,5 @@ Partial Class frmMain
     Friend WithEvents 获取新版本ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents getNewVerStable As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents GetNewVerNightly As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents getReleaseCode As System.Windows.Forms.ToolStripMenuItem
 End Class
