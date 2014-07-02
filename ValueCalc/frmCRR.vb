@@ -1,9 +1,7 @@
 ﻿Public Class frmCRR
-
-
+    Public nowSteping As Integer
     Private Sub frmCRR_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         nowSteping = 1
-        typeLen = 0
         Dim i As Integer
         For i = 0 To 5
             shData(i) = -1

@@ -1,10 +1,6 @@
 ﻿Module mdProgram
     '色环电阻
-    Public nowRunning As Integer
-    Public oldIndex As Integer
     Public shData(5) As Integer
-    Public nowSteping As Integer
-    Public typeLen As Integer
     Dim mkString As String
     '设置相关
     Public Sub ReadSettings()
