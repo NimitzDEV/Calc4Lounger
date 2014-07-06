@@ -189,6 +189,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="20140329041501994_easyicon_net_96.ico" />
+    <None Include="info.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">

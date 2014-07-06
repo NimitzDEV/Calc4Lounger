@@ -1,5 +1,7 @@
 ﻿Public Class frmCRR
     Public nowSteping As Integer
+    'tips
+    Dim toolTip1 As New ToolTip()
     Private Sub frmCRR_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         nowSteping = 1
         Dim i As Integer
@@ -7,6 +9,11 @@
             shData(i) = -1
             subSetColor(Color.FromArgb(221, 221, 221), i + 1)
         Next
+        toolTip1.AutoPopDelay = 9000
+        toolTip1.InitialDelay = 20
+        toolTip1.ReshowDelay = 500
+        toolTip1.ShowAlways = True
+        toolTip1.SetToolTip(PictureBox1, "点击功能按钮将全部重置；" & vbCrLf & "点击某个色环将重置该色环及其之后的色环")
     End Sub
     Private Sub subSetColor(ByVal tgColor As Color, tgSection As Integer)
         Dim ftColor As Color
@@ -53,7 +60,7 @@
                 lbType.Text = "六色环电阻"
                 lbFull.Visible = True
             Case Else
-                lbType.Text = "无"
+                lbType.Text = "-/-"
         End Select
     End Sub
     Private Sub cleanData(ByVal startPosition As Integer)
