@@ -148,8 +148,23 @@
     <Compile Include="mdProgram.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmAbout.en.resx">
+      <DependentUpon>frmAbout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCRR.en.resx">
+      <DependentUpon>frmCRR.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCRR.resx">
       <DependentUpon>frmCRR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.en.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProDateDiff.en.resx">
+      <DependentUpon>frmProDateDiff.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProDateDiff.jv.resx">
+      <DependentUpon>frmProDateDiff.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProDateDiff.resx">
       <DependentUpon>frmProDateDiff.vb</DependentUpon>
@@ -160,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmHelp.resx">
       <DependentUpon>frmHelp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProUI.en.resx">
+      <DependentUpon>frmProUI.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProUI.resx">
       <DependentUpon>frmProUI.vb</DependentUpon>
