@@ -33,6 +33,11 @@ Partial Class frmMain
         Me.Label4 = New System.Windows.Forms.Label()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripDropDownButton1 = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.获取新版本ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.getNewVerStable = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GetNewVerNightly = New System.Windows.Forms.ToolStripMenuItem()
+        Me.getReleaseCode = New System.Windows.Forms.ToolStripMenuItem()
         Me.cbAutoShowProUI = New System.Windows.Forms.CheckBox()
         Me.btnCalcPhy = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
@@ -61,11 +66,6 @@ Partial Class frmMain
         Me.mcldB = New System.Windows.Forms.MonthCalendar()
         Me.mcldA = New System.Windows.Forms.MonthCalendar()
         Me.llbHelp = New System.Windows.Forms.LinkLabel()
-        Me.ToolStripDropDownButton1 = New System.Windows.Forms.ToolStripDropDownButton()
-        Me.获取新版本ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.getNewVerStable = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GetNewVerNightly = New System.Windows.Forms.ToolStripMenuItem()
-        Me.getReleaseCode = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -121,14 +121,42 @@ Partial Class frmMain
         '
         'StatusStrip1
         '
-        resources.ApplyResources(Me.StatusStrip1, "StatusStrip1")
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.ToolStripDropDownButton1})
+        resources.ApplyResources(Me.StatusStrip1, "StatusStrip1")
         Me.StatusStrip1.Name = "StatusStrip1"
         '
         'ToolStripStatusLabel1
         '
-        resources.ApplyResources(Me.ToolStripStatusLabel1, "ToolStripStatusLabel1")
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
+        resources.ApplyResources(Me.ToolStripStatusLabel1, "ToolStripStatusLabel1")
+        '
+        'ToolStripDropDownButton1
+        '
+        Me.ToolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.获取新版本ToolStripMenuItem, Me.getReleaseCode})
+        resources.ApplyResources(Me.ToolStripDropDownButton1, "ToolStripDropDownButton1")
+        Me.ToolStripDropDownButton1.Name = "ToolStripDropDownButton1"
+        '
+        '获取新版本ToolStripMenuItem
+        '
+        Me.获取新版本ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.getNewVerStable, Me.GetNewVerNightly})
+        Me.获取新版本ToolStripMenuItem.Name = "获取新版本ToolStripMenuItem"
+        resources.ApplyResources(Me.获取新版本ToolStripMenuItem, "获取新版本ToolStripMenuItem")
+        '
+        'getNewVerStable
+        '
+        Me.getNewVerStable.Name = "getNewVerStable"
+        resources.ApplyResources(Me.getNewVerStable, "getNewVerStable")
+        '
+        'GetNewVerNightly
+        '
+        Me.GetNewVerNightly.Name = "GetNewVerNightly"
+        resources.ApplyResources(Me.GetNewVerNightly, "GetNewVerNightly")
+        '
+        'getReleaseCode
+        '
+        Me.getReleaseCode.Name = "getReleaseCode"
+        resources.ApplyResources(Me.getReleaseCode, "getReleaseCode")
         '
         'cbAutoShowProUI
         '
@@ -144,17 +172,16 @@ Partial Class frmMain
         '
         'TabControl1
         '
-        resources.ApplyResources(Me.TabControl1, "TabControl1")
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.Controls.Add(Me.TabPage3)
+        resources.ApplyResources(Me.TabControl1, "TabControl1")
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         '
         'TabPage2
         '
-        resources.ApplyResources(Me.TabPage2, "TabPage2")
         Me.TabPage2.Controls.Add(Me.btnFact)
         Me.TabPage2.Controls.Add(Me.btnRnd)
         Me.TabPage2.Controls.Add(Me.btnPi)
@@ -169,6 +196,7 @@ Partial Class frmMain
         Me.TabPage2.Controls.Add(Me.tbDigi2)
         Me.TabPage2.Controls.Add(Me.btnCalcMath)
         Me.TabPage2.Controls.Add(Me.txtInputMath)
+        resources.ApplyResources(Me.TabPage2, "TabPage2")
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
@@ -237,9 +265,9 @@ Partial Class frmMain
         '
         'tbDigi2
         '
-        resources.ApplyResources(Me.tbDigi2, "tbDigi2")
         Me.tbDigi2.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.tbDigi2.LargeChange = 1
+        resources.ApplyResources(Me.tbDigi2, "tbDigi2")
         Me.tbDigi2.Minimum = -1
         Me.tbDigi2.Name = "tbDigi2"
         Me.tbDigi2.Value = 2
@@ -257,7 +285,6 @@ Partial Class frmMain
         '
         'TabPage1
         '
-        resources.ApplyResources(Me.TabPage1, "TabPage1")
         Me.TabPage1.Controls.Add(Me.Label1)
         Me.TabPage1.Controls.Add(Me.btnCalcPhy)
         Me.TabPage1.Controls.Add(Me.txtInputData)
@@ -268,22 +295,23 @@ Partial Class frmMain
         Me.TabPage1.Controls.Add(Me.Label3)
         Me.TabPage1.Controls.Add(Me.llbProUI)
         Me.TabPage1.Controls.Add(Me.tbDigi1)
+        resources.ApplyResources(Me.TabPage1, "TabPage1")
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
         'tbDigi1
         '
-        resources.ApplyResources(Me.tbDigi1, "tbDigi1")
         Me.tbDigi1.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.tbDigi1.LargeChange = 1
+        resources.ApplyResources(Me.tbDigi1, "tbDigi1")
         Me.tbDigi1.Minimum = -1
         Me.tbDigi1.Name = "tbDigi1"
         Me.tbDigi1.Value = 2
         '
         'TabPage4
         '
-        resources.ApplyResources(Me.TabPage4, "TabPage4")
         Me.TabPage4.Controls.Add(Me.Button1)
+        resources.ApplyResources(Me.TabPage4, "TabPage4")
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
@@ -295,11 +323,11 @@ Partial Class frmMain
         '
         'TabPage3
         '
-        resources.ApplyResources(Me.TabPage3, "TabPage3")
         Me.TabPage3.Controls.Add(Me.Label8)
         Me.TabPage3.Controls.Add(Me.btnCalcDateDiff)
         Me.TabPage3.Controls.Add(Me.mcldB)
         Me.TabPage3.Controls.Add(Me.mcldA)
+        resources.ApplyResources(Me.TabPage3, "TabPage3")
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
@@ -329,34 +357,6 @@ Partial Class frmMain
         resources.ApplyResources(Me.llbHelp, "llbHelp")
         Me.llbHelp.Name = "llbHelp"
         Me.llbHelp.TabStop = True
-        '
-        'ToolStripDropDownButton1
-        '
-        resources.ApplyResources(Me.ToolStripDropDownButton1, "ToolStripDropDownButton1")
-        Me.ToolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.获取新版本ToolStripMenuItem, Me.getReleaseCode})
-        Me.ToolStripDropDownButton1.Name = "ToolStripDropDownButton1"
-        '
-        '获取新版本ToolStripMenuItem
-        '
-        resources.ApplyResources(Me.获取新版本ToolStripMenuItem, "获取新版本ToolStripMenuItem")
-        Me.获取新版本ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.getNewVerStable, Me.GetNewVerNightly})
-        Me.获取新版本ToolStripMenuItem.Name = "获取新版本ToolStripMenuItem"
-        '
-        'getNewVerStable
-        '
-        resources.ApplyResources(Me.getNewVerStable, "getNewVerStable")
-        Me.getNewVerStable.Name = "getNewVerStable"
-        '
-        'GetNewVerNightly
-        '
-        resources.ApplyResources(Me.GetNewVerNightly, "GetNewVerNightly")
-        Me.GetNewVerNightly.Name = "GetNewVerNightly"
-        '
-        'getReleaseCode
-        '
-        resources.ApplyResources(Me.getReleaseCode, "getReleaseCode")
-        Me.getReleaseCode.Name = "getReleaseCode"
         '
         'frmMain
         '
