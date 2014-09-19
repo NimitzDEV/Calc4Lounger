@@ -11,6 +11,10 @@
         Me.Text = Application.ProductName & " - " & Application.ProductVersion
         Randomize()
         ReadSettings()
+        TabControl1.SelectedIndex = pref_lasttab
+        cbAutoShowProUI.Checked = pref_autoshowproui
+        tbDigi1.Value = pref_dots1
+        tbDigi2.Value = pref_dots2
         If tbDigi1.Value < 0 Then
             Label4.Text = "完整"
         Else
@@ -30,6 +34,7 @@
             Exit Sub
         End If
         Label4.Text = tbDigi1.Value & "位"
+        pref_dots2 = tbDigi2.Value
     End Sub
     Private Function countNum(ByVal inputStr As String) As Integer
         '计算有多少个数值需要计算
@@ -111,7 +116,7 @@
         showProUI()
     End Sub
 
-    Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles llbAbout.LinkClicked
+    Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs)
         frmAbout.Show(Me)
     End Sub
 
@@ -122,6 +127,7 @@
             Exit Sub
         End If
         Label5.Text = tbDigi2.Value & "位"
+        pref_dots1 = tbDigi1.Value
     End Sub
 
     Private Sub LinkLabel2_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles llbClear2.LinkClicked
@@ -142,9 +148,6 @@
         End Try
     End Sub
 
-    Private Sub LinkLabel3_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles llbHelp.LinkClicked
-        frmHelp.Show(Me)
-    End Sub
 
     Private Sub TextBox2_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles txtInputMath.KeyDown
         If e.KeyCode = Keys.Enter Then
@@ -227,15 +230,23 @@
         frmCRR.Show()
     End Sub
 
-    Private Sub getNewVerStable_Click(sender As Object, e As EventArgs) Handles getNewVerStable.Click
-        Process.Start("http://pan.baidu.com/s/1hqxdjbY")
+
+
+
+    Private Sub llbHelp_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llbHelp.LinkClicked
+        frmHelp.Show(Me)
     End Sub
 
-    Private Sub GetNewVerNightly_Click(sender As Object, e As EventArgs) Handles GetNewVerNightly.Click
-        Process.Start("http://pan.baidu.com/s/1mgiHQUs")
+    Private Sub llbAbout_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llbAbout.LinkClicked
+        frmAbout.Show(Me)
     End Sub
 
-    Private Sub getReleaseCode_Click(sender As Object, e As EventArgs) Handles getReleaseCode.Click
-        Process.Start("https://github.com/NimitzDEV/Calc4Lounger/releases")
+
+    Private Sub cbAutoShowProUI_CheckedChanged(sender As Object, e As EventArgs) Handles cbAutoShowProUI.CheckedChanged
+        pref_autoshowproui = cbAutoShowProUI.Checked
+    End Sub
+
+    Private Sub TabControl1_Click(sender As Object, e As EventArgs) Handles TabControl1.Click
+        pref_lasttab = TabControl1.SelectedIndex
     End Sub
 End Class
