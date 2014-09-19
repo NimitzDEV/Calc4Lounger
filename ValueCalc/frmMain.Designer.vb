@@ -37,7 +37,6 @@ Partial Class frmMain
         Me.获取新版本ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.getNewVerStable = New System.Windows.Forms.ToolStripMenuItem()
         Me.GetNewVerNightly = New System.Windows.Forms.ToolStripMenuItem()
-        Me.getReleaseCode = New System.Windows.Forms.ToolStripMenuItem()
         Me.cbAutoShowProUI = New System.Windows.Forms.CheckBox()
         Me.btnCalcPhy = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
@@ -66,6 +65,7 @@ Partial Class frmMain
         Me.mcldB = New System.Windows.Forms.MonthCalendar()
         Me.mcldA = New System.Windows.Forms.MonthCalendar()
         Me.llbHelp = New System.Windows.Forms.LinkLabel()
+        Me.getReleaseCode = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -108,7 +108,7 @@ Partial Class frmMain
         'llbAbout
         '
         Me.llbAbout.AutoSize = True
-        Me.llbAbout.Location = New System.Drawing.Point(466, 238)
+        Me.llbAbout.Location = New System.Drawing.Point(470, 222)
         Me.llbAbout.Name = "llbAbout"
         Me.llbAbout.Size = New System.Drawing.Size(29, 12)
         Me.llbAbout.TabIndex = 13
@@ -154,7 +154,7 @@ Partial Class frmMain
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.ToolStripDropDownButton1})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 235)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 215)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(502, 22)
         Me.StatusStrip1.TabIndex = 21
@@ -163,7 +163,7 @@ Partial Class frmMain
         'ToolStripStatusLabel1
         '
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(142, 17)
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(141, 17)
         Me.ToolStripStatusLabel1.Text = "Powered by NimitzDEV"
         '
         'ToolStripDropDownButton1
@@ -180,31 +180,25 @@ Partial Class frmMain
         '
         Me.获取新版本ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.getNewVerStable, Me.GetNewVerNightly})
         Me.获取新版本ToolStripMenuItem.Name = "获取新版本ToolStripMenuItem"
-        Me.获取新版本ToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
+        Me.获取新版本ToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
         Me.获取新版本ToolStripMenuItem.Text = "获取新版本"
         '
         'getNewVerStable
         '
         Me.getNewVerStable.Name = "getNewVerStable"
-        Me.getNewVerStable.Size = New System.Drawing.Size(112, 22)
+        Me.getNewVerStable.Size = New System.Drawing.Size(152, 22)
         Me.getNewVerStable.Text = "稳定版"
         '
         'GetNewVerNightly
         '
         Me.GetNewVerNightly.Name = "GetNewVerNightly"
-        Me.GetNewVerNightly.Size = New System.Drawing.Size(112, 22)
+        Me.GetNewVerNightly.Size = New System.Drawing.Size(152, 22)
         Me.GetNewVerNightly.Text = "测试版"
-        '
-        'getReleaseCode
-        '
-        Me.getReleaseCode.Name = "getReleaseCode"
-        Me.getReleaseCode.Size = New System.Drawing.Size(193, 22)
-        Me.getReleaseCode.Text = "获取Release版本代码"
         '
         'cbAutoShowProUI
         '
         Me.cbAutoShowProUI.AutoSize = True
-        Me.cbAutoShowProUI.Location = New System.Drawing.Point(308, 187)
+        Me.cbAutoShowProUI.Location = New System.Drawing.Point(306, 167)
         Me.cbAutoShowProUI.Name = "cbAutoShowProUI"
         Me.cbAutoShowProUI.Size = New System.Drawing.Size(180, 16)
         Me.cbAutoShowProUI.TabIndex = 22
@@ -230,7 +224,7 @@ Partial Class frmMain
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(502, 235)
+        Me.TabControl1.Size = New System.Drawing.Size(502, 215)
         Me.TabControl1.TabIndex = 24
         '
         'TabPage2
@@ -252,14 +246,14 @@ Partial Class frmMain
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(494, 209)
+        Me.TabPage2.Size = New System.Drawing.Size(494, 189)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "算式运算"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
         'btnFact
         '
-        Me.btnFact.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.btnFact.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.btnFact.Location = New System.Drawing.Point(152, 33)
         Me.btnFact.Name = "btnFact"
         Me.btnFact.Size = New System.Drawing.Size(26, 23)
@@ -269,7 +263,7 @@ Partial Class frmMain
         '
         'btnRnd
         '
-        Me.btnRnd.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.btnRnd.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.btnRnd.Location = New System.Drawing.Point(122, 33)
         Me.btnRnd.Name = "btnRnd"
         Me.btnRnd.Size = New System.Drawing.Size(26, 23)
@@ -325,8 +319,8 @@ Partial Class frmMain
         '
         'tbResult
         '
-        Me.tbResult.Font = New System.Drawing.Font("宋体", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.tbResult.Location = New System.Drawing.Point(10, 174)
+        Me.tbResult.Font = New System.Drawing.Font("宋体", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.tbResult.Location = New System.Drawing.Point(10, 154)
         Me.tbResult.Name = "tbResult"
         Me.tbResult.ReadOnly = True
         Me.tbResult.Size = New System.Drawing.Size(481, 29)
@@ -337,7 +331,7 @@ Partial Class frmMain
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(8, 159)
+        Me.Label7.Location = New System.Drawing.Point(8, 139)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(53, 12)
         Me.Label7.TabIndex = 24
@@ -404,7 +398,7 @@ Partial Class frmMain
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(494, 209)
+        Me.TabPage1.Size = New System.Drawing.Size(494, 189)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "平均与偏差"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -426,7 +420,7 @@ Partial Class frmMain
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(494, 209)
+        Me.TabPage4.Size = New System.Drawing.Size(494, 189)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "电路工具箱"
         Me.TabPage4.UseVisualStyleBackColor = True
@@ -449,7 +443,7 @@ Partial Class frmMain
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(494, 209)
+        Me.TabPage3.Size = New System.Drawing.Size(494, 189)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "天数差"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -489,19 +483,25 @@ Partial Class frmMain
         'llbHelp
         '
         Me.llbHelp.AutoSize = True
-        Me.llbHelp.Location = New System.Drawing.Point(408, 238)
+        Me.llbHelp.Location = New System.Drawing.Point(411, 222)
         Me.llbHelp.Name = "llbHelp"
         Me.llbHelp.Size = New System.Drawing.Size(53, 12)
         Me.llbHelp.TabIndex = 25
         Me.llbHelp.TabStop = True
         Me.llbHelp.Text = "使用帮助"
         '
+        'getReleaseCode
+        '
+        Me.getReleaseCode.Name = "getReleaseCode"
+        Me.getReleaseCode.Size = New System.Drawing.Size(191, 22)
+        Me.getReleaseCode.Text = "获取Release版本代码"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.ClientSize = New System.Drawing.Size(502, 257)
+        Me.ClientSize = New System.Drawing.Size(502, 237)
         Me.Controls.Add(Me.llbHelp)
         Me.Controls.Add(Me.llbAbout)
         Me.Controls.Add(Me.TabControl1)
