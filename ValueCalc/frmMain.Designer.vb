@@ -78,96 +78,146 @@ Partial Class frmMain
         '
         'txtInputData
         '
-        resources.ApplyResources(Me.txtInputData, "txtInputData")
+        Me.txtInputData.Location = New System.Drawing.Point(6, 6)
         Me.txtInputData.Name = "txtInputData"
+        Me.txtInputData.Size = New System.Drawing.Size(480, 21)
+        Me.txtInputData.TabIndex = 0
+        Me.txtInputData.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'llbProUI
         '
-        resources.ApplyResources(Me.llbProUI, "llbProUI")
+        Me.llbProUI.AutoSize = True
+        Me.llbProUI.Location = New System.Drawing.Point(8, 133)
         Me.llbProUI.Name = "llbProUI"
+        Me.llbProUI.Size = New System.Drawing.Size(53, 12)
+        Me.llbProUI.TabIndex = 17
         Me.llbProUI.TabStop = True
+        Me.llbProUI.Text = "演算过程"
+        Me.llbProUI.Visible = False
         '
         'llbClear1
         '
-        resources.ApplyResources(Me.llbClear1, "llbClear1")
+        Me.llbClear1.AutoSize = True
+        Me.llbClear1.Location = New System.Drawing.Point(376, 38)
         Me.llbClear1.Name = "llbClear1"
+        Me.llbClear1.Size = New System.Drawing.Size(29, 12)
+        Me.llbClear1.TabIndex = 16
         Me.llbClear1.TabStop = True
+        Me.llbClear1.Text = "清除"
         '
         'llbAbout
         '
-        resources.ApplyResources(Me.llbAbout, "llbAbout")
+        Me.llbAbout.AutoSize = True
+        Me.llbAbout.Location = New System.Drawing.Point(466, 238)
         Me.llbAbout.Name = "llbAbout"
+        Me.llbAbout.Size = New System.Drawing.Size(29, 12)
+        Me.llbAbout.TabIndex = 13
         Me.llbAbout.TabStop = True
+        Me.llbAbout.Text = "关于"
         '
         'Label2
         '
-        resources.ApplyResources(Me.Label2, "Label2")
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(8, 108)
         Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(41, 12)
+        Me.Label2.TabIndex = 15
+        Me.Label2.Text = "偏差值"
         '
         'Label1
         '
-        resources.ApplyResources(Me.Label1, "Label1")
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(8, 83)
         Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(41, 12)
+        Me.Label1.TabIndex = 14
+        Me.Label1.Text = "平均值"
         '
         'Label3
         '
-        resources.ApplyResources(Me.Label3, "Label3")
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(8, 38)
         Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(41, 12)
+        Me.Label3.TabIndex = 19
+        Me.Label3.Text = "小数位"
         '
         'Label4
         '
-        resources.ApplyResources(Me.Label4, "Label4")
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(247, 38)
         Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(23, 12)
+        Me.Label4.TabIndex = 20
+        Me.Label4.Text = "2位"
         '
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.ToolStripDropDownButton1})
-        resources.ApplyResources(Me.StatusStrip1, "StatusStrip1")
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 235)
         Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(502, 22)
+        Me.StatusStrip1.TabIndex = 21
+        Me.StatusStrip1.Text = "StatusStrip1"
         '
         'ToolStripStatusLabel1
         '
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        resources.ApplyResources(Me.ToolStripStatusLabel1, "ToolStripStatusLabel1")
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(142, 17)
+        Me.ToolStripStatusLabel1.Text = "Powered by NimitzDEV"
         '
         'ToolStripDropDownButton1
         '
         Me.ToolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.获取新版本ToolStripMenuItem, Me.getReleaseCode})
-        resources.ApplyResources(Me.ToolStripDropDownButton1, "ToolStripDropDownButton1")
+        Me.ToolStripDropDownButton1.Image = CType(resources.GetObject("ToolStripDropDownButton1.Image"), System.Drawing.Image)
+        Me.ToolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripDropDownButton1.Name = "ToolStripDropDownButton1"
+        Me.ToolStripDropDownButton1.Size = New System.Drawing.Size(29, 20)
+        Me.ToolStripDropDownButton1.Text = "ToolStripDropDownButton1"
         '
         '获取新版本ToolStripMenuItem
         '
         Me.获取新版本ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.getNewVerStable, Me.GetNewVerNightly})
         Me.获取新版本ToolStripMenuItem.Name = "获取新版本ToolStripMenuItem"
-        resources.ApplyResources(Me.获取新版本ToolStripMenuItem, "获取新版本ToolStripMenuItem")
+        Me.获取新版本ToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
+        Me.获取新版本ToolStripMenuItem.Text = "获取新版本"
         '
         'getNewVerStable
         '
         Me.getNewVerStable.Name = "getNewVerStable"
-        resources.ApplyResources(Me.getNewVerStable, "getNewVerStable")
+        Me.getNewVerStable.Size = New System.Drawing.Size(112, 22)
+        Me.getNewVerStable.Text = "稳定版"
         '
         'GetNewVerNightly
         '
         Me.GetNewVerNightly.Name = "GetNewVerNightly"
-        resources.ApplyResources(Me.GetNewVerNightly, "GetNewVerNightly")
+        Me.GetNewVerNightly.Size = New System.Drawing.Size(112, 22)
+        Me.GetNewVerNightly.Text = "测试版"
         '
         'getReleaseCode
         '
         Me.getReleaseCode.Name = "getReleaseCode"
-        resources.ApplyResources(Me.getReleaseCode, "getReleaseCode")
+        Me.getReleaseCode.Size = New System.Drawing.Size(193, 22)
+        Me.getReleaseCode.Text = "获取Release版本代码"
         '
         'cbAutoShowProUI
         '
-        resources.ApplyResources(Me.cbAutoShowProUI, "cbAutoShowProUI")
+        Me.cbAutoShowProUI.AutoSize = True
+        Me.cbAutoShowProUI.Location = New System.Drawing.Point(308, 187)
         Me.cbAutoShowProUI.Name = "cbAutoShowProUI"
+        Me.cbAutoShowProUI.Size = New System.Drawing.Size(180, 16)
+        Me.cbAutoShowProUI.TabIndex = 22
+        Me.cbAutoShowProUI.Text = "点击计算后自动打开演算过程"
         Me.cbAutoShowProUI.UseVisualStyleBackColor = True
         '
         'btnCalcPhy
         '
-        resources.ApplyResources(Me.btnCalcPhy, "btnCalcPhy")
+        Me.btnCalcPhy.Location = New System.Drawing.Point(411, 33)
         Me.btnCalcPhy.Name = "btnCalcPhy"
+        Me.btnCalcPhy.Size = New System.Drawing.Size(75, 23)
+        Me.btnCalcPhy.TabIndex = 23
+        Me.btnCalcPhy.Text = "计算结果"
         Me.btnCalcPhy.UseVisualStyleBackColor = True
         '
         'TabControl1
@@ -176,9 +226,12 @@ Partial Class frmMain
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.Controls.Add(Me.TabPage3)
-        resources.ApplyResources(Me.TabControl1, "TabControl1")
+        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(502, 235)
+        Me.TabControl1.TabIndex = 24
         '
         'TabPage2
         '
@@ -196,92 +249,145 @@ Partial Class frmMain
         Me.TabPage2.Controls.Add(Me.tbDigi2)
         Me.TabPage2.Controls.Add(Me.btnCalcMath)
         Me.TabPage2.Controls.Add(Me.txtInputMath)
-        resources.ApplyResources(Me.TabPage2, "TabPage2")
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(494, 209)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "算式运算"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
         'btnFact
         '
-        resources.ApplyResources(Me.btnFact, "btnFact")
+        Me.btnFact.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.btnFact.Location = New System.Drawing.Point(152, 33)
         Me.btnFact.Name = "btnFact"
+        Me.btnFact.Size = New System.Drawing.Size(26, 23)
+        Me.btnFact.TabIndex = 32
+        Me.btnFact.Text = "！"
         Me.btnFact.UseVisualStyleBackColor = True
         '
         'btnRnd
         '
-        resources.ApplyResources(Me.btnRnd, "btnRnd")
+        Me.btnRnd.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.btnRnd.Location = New System.Drawing.Point(122, 33)
         Me.btnRnd.Name = "btnRnd"
+        Me.btnRnd.Size = New System.Drawing.Size(26, 23)
+        Me.btnRnd.TabIndex = 31
+        Me.btnRnd.Text = "R"
         Me.btnRnd.UseVisualStyleBackColor = True
         '
         'btnPi
         '
-        resources.ApplyResources(Me.btnPi, "btnPi")
+        Me.btnPi.Location = New System.Drawing.Point(93, 33)
         Me.btnPi.Name = "btnPi"
+        Me.btnPi.Size = New System.Drawing.Size(26, 23)
+        Me.btnPi.TabIndex = 30
+        Me.btnPi.Text = "π"
         Me.btnPi.UseVisualStyleBackColor = True
         '
         'btnE
         '
-        resources.ApplyResources(Me.btnE, "btnE")
+        Me.btnE.Location = New System.Drawing.Point(64, 33)
         Me.btnE.Name = "btnE"
+        Me.btnE.Size = New System.Drawing.Size(26, 23)
+        Me.btnE.TabIndex = 29
+        Me.btnE.Text = "e"
         Me.btnE.UseVisualStyleBackColor = True
         '
         'btnAbs
         '
-        resources.ApplyResources(Me.btnAbs, "btnAbs")
+        Me.btnAbs.Location = New System.Drawing.Point(35, 33)
         Me.btnAbs.Name = "btnAbs"
+        Me.btnAbs.Size = New System.Drawing.Size(26, 23)
+        Me.btnAbs.TabIndex = 28
+        Me.btnAbs.Text = "||"
         Me.btnAbs.UseVisualStyleBackColor = True
         '
         'btnSqrt
         '
-        resources.ApplyResources(Me.btnSqrt, "btnSqrt")
+        Me.btnSqrt.Location = New System.Drawing.Point(6, 33)
         Me.btnSqrt.Name = "btnSqrt"
+        Me.btnSqrt.Size = New System.Drawing.Size(26, 23)
+        Me.btnSqrt.TabIndex = 27
+        Me.btnSqrt.Text = "√"
         Me.btnSqrt.UseVisualStyleBackColor = True
         '
         'llbClear2
         '
-        resources.ApplyResources(Me.llbClear2, "llbClear2")
+        Me.llbClear2.AutoSize = True
+        Me.llbClear2.Location = New System.Drawing.Point(378, 38)
         Me.llbClear2.Name = "llbClear2"
+        Me.llbClear2.Size = New System.Drawing.Size(29, 12)
+        Me.llbClear2.TabIndex = 26
         Me.llbClear2.TabStop = True
+        Me.llbClear2.Text = "清除"
         '
         'tbResult
         '
-        resources.ApplyResources(Me.tbResult, "tbResult")
+        Me.tbResult.Font = New System.Drawing.Font("宋体", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.tbResult.Location = New System.Drawing.Point(10, 174)
         Me.tbResult.Name = "tbResult"
         Me.tbResult.ReadOnly = True
+        Me.tbResult.Size = New System.Drawing.Size(481, 29)
+        Me.tbResult.TabIndex = 25
+        Me.tbResult.Text = "0"
+        Me.tbResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label7
         '
-        resources.ApplyResources(Me.Label7, "Label7")
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(8, 159)
         Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(53, 12)
+        Me.Label7.TabIndex = 24
+        Me.Label7.Text = "运算结果"
         '
         'Label5
         '
-        resources.ApplyResources(Me.Label5, "Label5")
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(244, 97)
         Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(23, 12)
+        Me.Label5.TabIndex = 23
+        Me.Label5.Text = "2位"
         '
         'Label6
         '
-        resources.ApplyResources(Me.Label6, "Label6")
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(8, 97)
         Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(41, 12)
+        Me.Label6.TabIndex = 22
+        Me.Label6.Text = "小数位"
         '
         'tbDigi2
         '
         Me.tbDigi2.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.tbDigi2.LargeChange = 1
-        resources.ApplyResources(Me.tbDigi2, "tbDigi2")
+        Me.tbDigi2.Location = New System.Drawing.Point(55, 85)
         Me.tbDigi2.Minimum = -1
         Me.tbDigi2.Name = "tbDigi2"
+        Me.tbDigi2.Size = New System.Drawing.Size(183, 45)
+        Me.tbDigi2.TabIndex = 21
         Me.tbDigi2.Value = 2
         '
         'btnCalcMath
         '
-        resources.ApplyResources(Me.btnCalcMath, "btnCalcMath")
+        Me.btnCalcMath.Location = New System.Drawing.Point(413, 33)
         Me.btnCalcMath.Name = "btnCalcMath"
+        Me.btnCalcMath.Size = New System.Drawing.Size(75, 23)
+        Me.btnCalcMath.TabIndex = 1
+        Me.btnCalcMath.Text = "运算式子"
         Me.btnCalcMath.UseVisualStyleBackColor = True
         '
         'txtInputMath
         '
-        resources.ApplyResources(Me.txtInputMath, "txtInputMath")
+        Me.txtInputMath.Location = New System.Drawing.Point(6, 6)
         Me.txtInputMath.Name = "txtInputMath"
+        Me.txtInputMath.Size = New System.Drawing.Size(482, 21)
+        Me.txtInputMath.TabIndex = 0
+        Me.txtInputMath.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'TabPage1
         '
@@ -295,30 +401,43 @@ Partial Class frmMain
         Me.TabPage1.Controls.Add(Me.Label3)
         Me.TabPage1.Controls.Add(Me.llbProUI)
         Me.TabPage1.Controls.Add(Me.tbDigi1)
-        resources.ApplyResources(Me.TabPage1, "TabPage1")
+        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(494, 209)
+        Me.TabPage1.TabIndex = 0
+        Me.TabPage1.Text = "平均与偏差"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
         'tbDigi1
         '
         Me.tbDigi1.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.tbDigi1.LargeChange = 1
-        resources.ApplyResources(Me.tbDigi1, "tbDigi1")
+        Me.tbDigi1.Location = New System.Drawing.Point(55, 35)
         Me.tbDigi1.Minimum = -1
         Me.tbDigi1.Name = "tbDigi1"
+        Me.tbDigi1.Size = New System.Drawing.Size(186, 45)
+        Me.tbDigi1.TabIndex = 18
         Me.tbDigi1.Value = 2
         '
         'TabPage4
         '
         Me.TabPage4.Controls.Add(Me.Button1)
-        resources.ApplyResources(Me.TabPage4, "TabPage4")
+        Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
+        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage4.Size = New System.Drawing.Size(494, 209)
+        Me.TabPage4.TabIndex = 3
+        Me.TabPage4.Text = "电路工具箱"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
         'Button1
         '
-        resources.ApplyResources(Me.Button1, "Button1")
+        Me.Button1.Location = New System.Drawing.Point(3, 6)
         Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(131, 43)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "色环电阻计算器"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'TabPage3
@@ -327,48 +446,72 @@ Partial Class frmMain
         Me.TabPage3.Controls.Add(Me.btnCalcDateDiff)
         Me.TabPage3.Controls.Add(Me.mcldB)
         Me.TabPage3.Controls.Add(Me.mcldA)
-        resources.ApplyResources(Me.TabPage3, "TabPage3")
+        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage3.Size = New System.Drawing.Size(494, 209)
+        Me.TabPage3.TabIndex = 2
+        Me.TabPage3.Text = "天数差"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
         'Label8
         '
-        resources.ApplyResources(Me.Label8, "Label8")
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(4, 6)
         Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(293, 12)
+        Me.Label8.TabIndex = 3
+        Me.Label8.Text = "在下面两个日历中选择两个日期来计算他们的天数差别"
         '
         'btnCalcDateDiff
         '
-        resources.ApplyResources(Me.btnCalcDateDiff, "btnCalcDateDiff")
+        Me.btnCalcDateDiff.Location = New System.Drawing.Point(416, 0)
         Me.btnCalcDateDiff.Name = "btnCalcDateDiff"
+        Me.btnCalcDateDiff.Size = New System.Drawing.Size(75, 23)
+        Me.btnCalcDateDiff.TabIndex = 2
+        Me.btnCalcDateDiff.Text = "计算"
         Me.btnCalcDateDiff.UseVisualStyleBackColor = True
         '
         'mcldB
         '
-        resources.ApplyResources(Me.mcldB, "mcldB")
+        Me.mcldB.Location = New System.Drawing.Point(248, 24)
         Me.mcldB.Name = "mcldB"
+        Me.mcldB.ShowWeekNumbers = True
+        Me.mcldB.TabIndex = 1
         '
         'mcldA
         '
-        resources.ApplyResources(Me.mcldA, "mcldA")
+        Me.mcldA.Location = New System.Drawing.Point(0, 24)
         Me.mcldA.Name = "mcldA"
+        Me.mcldA.ShowWeekNumbers = True
+        Me.mcldA.TabIndex = 0
         '
         'llbHelp
         '
-        resources.ApplyResources(Me.llbHelp, "llbHelp")
+        Me.llbHelp.AutoSize = True
+        Me.llbHelp.Location = New System.Drawing.Point(408, 238)
         Me.llbHelp.Name = "llbHelp"
+        Me.llbHelp.Size = New System.Drawing.Size(53, 12)
+        Me.llbHelp.TabIndex = 25
         Me.llbHelp.TabStop = True
+        Me.llbHelp.Text = "使用帮助"
         '
         'frmMain
         '
-        resources.ApplyResources(Me, "$this")
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.ClientSize = New System.Drawing.Size(502, 257)
         Me.Controls.Add(Me.llbHelp)
         Me.Controls.Add(Me.llbAbout)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.StatusStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "frmMain"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Main"
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
         Me.TabControl1.ResumeLayout(False)

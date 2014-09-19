@@ -103,7 +103,6 @@
         Else
             MsgBox("缺少mimetex文件")
             If MsgBox("是否现在下载缺少的文件？", MsgBoxStyle.OkCancel, "缺少组件") = MsgBoxResult.Ok Then Process.Start("http://pan.baidu.com/s/1sjIz8rr")
-            Exit Sub
         End If
     End Sub
 
