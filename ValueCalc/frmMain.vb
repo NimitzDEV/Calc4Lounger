@@ -249,4 +249,9 @@
     Private Sub TabControl1_Click(sender As Object, e As EventArgs) Handles TabControl1.Click
         pref_lasttab = TabControl1.SelectedIndex
     End Sub
+
+    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+        frmUpdate.ShowDialog()
+        frmUpdate.Dispose()
+    End Sub
 End Class

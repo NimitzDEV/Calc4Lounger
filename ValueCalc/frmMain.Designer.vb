@@ -61,6 +61,7 @@ Partial Class frmMain
         Me.mcldA = New System.Windows.Forms.MonthCalendar()
         Me.llbHelp = New System.Windows.Forms.LinkLabel()
         Me.llbAbout = New System.Windows.Forms.LinkLabel()
+        Me.btnUpdate = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.tbDigi2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -442,7 +443,7 @@ Partial Class frmMain
         'llbHelp
         '
         Me.llbHelp.AutoSize = True
-        Me.llbHelp.Location = New System.Drawing.Point(404, 236)
+        Me.llbHelp.Location = New System.Drawing.Point(404, 241)
         Me.llbHelp.Name = "llbHelp"
         Me.llbHelp.Size = New System.Drawing.Size(53, 12)
         Me.llbHelp.TabIndex = 35
@@ -452,19 +453,29 @@ Partial Class frmMain
         'llbAbout
         '
         Me.llbAbout.AutoSize = True
-        Me.llbAbout.Location = New System.Drawing.Point(463, 236)
+        Me.llbAbout.Location = New System.Drawing.Point(463, 241)
         Me.llbAbout.Name = "llbAbout"
         Me.llbAbout.Size = New System.Drawing.Size(29, 12)
         Me.llbAbout.TabIndex = 34
         Me.llbAbout.TabStop = True
         Me.llbAbout.Text = "关于"
         '
+        'btnUpdate
+        '
+        Me.btnUpdate.Location = New System.Drawing.Point(4, 236)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(90, 23)
+        Me.btnUpdate.TabIndex = 36
+        Me.btnUpdate.Text = "检查新版本"
+        Me.btnUpdate.UseVisualStyleBackColor = True
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.ClientSize = New System.Drawing.Size(502, 252)
+        Me.ClientSize = New System.Drawing.Size(502, 261)
+        Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.llbHelp)
         Me.Controls.Add(Me.llbAbout)
         Me.Controls.Add(Me.TabControl1)
@@ -526,4 +537,5 @@ Partial Class frmMain
     Friend WithEvents llbHelp As System.Windows.Forms.LinkLabel
     Friend WithEvents llbAbout As System.Windows.Forms.LinkLabel
     Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents btnUpdate As System.Windows.Forms.Button
 End Class
