@@ -99,6 +99,12 @@
     <Compile Include="frmCRR.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmLeadDownload.Designer.vb">
+      <DependentUpon>frmLeadDownload.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLeadDownload.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmProDateDiff.Designer.vb">
       <DependentUpon>frmProDateDiff.vb</DependentUpon>
     </Compile>
@@ -157,6 +163,9 @@
   <ItemGroup>
     <EmbeddedResource Include="frmCRR.resx">
       <DependentUpon>frmCRR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLeadDownload.resx">
+      <DependentUpon>frmLeadDownload.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProDateDiff.resx">
       <DependentUpon>frmProDateDiff.vb</DependentUpon>

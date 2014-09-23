@@ -102,12 +102,15 @@
     End Sub
     Private Sub showProUI()
         If frmProUI.ToString <> "" Then frmProUI.Close()
-        If My.Computer.FileSystem.FileExists(Application.StartupPath & "\mimetex.exe") = True Then
+        If My.Computer.FileSystem.FileExists(folderPath & "mimetex.exe") = True Then
             outputHtmlFile()
             frmProUI.Show()
         Else
             MsgBox("缺少mimetex文件")
-            If MsgBox("是否现在下载缺少的文件？", MsgBoxStyle.OkCancel, "缺少组件") = MsgBoxResult.Ok Then Process.Start("http://pan.baidu.com/s/1sjIz8rr")
+            If MsgBox("是否现在引导您下载缺失的组件？", MsgBoxStyle.OkCancel, "缺少组件") = MsgBoxResult.Ok Then
+                frmLeadDownload.ShowDialog()
+                frmLeadDownload.Dispose()
+            End If
             Exit Sub
         End If
     End Sub
