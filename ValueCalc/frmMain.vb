@@ -257,4 +257,8 @@
         frmUpdate.ShowDialog()
         frmUpdate.Dispose()
     End Sub
+
+    Private Sub llbWeb_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llbWeb.LinkClicked
+        Process.Start("http://ndev.cu.cc")
+    End Sub
 End Class

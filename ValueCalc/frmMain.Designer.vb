@@ -62,6 +62,7 @@ Partial Class frmMain
         Me.llbHelp = New System.Windows.Forms.LinkLabel()
         Me.llbAbout = New System.Windows.Forms.LinkLabel()
         Me.btnUpdate = New System.Windows.Forms.Button()
+        Me.llbWeb = New System.Windows.Forms.LinkLabel()
         Me.TabControl1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.tbDigi2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -469,12 +470,23 @@ Partial Class frmMain
         Me.btnUpdate.Text = "检查新版本"
         Me.btnUpdate.UseVisualStyleBackColor = True
         '
+        'llbWeb
+        '
+        Me.llbWeb.AutoSize = True
+        Me.llbWeb.Location = New System.Drawing.Point(345, 241)
+        Me.llbWeb.Name = "llbWeb"
+        Me.llbWeb.Size = New System.Drawing.Size(53, 12)
+        Me.llbWeb.TabIndex = 37
+        Me.llbWeb.TabStop = True
+        Me.llbWeb.Text = "访问官网"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(502, 261)
+        Me.Controls.Add(Me.llbWeb)
         Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.llbHelp)
         Me.Controls.Add(Me.llbAbout)
@@ -538,4 +550,5 @@ Partial Class frmMain
     Friend WithEvents llbAbout As System.Windows.Forms.LinkLabel
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents btnUpdate As System.Windows.Forms.Button
+    Friend WithEvents llbWeb As System.Windows.Forms.LinkLabel
 End Class
