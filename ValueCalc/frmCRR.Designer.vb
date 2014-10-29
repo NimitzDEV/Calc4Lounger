@@ -300,16 +300,7 @@ Partial Class frmCRR
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(100, 16)
         Me.Label5.TabIndex = 27
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.懒人计算器.My.Resources.Resources.info
-        Me.PictureBox1.Location = New System.Drawing.Point(444, 21)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(16, 16)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 28
-        Me.PictureBox1.TabStop = False
+
         '
         'frmCRR
         '
