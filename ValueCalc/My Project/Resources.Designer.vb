@@ -79,5 +79,14 @@ Namespace My.Resources
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
+        
+        '''<summary>
+        '''  查找类似 米#1 的本地化字符串。
+        '''</summary>
+        Friend ReadOnly Property list_distance() As String
+            Get
+                Return ResourceManager.GetString("list_distance", resourceCulture)
+            End Get
+        End Property
     End Module
 End Namespace

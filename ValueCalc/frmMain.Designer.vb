@@ -59,10 +59,13 @@ Partial Class frmMain
         Me.btnCalcDateDiff = New System.Windows.Forms.Button()
         Me.mcldB = New System.Windows.Forms.MonthCalendar()
         Me.mcldA = New System.Windows.Forms.MonthCalendar()
+        Me.tbUnits = New System.Windows.Forms.TabPage()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.llbHelp = New System.Windows.Forms.LinkLabel()
         Me.llbAbout = New System.Windows.Forms.LinkLabel()
         Me.btnUpdate = New System.Windows.Forms.Button()
         Me.llbWeb = New System.Windows.Forms.LinkLabel()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.tbDigi2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -70,6 +73,7 @@ Partial Class frmMain
         CType(Me.tbDigi1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage4.SuspendLayout()
         Me.TabPage3.SuspendLayout()
+        Me.tbUnits.SuspendLayout()
         Me.SuspendLayout()
         '
         'txtInputData
@@ -162,6 +166,7 @@ Partial Class frmMain
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.Controls.Add(Me.TabPage3)
+        Me.TabControl1.Controls.Add(Me.tbUnits)
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -441,6 +446,26 @@ Partial Class frmMain
         Me.mcldA.ShowWeekNumbers = True
         Me.mcldA.TabIndex = 0
         '
+        'tbUnits
+        '
+        Me.tbUnits.Controls.Add(Me.Button2)
+        Me.tbUnits.Controls.Add(Me.ComboBox1)
+        Me.tbUnits.Location = New System.Drawing.Point(4, 22)
+        Me.tbUnits.Name = "tbUnits"
+        Me.tbUnits.Padding = New System.Windows.Forms.Padding(3)
+        Me.tbUnits.Size = New System.Drawing.Size(494, 207)
+        Me.tbUnits.TabIndex = 4
+        Me.tbUnits.Text = "单位换算"
+        Me.tbUnits.UseVisualStyleBackColor = True
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(365, 6)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 20)
+        Me.ComboBox1.TabIndex = 0
+        '
         'llbHelp
         '
         Me.llbHelp.AutoSize = True
@@ -480,6 +505,15 @@ Partial Class frmMain
         Me.llbWeb.TabStop = True
         Me.llbWeb.Text = "访问官网"
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(174, 92)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 1
+        Me.Button2.Text = "Button2"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
@@ -507,6 +541,7 @@ Partial Class frmMain
         Me.TabPage4.ResumeLayout(False)
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
+        Me.tbUnits.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -551,4 +586,7 @@ Partial Class frmMain
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents btnUpdate As System.Windows.Forms.Button
     Friend WithEvents llbWeb As System.Windows.Forms.LinkLabel
+    Friend WithEvents tbUnits As System.Windows.Forms.TabPage
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class

@@ -124,4 +124,7 @@
   <data name="alipayqrcode" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\alipayqrcode.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="list_distance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\list_distance.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;gb2312</value>
+  </data>
 </root>

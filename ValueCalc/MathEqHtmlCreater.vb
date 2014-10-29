@@ -7,6 +7,7 @@ Module MathEqHtmlCreater
     Dim tmpStr As String
     Dim serverStr As String
     Public Sub outputHtmlFile()
+
         pubOperate = folderPath & "eq.html"
         serverStr = "<img src=""" & folderPath
         If Dir(pubOperate) <> "" Then

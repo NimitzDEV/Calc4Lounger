@@ -261,4 +261,13 @@
     Private Sub llbWeb_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llbWeb.LinkClicked
         Process.Start("http://ndev.cu.cc")
     End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+        Debug.Print(catListData(ComboBox1.SelectedIndex))
+    End Sub
+
+    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+        ComboBox1.Items.Clear()
+        initCatList(ComboBox1)
+    End Sub
 End Class
