@@ -209,6 +209,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="20140329041501994_easyicon_net_96.ico" />
+    <EmbeddedResource Include="Resources\list_time.txt" />
     <EmbeddedResource Include="Resources\catlist.txt" />
     <EmbeddedResource Include="Resources\list_distance.txt" />
     <None Include="Resources\alipayqrcode.jpg" />

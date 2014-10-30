@@ -22,6 +22,7 @@ Partial Class frmMain
     '不要使用代码编辑器修改它。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.txtInputData = New System.Windows.Forms.TextBox()
         Me.llbProUI = New System.Windows.Forms.LinkLabel()
@@ -60,12 +61,22 @@ Partial Class frmMain
         Me.mcldB = New System.Windows.Forms.MonthCalendar()
         Me.mcldA = New System.Windows.Forms.MonthCalendar()
         Me.tbUnits = New System.Windows.Forms.TabPage()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.btnConver = New System.Windows.Forms.Button()
+        Me.tbCU = New System.Windows.Forms.TextBox()
+        Me.tbOU = New System.Windows.Forms.TextBox()
+        Me.btnCU = New System.Windows.Forms.Button()
+        Me.btnOU = New System.Windows.Forms.Button()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.btnCatSel = New System.Windows.Forms.Button()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.llbHelp = New System.Windows.Forms.LinkLabel()
         Me.llbAbout = New System.Windows.Forms.LinkLabel()
         Me.btnUpdate = New System.Windows.Forms.Button()
         Me.llbWeb = New System.Windows.Forms.LinkLabel()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.cmsCatSel = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.cmsOU = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.cmsCU = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.TabControl1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.tbDigi2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -448,8 +459,15 @@ Partial Class frmMain
         '
         'tbUnits
         '
-        Me.tbUnits.Controls.Add(Me.Button2)
-        Me.tbUnits.Controls.Add(Me.ComboBox1)
+        Me.tbUnits.Controls.Add(Me.btnConver)
+        Me.tbUnits.Controls.Add(Me.tbCU)
+        Me.tbUnits.Controls.Add(Me.tbOU)
+        Me.tbUnits.Controls.Add(Me.btnCU)
+        Me.tbUnits.Controls.Add(Me.btnOU)
+        Me.tbUnits.Controls.Add(Me.Label13)
+        Me.tbUnits.Controls.Add(Me.Label12)
+        Me.tbUnits.Controls.Add(Me.btnCatSel)
+        Me.tbUnits.Controls.Add(Me.Label11)
         Me.tbUnits.Location = New System.Drawing.Point(4, 22)
         Me.tbUnits.Name = "tbUnits"
         Me.tbUnits.Padding = New System.Windows.Forms.Padding(3)
@@ -458,13 +476,83 @@ Partial Class frmMain
         Me.tbUnits.Text = "单位换算"
         Me.tbUnits.UseVisualStyleBackColor = True
         '
-        'ComboBox1
+        'btnConver
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(365, 6)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 20)
-        Me.ComboBox1.TabIndex = 0
+        Me.btnConver.Location = New System.Drawing.Point(204, 108)
+        Me.btnConver.Name = "btnConver"
+        Me.btnConver.Size = New System.Drawing.Size(75, 23)
+        Me.btnConver.TabIndex = 8
+        Me.btnConver.Text = "转换"
+        Me.btnConver.UseVisualStyleBackColor = True
+        '
+        'tbCU
+        '
+        Me.tbCU.Enabled = False
+        Me.tbCU.Location = New System.Drawing.Point(285, 108)
+        Me.tbCU.Name = "tbCU"
+        Me.tbCU.Size = New System.Drawing.Size(100, 21)
+        Me.tbCU.TabIndex = 7
+        '
+        'tbOU
+        '
+        Me.tbOU.Location = New System.Drawing.Point(101, 108)
+        Me.tbOU.Name = "tbOU"
+        Me.tbOU.Size = New System.Drawing.Size(100, 21)
+        Me.tbOU.TabIndex = 6
+        '
+        'btnCU
+        '
+        Me.btnCU.Location = New System.Drawing.Point(285, 79)
+        Me.btnCU.Name = "btnCU"
+        Me.btnCU.Size = New System.Drawing.Size(75, 23)
+        Me.btnCU.TabIndex = 5
+        Me.btnCU.Text = "CU"
+        Me.btnCU.UseVisualStyleBackColor = True
+        '
+        'btnOU
+        '
+        Me.btnOU.Location = New System.Drawing.Point(101, 79)
+        Me.btnOU.Name = "btnOU"
+        Me.btnOU.Size = New System.Drawing.Size(75, 23)
+        Me.btnOU.TabIndex = 4
+        Me.btnOU.Text = "OU"
+        Me.btnOU.UseVisualStyleBackColor = True
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(283, 64)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(53, 12)
+        Me.Label13.TabIndex = 3
+        Me.Label13.Text = "转换单位"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(99, 64)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(41, 12)
+        Me.Label12.TabIndex = 2
+        Me.Label12.Text = "原单位"
+        '
+        'btnCatSel
+        '
+        Me.btnCatSel.Location = New System.Drawing.Point(402, 10)
+        Me.btnCatSel.Name = "btnCatSel"
+        Me.btnCatSel.Size = New System.Drawing.Size(75, 23)
+        Me.btnCatSel.TabIndex = 1
+        Me.btnCatSel.Text = "CatSel"
+        Me.btnCatSel.UseVisualStyleBackColor = True
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(341, 15)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(53, 12)
+        Me.Label11.TabIndex = 0
+        Me.Label11.Text = "分类选择"
         '
         'llbHelp
         '
@@ -505,14 +593,20 @@ Partial Class frmMain
         Me.llbWeb.TabStop = True
         Me.llbWeb.Text = "访问官网"
         '
-        'Button2
+        'cmsCatSel
         '
-        Me.Button2.Location = New System.Drawing.Point(174, 92)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.cmsCatSel.Name = "cmsCatSel"
+        Me.cmsCatSel.Size = New System.Drawing.Size(61, 4)
+        '
+        'cmsOU
+        '
+        Me.cmsOU.Name = "cmsOU"
+        Me.cmsOU.Size = New System.Drawing.Size(61, 4)
+        '
+        'cmsCU
+        '
+        Me.cmsCU.Name = "cmsCU"
+        Me.cmsCU.Size = New System.Drawing.Size(61, 4)
         '
         'frmMain
         '
@@ -542,6 +636,7 @@ Partial Class frmMain
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
         Me.tbUnits.ResumeLayout(False)
+        Me.tbUnits.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -587,6 +682,16 @@ Partial Class frmMain
     Friend WithEvents btnUpdate As System.Windows.Forms.Button
     Friend WithEvents llbWeb As System.Windows.Forms.LinkLabel
     Friend WithEvents tbUnits As System.Windows.Forms.TabPage
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents btnCU As System.Windows.Forms.Button
+    Friend WithEvents btnOU As System.Windows.Forms.Button
+    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents btnCatSel As System.Windows.Forms.Button
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents btnConver As System.Windows.Forms.Button
+    Friend WithEvents tbCU As System.Windows.Forms.TextBox
+    Friend WithEvents tbOU As System.Windows.Forms.TextBox
+    Friend WithEvents cmsCatSel As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents cmsOU As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents cmsCU As System.Windows.Forms.ContextMenuStrip
 End Class

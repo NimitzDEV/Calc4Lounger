@@ -8,6 +8,7 @@
         SaveSettings()
     End Sub
     Private Sub Form3_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        initCatList(cmsCatSel)
         Me.Text = Application.ProductName & " - " & Application.ProductVersion
         Randomize()
         ReadSettings()
@@ -262,12 +263,20 @@
         Process.Start("http://ndev.cu.cc")
     End Sub
 
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
-        Debug.Print(catListData(ComboBox1.SelectedIndex))
+
+    Private Sub btnCatSel_Click(sender As Object, e As EventArgs) Handles btnCatSel.Click
+        cmsCatSel.Show(btnCatSel, 0, btnCatSel.Height)
     End Sub
 
-    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
-        ComboBox1.Items.Clear()
-        initCatList(ComboBox1)
+    Private Sub btnOU_Click(sender As Object, e As EventArgs) Handles btnOU.Click
+        cmsOU.Show(btnOU, 0, btnOU.Height)
+    End Sub
+
+    Private Sub btnCU_Click(sender As Object, e As EventArgs) Handles btnCU.Click
+        cmsCU.Show(btnCU, 0, btnCU.Height)
+    End Sub
+
+    Private Sub btnConver_Click(sender As Object, e As EventArgs) Handles btnConver.Click
+        doConver()
     End Sub
 End Class

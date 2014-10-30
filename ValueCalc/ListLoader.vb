@@ -6,7 +6,12 @@ Module ListLoader
     Public listData(0) As String
     Public catListName(0) As String
     Public catListData(0) As String
+    Public detailListName(0) As String
+    Public detailListData(0) As Double
     Dim catCount As Integer
+    '----
+    Public currentValueA As Double
+    Public currentValueB As Double
     Private Function readFile(ByVal filePath As String) As String
         Dim assembly__1 = Assembly.GetExecutingAssembly()
         Dim resourceName = filePath
@@ -18,7 +23,7 @@ Module ListLoader
         End Using
     End Function
 
-    Public Sub initCatList(ByVal listContainer As ComboBox)
+    Public Sub initCatList(ByVal listContainer As ContextMenuStrip)
         Dim listString As String
         Dim listCount As Integer
         listString = readFile("懒人计算器.catlist.txt")
@@ -27,8 +32,49 @@ Module ListLoader
         For i = 0 To listCount
             catListName(i) = Split(listString, vbCrLf)(i).Split("#")(0)
             catListData(i) = Split(listString, vbCrLf)(i).Split("#")(1)
+            listContainer.Items.Add(catListName(i), Nothing, AddressOf catSelHandler).Tag = i
         Next
-        listContainer.Items.AddRange(catListName)
-        listContainer.SelectedIndex = 0
+        frmMain.btnCatSel.Text = catListName(0)
+        loadDetails("懒人计算器.list_distance.txt")
+        'listContainer.Items.AddRange(catListName)
+        'listContainer.SelectedIndex = 0
+    End Sub
+    Public Sub loadDetails(ByVal listPath As String)
+        Dim listString As String
+        Dim listCount As Integer
+        listString = readFile(listPath)
+        listCount = listString.Split(vbCrLf).Length - 1
+        ReDim detailListData(listCount), detailListName(listCount)
+        For i = 0 To listCount
+            detailListName(i) = Split(listString, vbCrLf)(i).Split("#")(0)
+            detailListData(i) = Split(listString, vbCrLf)(i).Split("#")(1)
+            frmMain.cmsOU.Items.Add(detailListName(i), Nothing, AddressOf valueAHandle).Tag = i
+            frmMain.cmsCU.Items.Add(detailListName(i), Nothing, AddressOf valueBHandle).Tag = i
+        Next
+        frmMain.btnCU.Text = detailListName(0)
+        frmMain.btnOU.Text = detailListName(0)
+        currentValueA = detailListData(0)
+        currentValueB = detailListData(0)
+    End Sub
+    Public Sub catSelHandler(sender As Object, e As EventArgs)
+        Debug.Print(sender.tag)
+        frmMain.btnCatSel.Text = catListName(sender.tag)
+        frmMain.cmsCU.Items.Clear()
+        frmMain.cmsOU.Items.Clear()
+        loadDetails(catListData(sender.tag))
+    End Sub
+    Public Sub valueAHandle(sender As Object, e As EventArgs)
+        frmMain.btnOU.Text = detailListName(sender.tag)
+        currentValueA = detailListData(sender.tag)
+        doConver()
+    End Sub
+    Public Sub valueBHandle(sender As Object, e As EventArgs)
+        frmMain.btnCU.Text = detailListName(sender.tag)
+        currentValueB = detailListData(sender.tag)
+        doConver()
+    End Sub
+    Public Sub doConver()
+        If frmMain.tbOU.Text = "" Then Exit Sub
+        frmMain.tbCU.Text = frmMain.tbOU.Text * (currentValueB / currentValueA)
     End Sub
 End Module
