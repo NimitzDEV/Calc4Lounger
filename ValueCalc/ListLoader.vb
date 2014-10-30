@@ -78,7 +78,11 @@ Module ListLoader
         doConver()
     End Sub
     Public Sub doConver()
-        If frmMain.tbOU.Text = "" Then Exit Sub
-        frmMain.tbCU.Text = frmMain.tbOU.Text * (currentValueB / currentValueA)
+        Try
+            If frmMain.tbOU.Text = "" Then Exit Sub
+            frmMain.tbCU.Text = frmMain.tbOU.Text * (currentValueB / currentValueA)
+        Catch ex As Exception
+            frmMain.tbCU.Text = "ERR!"
+        End Try
     End Sub
 End Module

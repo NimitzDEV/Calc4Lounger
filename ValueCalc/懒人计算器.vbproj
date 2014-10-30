@@ -209,6 +209,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="20140329041501994_easyicon_net_96.ico" />
+    <EmbeddedResource Include="Resources\list_power.txt" />
+    <EmbeddedResource Include="Resources\list_press.txt" />
+    <EmbeddedResource Include="Resources\list_force.txt" />
+    <EmbeddedResource Include="Resources\list_density.txt" />
+    <EmbeddedResource Include="Resources\list_mass.txt" />
+    <EmbeddedResource Include="Resources\list_volume.txt" />
+    <EmbeddedResource Include="Resources\list_area.txt" />
     <EmbeddedResource Include="Resources\list_time.txt" />
     <EmbeddedResource Include="Resources\catlist.txt" />
     <EmbeddedResource Include="Resources\list_distance.txt" />

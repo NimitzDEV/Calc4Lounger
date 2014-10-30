@@ -278,7 +278,7 @@
 
 
     Private Sub tbOU_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbOU.KeyPress
-        If Char.IsDigit(e.KeyChar) OrElse e.KeyChar = Chr(8) Then
+        If Char.IsDigit(e.KeyChar) OrElse e.KeyChar = Chr(8) OrElse e.KeyChar = "." Then
             e.Handled = False
         Else
             e.Handled = True
