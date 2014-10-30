@@ -66,6 +66,7 @@ Module ListLoader
         loadDetails(catListData(sender.tag))
         frmMain.tbOU.Text = 0
         frmMain.tbCU.Text = 0
+        redoUI()
     End Sub
     Public Sub valueAHandle(sender As Object, e As EventArgs)
         frmMain.btnOU.Text = detailListName(sender.tag)
@@ -78,11 +79,18 @@ Module ListLoader
         doConver()
     End Sub
     Public Sub doConver()
+        redoUI()
         Try
             If frmMain.tbOU.Text = "" Then Exit Sub
             frmMain.tbCU.Text = frmMain.tbOU.Text * (currentValueB / currentValueA)
         Catch ex As Exception
             frmMain.tbCU.Text = "ERR!"
         End Try
+    End Sub
+    Private Sub redoUI()
+        frmMain.btnOU.Left = frmMain.Width - frmMain.btnOU.Width - 22
+        frmMain.tbOU.Width = frmMain.Width - 35 - frmMain.btnOU.Width
+        frmMain.btnCU.Left = frmMain.Width - frmMain.btnCU.Width - 22
+        frmMain.tbCU.Width = frmMain.Width - 35 - frmMain.btnCU.Width
     End Sub
 End Module

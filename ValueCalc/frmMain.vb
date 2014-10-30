@@ -8,6 +8,8 @@
         SaveSettings()
     End Sub
     Private Sub Form3_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Debug.Print(Me.Width - btnOU.Left - btnOU.Width)
+        Debug.Print(tbOU.Left)
         initCatList(cmsCatSel)
         Me.Text = Application.ProductName & " - " & Application.ProductVersion
         Randomize()

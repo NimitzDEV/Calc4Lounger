@@ -61,6 +61,7 @@ Partial Class frmMain
         Me.mcldB = New System.Windows.Forms.MonthCalendar()
         Me.mcldA = New System.Windows.Forms.MonthCalendar()
         Me.tbUnits = New System.Windows.Forms.TabPage()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.llbRev = New System.Windows.Forms.LinkLabel()
         Me.tbCU = New System.Windows.Forms.TextBox()
         Me.tbOU = New System.Windows.Forms.TextBox()
@@ -75,7 +76,6 @@ Partial Class frmMain
         Me.cmsCatSel = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.cmsOU = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.cmsCU = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.Label12 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.tbDigi2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -474,10 +474,20 @@ Partial Class frmMain
         Me.tbUnits.Text = "单位换算"
         Me.tbUnits.UseVisualStyleBackColor = True
         '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("宋体", 42.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label12.Location = New System.Drawing.Point(192, 91)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(53, 56)
+        Me.Label12.TabIndex = 10
+        Me.Label12.Text = "="
+        '
         'llbRev
         '
         Me.llbRev.AutoSize = True
-        Me.llbRev.Location = New System.Drawing.Point(343, 91)
+        Me.llbRev.Location = New System.Drawing.Point(8, 91)
         Me.llbRev.Name = "llbRev"
         Me.llbRev.Size = New System.Drawing.Size(53, 12)
         Me.llbRev.TabIndex = 9
@@ -490,7 +500,7 @@ Partial Class frmMain
         Me.tbCU.Font = New System.Drawing.Font("宋体", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.tbCU.Location = New System.Drawing.Point(8, 150)
         Me.tbCU.Name = "tbCU"
-        Me.tbCU.Size = New System.Drawing.Size(388, 26)
+        Me.tbCU.Size = New System.Drawing.Size(397, 26)
         Me.tbCU.TabIndex = 7
         Me.tbCU.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -499,22 +509,28 @@ Partial Class frmMain
         Me.tbOU.Font = New System.Drawing.Font("宋体", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.tbOU.Location = New System.Drawing.Point(8, 62)
         Me.tbOU.Name = "tbOU"
-        Me.tbOU.Size = New System.Drawing.Size(388, 26)
+        Me.tbOU.Size = New System.Drawing.Size(397, 26)
         Me.tbOU.TabIndex = 6
         Me.tbOU.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'btnCU
         '
-        Me.btnCU.Location = New System.Drawing.Point(402, 150)
+        Me.btnCU.AutoSize = True
+        Me.btnCU.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnCU.Location = New System.Drawing.Point(411, 149)
+        Me.btnCU.MinimumSize = New System.Drawing.Size(75, 28)
         Me.btnCU.Name = "btnCU"
-        Me.btnCU.Size = New System.Drawing.Size(75, 26)
+        Me.btnCU.Size = New System.Drawing.Size(75, 28)
         Me.btnCU.TabIndex = 5
         Me.btnCU.Text = "CU"
         Me.btnCU.UseVisualStyleBackColor = True
         '
         'btnOU
         '
-        Me.btnOU.Location = New System.Drawing.Point(402, 60)
+        Me.btnOU.AutoSize = True
+        Me.btnOU.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnOU.Location = New System.Drawing.Point(411, 61)
+        Me.btnOU.MinimumSize = New System.Drawing.Size(75, 28)
         Me.btnOU.Name = "btnOU"
         Me.btnOU.Size = New System.Drawing.Size(75, 28)
         Me.btnOU.TabIndex = 4
@@ -523,9 +539,9 @@ Partial Class frmMain
         '
         'btnCatSel
         '
-        Me.btnCatSel.Location = New System.Drawing.Point(402, 10)
+        Me.btnCatSel.Location = New System.Drawing.Point(411, 10)
         Me.btnCatSel.Name = "btnCatSel"
-        Me.btnCatSel.Size = New System.Drawing.Size(75, 23)
+        Me.btnCatSel.Size = New System.Drawing.Size(75, 26)
         Me.btnCatSel.TabIndex = 1
         Me.btnCatSel.Text = "CatSel"
         Me.btnCatSel.UseVisualStyleBackColor = True
@@ -533,7 +549,7 @@ Partial Class frmMain
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(341, 15)
+        Me.Label11.Location = New System.Drawing.Point(352, 17)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(53, 12)
         Me.Label11.TabIndex = 0
@@ -592,16 +608,6 @@ Partial Class frmMain
         '
         Me.cmsCU.Name = "cmsCU"
         Me.cmsCU.Size = New System.Drawing.Size(61, 4)
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("宋体", 42.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Label12.Location = New System.Drawing.Point(192, 91)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(53, 56)
-        Me.Label12.TabIndex = 10
-        Me.Label12.Text = "="
         '
         'frmMain
         '
