@@ -27,7 +27,6 @@ Partial Class frmUpdate
         Me.txtDetails = New System.Windows.Forms.TextBox()
         Me.lbStatus = New System.Windows.Forms.Label()
         Me.wbStart = New System.Windows.Forms.WebBrowser()
-        Me.wbInfo = New System.Windows.Forms.WebBrowser()
         Me.cmsDownloadList = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.tmrTimeOut = New System.Windows.Forms.Timer(Me.components)
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
@@ -73,16 +72,6 @@ Partial Class frmUpdate
         Me.wbStart.TabIndex = 16
         Me.wbStart.Visible = False
         '
-        'wbInfo
-        '
-        Me.wbInfo.Location = New System.Drawing.Point(199, 148)
-        Me.wbInfo.MinimumSize = New System.Drawing.Size(20, 20)
-        Me.wbInfo.Name = "wbInfo"
-        Me.wbInfo.ScriptErrorsSuppressed = True
-        Me.wbInfo.Size = New System.Drawing.Size(160, 94)
-        Me.wbInfo.TabIndex = 18
-        Me.wbInfo.Visible = False
-        '
         'cmsDownloadList
         '
         Me.cmsDownloadList.Name = "cmsDownloadList"
@@ -111,7 +100,6 @@ Partial Class frmUpdate
         Me.Controls.Add(Me.txtDetails)
         Me.Controls.Add(Me.lbStatus)
         Me.Controls.Add(Me.wbStart)
-        Me.Controls.Add(Me.wbInfo)
         Me.Controls.Add(Me.ProgressBar1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "frmUpdate"
@@ -125,7 +113,6 @@ Partial Class frmUpdate
     Friend WithEvents txtDetails As System.Windows.Forms.TextBox
     Friend WithEvents lbStatus As System.Windows.Forms.Label
     Friend WithEvents wbStart As System.Windows.Forms.WebBrowser
-    Friend WithEvents wbInfo As System.Windows.Forms.WebBrowser
     Friend WithEvents cmsDownloadList As System.Windows.Forms.ContextMenuStrip
     Friend WithEvents tmrTimeOut As System.Windows.Forms.Timer
     Friend WithEvents ProgressBar1 As System.Windows.Forms.ProgressBar

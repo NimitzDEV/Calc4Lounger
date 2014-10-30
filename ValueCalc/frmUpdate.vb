@@ -6,14 +6,14 @@
     Dim spliter() As String = {"≠"}
     Public timeout As Integer = 20
     Private Sub frmUpdate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        wbStart.Navigate("http://nimitzdev.free3v.net/update/update_lrjsq.html")
+        wbStart.Navigate("http://ndev.cu.cc/update/update_lrjsq.txt")
         Me.Height = 94
     End Sub
     Private Sub wbStart_DocumentCompleted(sender As Object, e As WebBrowserDocumentCompletedEventArgs) Handles wbStart.DocumentCompleted
-        wbInfo.Navigate("http://nimitzdev.free3v.net/update/update_lrjsq.html")
+        splitPageString()
     End Sub
     Private Sub splitPageString()
-        docString = New System.IO.StreamReader(wbInfo.DocumentStream, System.Text.Encoding.Default).ReadToEnd
+        docString = New System.IO.StreamReader(wbStart.DocumentStream, System.Text.Encoding.Default).ReadToEnd
         versionString = Split(docString, "≡")(1).Trim
         updateString = Split(docString, "≡")(2).Trim
         linkString = Split(docString, "≡")(3).Trim
@@ -74,7 +74,6 @@
         timeout -= 1
         If timeout < 0 Then
             wbStart.Stop()
-            wbInfo.Stop()
             tmrTimeOut.Enabled = False
             MsgBox("与服务器的连接超时" & vbCrLf & "建议您重试即可")
             Me.Close()
@@ -85,7 +84,4 @@
         cmsDownloadList.Show(btnDownload, 0, btnDownload.Height)
     End Sub
 
-    Private Sub wbInfo_DocumentCompleted(sender As Object, e As WebBrowserDocumentCompletedEventArgs) Handles wbInfo.DocumentCompleted
-        splitPageString()
-    End Sub
 End Class
