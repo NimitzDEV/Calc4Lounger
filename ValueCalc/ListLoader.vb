@@ -38,6 +38,8 @@ Module ListLoader
         loadDetails("懒人计算器.list_distance.txt")
         'listContainer.Items.AddRange(catListName)
         'listContainer.SelectedIndex = 0
+        frmMain.tbOU.Text = 0
+        frmMain.tbCU.Text = 0
     End Sub
     Public Sub loadDetails(ByVal listPath As String)
         Dim listString As String
@@ -62,6 +64,8 @@ Module ListLoader
         frmMain.cmsCU.Items.Clear()
         frmMain.cmsOU.Items.Clear()
         loadDetails(catListData(sender.tag))
+        frmMain.tbOU.Text = 0
+        frmMain.tbCU.Text = 0
     End Sub
     Public Sub valueAHandle(sender As Object, e As EventArgs)
         frmMain.btnOU.Text = detailListName(sender.tag)

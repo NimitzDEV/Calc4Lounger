@@ -276,7 +276,21 @@
         cmsCU.Show(btnCU, 0, btnCU.Height)
     End Sub
 
-    Private Sub btnConver_Click(sender As Object, e As EventArgs) Handles btnConver.Click
+
+    Private Sub tbOU_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbOU.KeyPress
+        If Char.IsDigit(e.KeyChar) OrElse e.KeyChar = Chr(8) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub tbOU_TextChanged(sender As Object, e As EventArgs) Handles tbOU.TextChanged
         doConver()
+
+    End Sub
+
+    Private Sub llbRev_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llbRev.LinkClicked
+        tbOU.Text = -tbOU.Text
     End Sub
 End Class
