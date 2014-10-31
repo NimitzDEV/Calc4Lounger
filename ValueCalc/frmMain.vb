@@ -8,8 +8,6 @@
         SaveSettings()
     End Sub
     Private Sub Form3_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Debug.Print(Me.Width - btnOU.Left - btnOU.Width)
-        Debug.Print(tbOU.Left)
         initCatList(cmsCatSel)
         Me.Text = Application.ProductName & " - " & Application.ProductVersion
         Randomize()
@@ -237,8 +235,6 @@
     End Sub
 
 
-
-
     Private Sub llbHelp_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llbHelp.LinkClicked
         frmHelp.Show(Me)
     End Sub
@@ -246,7 +242,6 @@
     Private Sub llbAbout_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llbAbout.LinkClicked
         frmAbout.Show(Me)
     End Sub
-
 
     Private Sub cbAutoShowProUI_CheckedChanged(sender As Object, e As EventArgs) Handles cbAutoShowProUI.CheckedChanged
         pref_autoshowproui = cbAutoShowProUI.Checked
@@ -265,7 +260,6 @@
         Process.Start("http://ndev.cu.cc")
     End Sub
 
-
     Private Sub btnCatSel_Click(sender As Object, e As EventArgs) Handles btnCatSel.Click
         cmsCatSel.Show(btnCatSel, 0, btnCatSel.Height)
     End Sub
@@ -278,7 +272,6 @@
         cmsCU.Show(btnCU, 0, btnCU.Height)
     End Sub
 
-
     Private Sub tbOU_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbOU.KeyPress
         If Char.IsDigit(e.KeyChar) OrElse e.KeyChar = Chr(8) OrElse e.KeyChar = "." Then
             e.Handled = False
@@ -289,7 +282,6 @@
 
     Private Sub tbOU_TextChanged(sender As Object, e As EventArgs) Handles tbOU.TextChanged
         doConver()
-
     End Sub
 
     Private Sub llbRev_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llbRev.LinkClicked

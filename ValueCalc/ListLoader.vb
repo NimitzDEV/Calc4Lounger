@@ -14,11 +14,9 @@ Module ListLoader
     Public currentValueB As Double
     Private Function readFile(ByVal filePath As String) As String
         Dim assembly__1 = Assembly.GetExecutingAssembly()
-        Dim resourceName = filePath
-        Using stream As Stream = assembly__1.GetManifestResourceStream(resourceName)
+        Using stream As Stream = assembly__1.GetManifestResourceStream(filePath)
             Using reader As New StreamReader(stream)
-                Dim result As String = reader.ReadToEnd()
-                Return result
+                Return reader.ReadToEnd()
             End Using
         End Using
     End Function
@@ -35,9 +33,7 @@ Module ListLoader
             listContainer.Items.Add(catListName(i), Nothing, AddressOf catSelHandler).Tag = i
         Next
         frmMain.btnCatSel.Text = catListName(0)
-        loadDetails("懒人计算器.list_distance.txt")
-        'listContainer.Items.AddRange(catListName)
-        'listContainer.SelectedIndex = 0
+        loadDetails(catListData(0))
         frmMain.tbOU.Text = 0
         frmMain.tbCU.Text = 0
     End Sub
