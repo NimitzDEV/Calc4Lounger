@@ -293,6 +293,10 @@
     End Sub
 
     Private Sub llbRev_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llbRev.LinkClicked
-        tbOU.Text = -tbOU.Text
+        Try
+            tbOU.Text = -tbOU.Text
+        Catch ex As Exception
+            tbCU.Text = "ERR!"
+        End Try
     End Sub
 End Class
