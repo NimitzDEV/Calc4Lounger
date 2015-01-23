@@ -120,9 +120,6 @@
         showProUI()
     End Sub
 
-    Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs)
-        frmAbout.Show(Me)
-    End Sub
 
 
     Private Sub TrackBar2_Scroll(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tbDigi2.Scroll
@@ -239,10 +236,6 @@
         frmHelp.Show(Me)
     End Sub
 
-    Private Sub llbAbout_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llbAbout.LinkClicked
-        frmAbout.Show(Me)
-    End Sub
-
     Private Sub cbAutoShowProUI_CheckedChanged(sender As Object, e As EventArgs) Handles cbAutoShowProUI.CheckedChanged
         pref_autoshowproui = cbAutoShowProUI.Checked
     End Sub
@@ -257,7 +250,7 @@
     End Sub
 
     Private Sub llbWeb_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llbWeb.LinkClicked
-        Process.Start("http://ndev.cu.cc")
+        Process.Start("http://nimitzdev.org")
     End Sub
 
     Private Sub btnCatSel_Click(sender As Object, e As EventArgs) Handles btnCatSel.Click
@@ -291,4 +284,5 @@
             tbCU.Text = "ERR!"
         End Try
     End Sub
+
 End Class

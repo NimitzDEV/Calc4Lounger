@@ -70,7 +70,6 @@ Partial Class frmMain
         Me.btnCatSel = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.llbHelp = New System.Windows.Forms.LinkLabel()
-        Me.llbAbout = New System.Windows.Forms.LinkLabel()
         Me.btnUpdate = New System.Windows.Forms.Button()
         Me.llbWeb = New System.Windows.Forms.LinkLabel()
         Me.cmsCatSel = New System.Windows.Forms.ContextMenuStrip(Me.components)
@@ -558,22 +557,12 @@ Partial Class frmMain
         'llbHelp
         '
         Me.llbHelp.AutoSize = True
-        Me.llbHelp.Location = New System.Drawing.Point(404, 241)
+        Me.llbHelp.Location = New System.Drawing.Point(445, 241)
         Me.llbHelp.Name = "llbHelp"
         Me.llbHelp.Size = New System.Drawing.Size(53, 12)
         Me.llbHelp.TabIndex = 35
         Me.llbHelp.TabStop = True
         Me.llbHelp.Text = "使用帮助"
-        '
-        'llbAbout
-        '
-        Me.llbAbout.AutoSize = True
-        Me.llbAbout.Location = New System.Drawing.Point(463, 241)
-        Me.llbAbout.Name = "llbAbout"
-        Me.llbAbout.Size = New System.Drawing.Size(29, 12)
-        Me.llbAbout.TabIndex = 34
-        Me.llbAbout.TabStop = True
-        Me.llbAbout.Text = "关于"
         '
         'btnUpdate
         '
@@ -581,13 +570,13 @@ Partial Class frmMain
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(90, 23)
         Me.btnUpdate.TabIndex = 36
-        Me.btnUpdate.Text = "检查新版本"
+        Me.btnUpdate.Text = "关于与更新"
         Me.btnUpdate.UseVisualStyleBackColor = True
         '
         'llbWeb
         '
         Me.llbWeb.AutoSize = True
-        Me.llbWeb.Location = New System.Drawing.Point(345, 241)
+        Me.llbWeb.Location = New System.Drawing.Point(386, 241)
         Me.llbWeb.Name = "llbWeb"
         Me.llbWeb.Size = New System.Drawing.Size(53, 12)
         Me.llbWeb.TabIndex = 37
@@ -618,7 +607,6 @@ Partial Class frmMain
         Me.Controls.Add(Me.llbWeb)
         Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.llbHelp)
-        Me.Controls.Add(Me.llbAbout)
         Me.Controls.Add(Me.TabControl1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -678,7 +666,6 @@ Partial Class frmMain
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents llbHelp As System.Windows.Forms.LinkLabel
-    Friend WithEvents llbAbout As System.Windows.Forms.LinkLabel
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents btnUpdate As System.Windows.Forms.Button
     Friend WithEvents llbWeb As System.Windows.Forms.LinkLabel

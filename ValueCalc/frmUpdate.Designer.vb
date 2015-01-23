@@ -22,98 +22,116 @@ Partial Class frmUpdate
     '不要使用代码编辑器修改它。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
-        Me.btnDownload = New System.Windows.Forms.Button()
-        Me.txtDetails = New System.Windows.Forms.TextBox()
-        Me.lbStatus = New System.Windows.Forms.Label()
-        Me.wbStart = New System.Windows.Forms.WebBrowser()
-        Me.cmsDownloadList = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.tmrTimeOut = New System.Windows.Forms.Timer(Me.components)
-        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
+        Me.btnDetails = New System.Windows.Forms.Button()
+        Me.btnDonload = New System.Windows.Forms.Button()
+        Me.lbCheckStatus = New System.Windows.Forms.Label()
+        Me.btnOfficialSite = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'btnDownload
+        'btnDetails
         '
-        Me.btnDownload.Enabled = False
-        Me.btnDownload.Location = New System.Drawing.Point(287, 189)
-        Me.btnDownload.Name = "btnDownload"
-        Me.btnDownload.Size = New System.Drawing.Size(75, 23)
-        Me.btnDownload.TabIndex = 19
-        Me.btnDownload.Text = "立即下载"
-        Me.btnDownload.UseVisualStyleBackColor = True
+        Me.btnDetails.Location = New System.Drawing.Point(192, 63)
+        Me.btnDetails.Name = "btnDetails"
+        Me.btnDetails.Size = New System.Drawing.Size(75, 23)
+        Me.btnDetails.TabIndex = 49
+        Me.btnDetails.Text = "更新详情"
+        Me.btnDetails.UseVisualStyleBackColor = True
         '
-        'txtDetails
+        'btnDonload
         '
-        Me.txtDetails.Location = New System.Drawing.Point(12, 56)
-        Me.txtDetails.Multiline = True
-        Me.txtDetails.Name = "txtDetails"
-        Me.txtDetails.ReadOnly = True
-        Me.txtDetails.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtDetails.Size = New System.Drawing.Size(348, 130)
-        Me.txtDetails.TabIndex = 17
-        Me.txtDetails.Visible = False
+        Me.btnDonload.Location = New System.Drawing.Point(273, 63)
+        Me.btnDonload.Name = "btnDonload"
+        Me.btnDonload.Size = New System.Drawing.Size(75, 23)
+        Me.btnDonload.TabIndex = 48
+        Me.btnDonload.Text = "下载新版"
+        Me.btnDonload.UseVisualStyleBackColor = True
         '
-        'lbStatus
+        'lbCheckStatus
         '
-        Me.lbStatus.AutoSize = True
-        Me.lbStatus.Location = New System.Drawing.Point(12, 9)
-        Me.lbStatus.Name = "lbStatus"
-        Me.lbStatus.Size = New System.Drawing.Size(107, 12)
-        Me.lbStatus.TabIndex = 15
-        Me.lbStatus.Text = "正在查找更新....."
+        Me.lbCheckStatus.AutoSize = True
+        Me.lbCheckStatus.Location = New System.Drawing.Point(5, 68)
+        Me.lbCheckStatus.Name = "lbCheckStatus"
+        Me.lbCheckStatus.Size = New System.Drawing.Size(11, 12)
+        Me.lbCheckStatus.TabIndex = 47
+        Me.lbCheckStatus.Text = "-"
         '
-        'wbStart
+        'btnOfficialSite
         '
-        Me.wbStart.Location = New System.Drawing.Point(24, 148)
-        Me.wbStart.MinimumSize = New System.Drawing.Size(20, 20)
-        Me.wbStart.Name = "wbStart"
-        Me.wbStart.ScriptErrorsSuppressed = True
-        Me.wbStart.Size = New System.Drawing.Size(160, 94)
-        Me.wbStart.TabIndex = 16
-        Me.wbStart.Visible = False
+        Me.btnOfficialSite.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(218, Byte), Integer))
+        Me.btnOfficialSite.FlatAppearance.BorderSize = 0
+        Me.btnOfficialSite.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnOfficialSite.ForeColor = System.Drawing.Color.White
+        Me.btnOfficialSite.Image = Global.懒人计算器.My.Resources.Resources.off
+        Me.btnOfficialSite.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnOfficialSite.Location = New System.Drawing.Point(242, 9)
+        Me.btnOfficialSite.Name = "btnOfficialSite"
+        Me.btnOfficialSite.Size = New System.Drawing.Size(106, 48)
+        Me.btnOfficialSite.TabIndex = 46
+        Me.btnOfficialSite.Text = "访问官网"
+        Me.btnOfficialSite.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnOfficialSite.UseVisualStyleBackColor = False
         '
-        'cmsDownloadList
+        'Label2
         '
-        Me.cmsDownloadList.Name = "cmsDownloadList"
-        Me.cmsDownloadList.Size = New System.Drawing.Size(61, 4)
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label2.Location = New System.Drawing.Point(63, 45)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(173, 12)
+        Me.Label2.TabIndex = 45
+        Me.Label2.Text = "Nimitz Software Developments"
         '
-        'tmrTimeOut
+        'Label1
         '
-        Me.tmrTimeOut.Enabled = True
-        Me.tmrTimeOut.Interval = 1000
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("微软雅黑", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(218, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(61, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(176, 39)
+        Me.Label1.TabIndex = 44
+        Me.Label1.Text = "NimitzDEV"
         '
-        'ProgressBar1
+        'PictureBox1
         '
-        Me.ProgressBar1.Location = New System.Drawing.Point(12, 27)
-        Me.ProgressBar1.MarqueeAnimationSpeed = 10
-        Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(348, 23)
-        Me.ProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee
-        Me.ProgressBar1.TabIndex = 20
+        Me.PictureBox1.Image = Global.懒人计算器.My.Resources.Resources.n_48
+        Me.PictureBox1.Location = New System.Drawing.Point(7, 9)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(48, 48)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox1.TabIndex = 43
+        Me.PictureBox1.TabStop = False
         '
         'frmUpdate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(369, 214)
-        Me.Controls.Add(Me.btnDownload)
-        Me.Controls.Add(Me.txtDetails)
-        Me.Controls.Add(Me.lbStatus)
-        Me.Controls.Add(Me.wbStart)
-        Me.Controls.Add(Me.ProgressBar1)
+        Me.ClientSize = New System.Drawing.Size(355, 94)
+        Me.Controls.Add(Me.btnDetails)
+        Me.Controls.Add(Me.btnDonload)
+        Me.Controls.Add(Me.lbCheckStatus)
+        Me.Controls.Add(Me.btnOfficialSite)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "frmUpdate"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "检查新版本"
+        Me.Text = "关于与更新"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents btnDownload As System.Windows.Forms.Button
-    Friend WithEvents txtDetails As System.Windows.Forms.TextBox
-    Friend WithEvents lbStatus As System.Windows.Forms.Label
-    Friend WithEvents wbStart As System.Windows.Forms.WebBrowser
-    Friend WithEvents cmsDownloadList As System.Windows.Forms.ContextMenuStrip
-    Friend WithEvents tmrTimeOut As System.Windows.Forms.Timer
-    Friend WithEvents ProgressBar1 As System.Windows.Forms.ProgressBar
+    Friend WithEvents btnDetails As System.Windows.Forms.Button
+    Friend WithEvents btnDonload As System.Windows.Forms.Button
+    Friend WithEvents lbCheckStatus As System.Windows.Forms.Label
+    Friend WithEvents btnOfficialSite As System.Windows.Forms.Button
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 End Class

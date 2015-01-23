@@ -111,12 +111,6 @@
     <Compile Include="frmProDateDiff.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAbout.Designer.vb">
-      <DependentUpon>frmAbout.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmAbout.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frmHelp.Designer.vb">
       <DependentUpon>frmHelp.vb</DependentUpon>
     </Compile>
@@ -171,10 +165,6 @@
     <EmbeddedResource Include="frmProDateDiff.resx">
       <DependentUpon>frmProDateDiff.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAbout.resx">
-      <DependentUpon>frmAbout.vb</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmHelp.resx">
       <DependentUpon>frmHelp.vb</DependentUpon>
     </EmbeddedResource>
@@ -209,6 +199,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="20140329041501994_easyicon_net_96.ico" />
+    <None Include="Resources\off.png" />
+    <None Include="Resources\n_48.png" />
     <EmbeddedResource Include="Resources\list_a.txt" />
     <EmbeddedResource Include="Resources\list_speed.txt" />
     <EmbeddedResource Include="Resources\list_storage.txt" />
